@@ -1,0 +1,334 @@
+/* Artfully masterminded by ZURB  */
+
+/* -------------------------------------------------- 
+   Table of Contents
+-----------------------------------------------------
+:: Colors
+:: Shared Styles
+:: Page Name 1
+:: Page Name 2
+*/
+
+
+/* -----------------------------------------
+   Colors
+----------------------------------------- */
+@bgColor: #fafafa;
+
+// categories
+@mograph: #91c53e;
+@tDesign: #e82929;
+@textFx: #fdb51c;
+@web: #2cb0e0;
+
+@borderColor: #4d4d4d;
+
+
+/* -----------------------------------------
+   Shared Styles
+----------------------------------------- */
+@import "fonts.css";
+
+body {
+	background-color: @bgColor;
+}
+.content {
+	margin-top: 1em;
+}
+
+
+/* -----------------------------------------
+   Main Header
+----------------------------------------- */
+
+h2, h3 {
+	// font-family: "RobotoThin";
+}
+header h2 {
+	font-size: 1.5em;
+	margin: 0;
+}
+header h3 {
+	font-size: 1.125em;
+}
+header .five.columns {
+	top: 3em;
+}
+header .five.columns:first-child {
+	text-align: right;
+}
+header {
+	margin-top: 1em !important;
+}
+
+hr {
+	border-color: rgba(1, 1, 1, 0.1);
+	margin: 0;
+}
+
+
+/* -----------------------------------------
+   Sub Header
+----------------------------------------- */
+
+.logo img {
+	width: 80px;
+}
+
+
+nav li {
+	width: 60px;
+	height: 60px;
+	border-radius: 60px;
+	border: 4px solid @borderColor;
+	background-color: white;
+
+}
+nav a {
+	color: @borderColor;
+}
+nav i {
+	font-size: 2em;
+	margin-left: 12px;
+	line-height: 50px !important;
+}
+nav li {
+	&.mograph {
+		border-color: @mograph;
+	}
+	&.web {
+		border-color: @web;
+	}
+	&.tDesign {
+		border-color: @tDesign;
+	}
+	&.textFx {
+		border-color: @textFx;
+	}
+}
+
+
+/* -----------------------------------------
+   Home (category list)
+----------------------------------------- */
+// PANEL
+.category {
+	height: 80px;
+	margin: 2em 0;
+	padding: 1em;
+	position: relative;
+	border-radius: 0.5em;	
+	font-size: 2em;
+	line-height: 1em;
+	text-align: center;
+	color: white;
+
+	&.mograph {
+		background-color: @mograph;
+		&:hover {
+			background-color: darken(@mograph, 8%);
+		}
+	}
+	&.tDesign {
+		background-color: @tDesign;
+		&:hover {
+			background-color: darken(@tDesign, 8%);
+		}
+	}
+	&.textFx {
+		background-color: @textFx;
+		&:hover {
+			background-color: darken(@textFx, 8%);
+		}
+	}
+	&.web {
+		background-color: @web;
+		&:hover {
+			background-color: darken(@web, 8%);
+		}
+		&:active {
+			background-color: lighten(@web, 2%);
+		}
+	}
+}
+@media only screen and (max-width: 767px) {
+ .category {
+ 	margin-top: 1em;
+ 	margin-bottom: 0.5em;
+ }
+}
+
+.circle {
+	position: absolute;
+	color: @borderColor;
+	z-index: 1;
+	background-color: white;
+	border-radius: 2em;
+	border: 0.15em solid @borderColor;
+	text-align: center;
+	line-height: 1.7em;
+	&.big {
+		width: 2em;
+		height: 2em;
+		font-size: 2em;
+		top: -25%;
+	}
+	&.small {
+		width: 2em;
+		height: 2em;
+		font-size: 1em;
+		top: 10%;
+	}
+	&.left {
+		left: -25%;
+	}
+	&.right {
+		right: -25%;
+	}
+}
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to { 
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+
+#introTour {
+	display: none;
+}
+
+/* -----------------------------------------
+   Lesson
+----------------------------------------- */
+.connector {
+	width: 3px;
+	height: 350px;
+	background-color: white;
+	z-index: -1;
+	position: absolute;
+	left: 38px;
+	top: 60px;
+}
+
+.polygon {
+	position: relative;
+	text-align: center;
+	margin: 1.8em 0 !important;
+	line-height: 1em;
+	background-color: @mograph;
+
+	&.big {
+		font-size: 2em;
+		width: 100px;
+		height: 60px;
+	}
+	&.small {
+		font-size: 2em;
+		width: 50px;
+		height: 30px;	
+	}
+	a {
+		color: white;
+	}
+
+	&.mograph {
+		background-color: @mograph;
+		&:hover {
+			background-color: darken(@mograph, 8%);
+		}
+	}
+	&.tDesign {
+		background-color: @tDesign;
+		&:hover {
+			background-color: darken(@tDesign, 8%);
+		}
+	}
+	&.textFx {
+		background-color: @textFx;
+		&:hover {
+			background-color: darken(@textFx, 8%);
+		}
+	}
+	&.web {
+		background-color: @web;
+		&:hover {
+			background-color: darken(@web, 8%);
+		}
+		&:active {
+			background-color: lighten(@web, 2%);
+		}
+	}
+
+}
+.polygon:before {
+	content: "";
+	position: absolute;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-left: 0 solid transparent;
+	border-right: 0 solid transparent;
+	border-bottom: 0 solid @mograph;
+}
+.polygon.big:before {
+	top: -30px;
+	border-left-width: 50px;
+	border-right-width: 50px;
+	border-bottom-width: 30px;
+}
+.polygon.small:before {
+	top: -15px;
+	border-left-width: 25px;
+	border-right-width: 25px;
+	border-bottom-width: 15px;
+}
+.polygon:after {
+	content: "";
+	position: absolute;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-top: 30px solid @mograph;
+}
+.polygon.big:after {
+	bottom: -30px;
+	border-left-width: 50px;
+	border-right-width: 50px;
+	border-top-width: 30px;
+}
+.polygon.small:after {
+	bottom: -15px;
+	border-left-width: 25px;
+	border-right-width: 25px;
+	border-top-width: 15px;
+}
+
+article.description {
+	background: #eee;
+	height: 500px;
+	padding: 0 1.5em;
+}
+
+.lesson-content {
+	// background-color: white;
+	height: 500px;
+}
+
+.lesson-features li {
+	width: 48px;
+	height: 48px;
+	border-radius: 5px 0 0 5px;
+	background-color: @borderColor;
+	font-size: 2em;
+	text-align: center;
+	a {
+		color: white;
+	}
+}
+	

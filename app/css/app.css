@@ -1,0 +1,286 @@
+@import "fonts.css";
+/* Artfully masterminded by ZURB  */
+/* -------------------------------------------------- 
+   Table of Contents
+-----------------------------------------------------
+:: Colors
+:: Shared Styles
+:: Page Name 1
+:: Page Name 2
+*/
+/* -----------------------------------------
+   Colors
+----------------------------------------- */
+/* -----------------------------------------
+   Shared Styles
+----------------------------------------- */
+body {
+  background-color: #fafafa;
+}
+.content {
+  margin-top: 1em;
+}
+/* -----------------------------------------
+   Main Header
+----------------------------------------- */
+header h2 {
+  font-size: 1.5em;
+  margin: 0;
+}
+header h3 {
+  font-size: 1.125em;
+}
+header .five.columns {
+  top: 3em;
+}
+header .five.columns:first-child {
+  text-align: right;
+}
+header {
+  margin-top: 1em !important;
+}
+hr {
+  border-color: rgba(1, 1, 1, 0.1);
+  margin: 0;
+}
+/* -----------------------------------------
+   Sub Header
+----------------------------------------- */
+.logo img {
+  width: 80px;
+}
+nav li {
+  width: 60px;
+  height: 60px;
+  border-radius: 60px;
+  border: 4px solid #4d4d4d;
+  background-color: white;
+}
+nav a {
+  color: #4d4d4d;
+}
+nav i {
+  font-size: 2em;
+  margin-left: 12px;
+  line-height: 50px !important;
+}
+nav li.mograph {
+  border-color: #91c53e;
+}
+nav li.web {
+  border-color: #2cb0e0;
+}
+nav li.tDesign {
+  border-color: #e82929;
+}
+nav li.textFx {
+  border-color: #fdb51c;
+}
+/* -----------------------------------------
+   Home (category list)
+----------------------------------------- */
+.category {
+  height: 80px;
+  margin: 2em 0;
+  padding: 1em;
+  position: relative;
+  border-radius: 0.5em;
+  font-size: 2em;
+  line-height: 1em;
+  text-align: center;
+  color: white;
+}
+.category.mograph {
+  background-color: #91c53e;
+}
+.category.mograph:hover {
+  background-color: #7ba832;
+}
+.category.tDesign {
+  background-color: #e82929;
+}
+.category.tDesign:hover {
+  background-color: #d21717;
+}
+.category.textFx {
+  background-color: #fdb51c;
+}
+.category.textFx:hover {
+  background-color: #eea302;
+}
+.category.web {
+  background-color: #2cb0e0;
+}
+.category.web:hover {
+  background-color: #1d99c6;
+}
+.category.web:active {
+  background-color: #35b3e1;
+}
+@media only screen and (max-width: 767px) {
+  .category {
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+  }
+}
+.circle {
+  position: absolute;
+  color: #4d4d4d;
+  z-index: 1;
+  background-color: white;
+  border-radius: 2em;
+  border: 0.15em solid #4d4d4d;
+  text-align: center;
+  line-height: 1.7em;
+}
+.circle.big {
+  width: 2em;
+  height: 2em;
+  font-size: 2em;
+  top: -25%;
+}
+.circle.small {
+  width: 2em;
+  height: 2em;
+  font-size: 1em;
+  top: 10%;
+}
+.circle.left {
+  left: -25%;
+}
+.circle.right {
+  right: -25%;
+}
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+#introTour {
+  display: none;
+}
+/* -----------------------------------------
+   Lesson
+----------------------------------------- */
+.connector {
+  width: 3px;
+  height: 350px;
+  background-color: white;
+  z-index: -1;
+  position: absolute;
+  left: 38px;
+  top: 60px;
+}
+.polygon {
+  position: relative;
+  text-align: center;
+  margin: 1.8em 0 !important;
+  line-height: 1em;
+  background-color: #91c53e;
+}
+.polygon.big {
+  font-size: 2em;
+  width: 100px;
+  height: 60px;
+}
+.polygon.small {
+  font-size: 2em;
+  width: 50px;
+  height: 30px;
+}
+.polygon a {
+  color: white;
+}
+.polygon.mograph {
+  background-color: #91c53e;
+}
+.polygon.mograph:hover {
+  background-color: #7ba832;
+}
+.polygon.tDesign {
+  background-color: #e82929;
+}
+.polygon.tDesign:hover {
+  background-color: #d21717;
+}
+.polygon.textFx {
+  background-color: #fdb51c;
+}
+.polygon.textFx:hover {
+  background-color: #eea302;
+}
+.polygon.web {
+  background-color: #2cb0e0;
+}
+.polygon.web:hover {
+  background-color: #1d99c6;
+}
+.polygon.web:active {
+  background-color: #35b3e1;
+}
+.polygon:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 0 solid transparent;
+  border-right: 0 solid transparent;
+  border-bottom: 0 solid #91c53e;
+}
+.polygon.big:before {
+  top: -30px;
+  border-left-width: 50px;
+  border-right-width: 50px;
+  border-bottom-width: 30px;
+}
+.polygon.small:before {
+  top: -15px;
+  border-left-width: 25px;
+  border-right-width: 25px;
+  border-bottom-width: 15px;
+}
+.polygon:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 30px solid #91c53e;
+}
+.polygon.big:after {
+  bottom: -30px;
+  border-left-width: 50px;
+  border-right-width: 50px;
+  border-top-width: 30px;
+}
+.polygon.small:after {
+  bottom: -15px;
+  border-left-width: 25px;
+  border-right-width: 25px;
+  border-top-width: 15px;
+}
+article.description {
+  background: #eee;
+  height: 500px;
+  padding: 0 1.5em;
+}
+.lesson-content {
+  height: 500px;
+}
+.lesson-features li {
+  width: 48px;
+  height: 48px;
+  border-radius: 5px 0 0 5px;
+  background-color: #4d4d4d;
+  font-size: 2em;
+  text-align: center;
+}
+.lesson-features li a {
+  color: white;
+}

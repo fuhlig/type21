@@ -1,0 +1,25 @@
+{
+	"description": "This is about Type Design.",
+	"lessons": [
+		{
+			"name":	"Effects",
+			"id":	"effects"
+		},
+		{
+			"name":	"Text Shadow",
+			"id":	"shadow"
+		},
+		{
+			"name":	"3D",
+			"id":	"3d"
+		},
+		{
+			"name": "Engraving",
+			"id": "engraving"
+		},
+		{
+			"name": "Color Effects",
+			"id": "color"
+		}
+	]
+}

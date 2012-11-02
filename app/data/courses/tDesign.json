@@ -1,0 +1,25 @@
+{
+	"description": "This is about Type Design.",
+	"lessons": [
+		{
+			"name":	"History",
+			"id":	"history"
+		},
+		{
+			"name":	"Icon Fonts",
+			"id":	"icon-fonts"
+		},
+		{
+			"name":	"Spacing",
+			"id":	"spacing"
+		},
+		{
+			"name": "Choosing the right Type",
+			"id": "choosing-type"
+		},
+		{
+			"name": "Print vs. Screen",
+			"id": "print-vs-screen"
+		}
+	]
+}

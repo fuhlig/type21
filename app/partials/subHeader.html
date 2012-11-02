@@ -1,0 +1,21 @@
+<!-- Header -->
+<header class="row">
+<div class="four columns">
+  <div class="row">
+    <div class="four columns">
+        <a href="index.html"><img src="img/logo.png"></a>
+    </div>
+    <div class="eight columns">
+      <p>twentyone lessons that make type sexy</p>
+      <hr>
+    </div>
+  </div>
+</div>
+<div class="eight columns">
+  <nav>
+    <ul class="link-list right">
+      <li ng-repeat="course in courses" class="{{course.id}}"><a href="#/courses/{{course.id}}"><i class="foundicon-{{course.icon}}"></i></a></li>
+    </ul>
+  </nav>
+</div>
+</header>

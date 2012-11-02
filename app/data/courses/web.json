@@ -1,0 +1,25 @@
+{
+	"description": "This is about Type Design.",
+	"lessons": [
+		{
+			"name":	"Web-Fonts",
+			"id":	"webfonts"
+		},
+		{
+			"name":	"Responsive Type",
+			"id":	"responsive-type"
+		},
+		{
+			"name":	"Dos and Donts",
+			"id":	"dodont"
+		},
+		{
+			"name": "@font-face",
+			"id": "font-face"
+		},
+		{
+			"name": "px vs. em",
+			"id": "px-vs-em"
+		}
+	]
+}
