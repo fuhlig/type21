@@ -25,6 +25,28 @@
 
 
 /* -----------------------------------------
+   Metrics
+----------------------------------------- */
+
+
+
+/* -----------------------------------------
+   Mixins
+----------------------------------------- */
+// by MarkDotto.com
+.3d-text() {
+	text-shadow: 
+			0 1px 0 #ccc, 
+			0 2px 0 #c9c9c9,
+			0 3px 0 #bbb,
+			0 4px 0 #b9b9b9,
+			0 5px 0 #aaa,
+			0 6px 1px rgba(0,0,0,.1);	
+			color: white;
+}
+
+
+/* -----------------------------------------
    Shared Styles
 ----------------------------------------- */
 @import "fonts.css";
@@ -34,6 +56,11 @@ body {
 }
 .content {
 	margin-top: 1em;
+	// background-color: white;
+}
+
+a {
+	// color: white !important;
 }
 
 
@@ -41,15 +68,20 @@ body {
    Main Header
 ----------------------------------------- */
 
-h2, h3 {
-	// font-family: "RobotoThin";
+h1, h2, h3 {
+	font-family: 'RobotoThin';
+	// .3d-text();
+}
+p {
+	font-family: 'RobotoLight';
+	font-size: 16px;
 }
 header h2 {
 	font-size: 1.5em;
 	margin: 0;
 }
 header h3 {
-	font-size: 1.125em;
+	font-size: 0.9em;
 }
 header .five.columns {
 	top: 3em;
@@ -73,6 +105,9 @@ hr {
 
 .logo img {
 	width: 80px;
+}
+.sub-logo .columns {
+	padding: 0;
 }
 
 
@@ -122,6 +157,12 @@ nav li {
 	line-height: 1em;
 	text-align: center;
 	color: white;
+
+	& h1 {
+		font-size: 1em;
+		line-height: 0;
+		color: white;
+	}
 
 	&.mograph {
 		background-color: @mograph;
@@ -200,24 +241,70 @@ nav li {
 #introTour {
 	display: none;
 }
+#startTour {
+	display: none;
+}
+
+
+
+/* -----------------------------------------
+   Lesson
+----------------------------------------- */
+.course-intro {
+	height: 200px;
+	h1 {
+		text-align: center;
+	}
+}
+
+
+
 
 /* -----------------------------------------
    Lesson
 ----------------------------------------- */
 .connector {
 	width: 3px;
-	height: 350px;
-	background-color: white;
-	z-index: -1;
+	height: 300px;
+	background-color: @borderColor;
 	position: absolute;
 	left: 38px;
 	top: 60px;
 }
 
+#lessons .polygon {
+	margin-top: 30px;
+}
+.lesson-list {
+	margin-top: 15px;  						// fix when polygon-mixin (top-size)
+}
+
+.lesson-list li span,
+.lesson-features li span {
+	width: 150px;
+	height: auto;
+	padding: 10px;
+	color: white;
+	background-color: lighten(@mograph, 10%);
+	z-index: 1;
+	position: absolute;
+	left: 60px;
+	top: -13px;
+	font-size: 14px;
+	border-radius: 5px;
+	border: 3px solid white;
+	box-shadow: 1px 2px 2px rgba(0,0,0,0.3);
+	display: none;
+}
+.lesson-list li a:hover span, 
+.lesson-features li a:hover span {
+	display: block;
+}
+
 .polygon {
 	position: relative;
 	text-align: center;
-	margin: 1.8em 0 !important;
+	margin-bottom: 1.8em !important;
 	line-height: 1em;
 	background-color: @mograph;
 
@@ -237,30 +324,15 @@ nav li {
 
 	&.mograph {
 		background-color: @mograph;
-		&:hover {
-			background-color: darken(@mograph, 8%);
-		}
 	}
 	&.tDesign {
 		background-color: @tDesign;
-		&:hover {
-			background-color: darken(@tDesign, 8%);
-		}
 	}
 	&.textFx {
 		background-color: @textFx;
-		&:hover {
-			background-color: darken(@textFx, 8%);
-		}
 	}
 	&.web {
 		background-color: @web;
-		&:hover {
-			background-color: darken(@web, 8%);
-		}
-		&:active {
-			background-color: lighten(@web, 2%);
-		}
 	}
 
 }
@@ -315,20 +387,33 @@ article.description {
 	padding: 0 1.5em;
 }
 
+#lessons a {
+	color: white;
+}
+
 .lesson-content {
 	// background-color: white;
-	height: 500px;
 }
 
 .lesson-features li {
 	width: 48px;
 	height: 48px;
-	border-radius: 5px 0 0 5px;
+	border-radius: 10px 0 0 10px;
 	background-color: @borderColor;
 	font-size: 2em;
+	position: relative;
 	text-align: center;
 	a {
 		color: white;
 	}
 }
 	
+
+.fontSize (@size: 20px) {
+	font-size: @size;
+}
+
+.angularSize {
+	.fontSize(20px);
+	font-size: 100px;
+}

@@ -12,6 +12,12 @@
    Colors
 ----------------------------------------- */
 /* -----------------------------------------
+   Metrics
+----------------------------------------- */
+/* -----------------------------------------
+   Mixins
+----------------------------------------- */
+/* -----------------------------------------
    Shared Styles
 ----------------------------------------- */
 body {
@@ -23,12 +29,21 @@ body {
 /* -----------------------------------------
    Main Header
 ----------------------------------------- */
+h1,
+h2,
+h3 {
+  font-family: 'RobotoThin';
+}
+p {
+  font-family: 'RobotoLight';
+  font-size: 16px;
+}
 header h2 {
   font-size: 1.5em;
   margin: 0;
 }
 header h3 {
-  font-size: 1.125em;
+  font-size: 0.9em;
 }
 header .five.columns {
   top: 3em;
@@ -48,6 +63,9 @@ hr {
 ----------------------------------------- */
 .logo img {
   width: 80px;
+}
+.sub-logo .columns {
+  padding: 0;
 }
 nav li {
   width: 60px;
@@ -88,6 +106,11 @@ nav li.textFx {
   font-size: 2em;
   line-height: 1em;
   text-align: center;
+  color: white;
+}
+.category h1 {
+  font-size: 1em;
+  line-height: 0;
   color: white;
 }
 .category.mograph {
@@ -162,22 +185,60 @@ nav li.textFx {
 #introTour {
   display: none;
 }
+#startTour {
+  display: none;
+}
+/* -----------------------------------------
+   Lesson
+----------------------------------------- */
+.course-intro {
+  height: 200px;
+}
+.course-intro h1 {
+  text-align: center;
+}
 /* -----------------------------------------
    Lesson
 ----------------------------------------- */
 .connector {
   width: 3px;
-  height: 350px;
-  background-color: white;
-  z-index: -1;
+  height: 300px;
+  background-color: #4d4d4d;
   position: absolute;
   left: 38px;
   top: 60px;
 }
+#lessons .polygon {
+  margin-top: 30px;
+}
+.lesson-list {
+  margin-top: 15px;
+}
+.lesson-list li span,
+.lesson-features li span {
+  width: 150px;
+  height: auto;
+  padding: 10px;
+  color: white;
+  background-color: #a7d165;
+  z-index: 1;
+  position: absolute;
+  left: 60px;
+  top: -13px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 3px solid white;
+  box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.3);
+  display: none;
+}
+.lesson-list li a:hover span,
+.lesson-features li a:hover span {
+  display: block;
+}
 .polygon {
   position: relative;
   text-align: center;
-  margin: 1.8em 0 !important;
+  margin-bottom: 1.8em !important;
   line-height: 1em;
   background-color: #91c53e;
 }
@@ -197,29 +258,14 @@ nav li.textFx {
 .polygon.mograph {
   background-color: #91c53e;
 }
-.polygon.mograph:hover {
-  background-color: #7ba832;
-}
 .polygon.tDesign {
   background-color: #e82929;
-}
-.polygon.tDesign:hover {
-  background-color: #d21717;
 }
 .polygon.textFx {
   background-color: #fdb51c;
 }
-.polygon.textFx:hover {
-  background-color: #eea302;
-}
 .polygon.web {
   background-color: #2cb0e0;
-}
-.polygon.web:hover {
-  background-color: #1d99c6;
-}
-.polygon.web:active {
-  background-color: #35b3e1;
 }
 .polygon:before {
   content: "";
@@ -270,17 +316,22 @@ article.description {
   height: 500px;
   padding: 0 1.5em;
 }
-.lesson-content {
-  height: 500px;
+#lessons a {
+  color: white;
 }
 .lesson-features li {
   width: 48px;
   height: 48px;
-  border-radius: 5px 0 0 5px;
+  border-radius: 10px 0 0 10px;
   background-color: #4d4d4d;
   font-size: 2em;
+  position: relative;
   text-align: center;
 }
 .lesson-features li a {
   color: white;
+}
+.angularSize {
+  font-size: 20px;
+  font-size: 100px;
 }
