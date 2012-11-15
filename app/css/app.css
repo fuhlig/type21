@@ -26,6 +26,11 @@ body {
 .content {
   margin-top: 1em;
 }
+h1,
+p {
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+}
 /* -----------------------------------------
    Main Header
 ----------------------------------------- */
@@ -193,6 +198,7 @@ nav li.textFx {
 ----------------------------------------- */
 .course-intro {
   height: 200px;
+  margin-bottom: 1em;
 }
 .course-intro h1 {
   text-align: center;

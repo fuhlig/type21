@@ -8,10 +8,10 @@
 			"content": "Symbols or Icons are visually really powerful as they deliver instant information without any cultural or lingual barrier. Icons can support the displayed text or stand on their own."
 		},
 		{
-			"id": "tutorial",
-			"name": "Tutorial",
-			"icon": "group",
-			"content": "tutorial here"
+			"id": "showcase",
+			"name": "Showcase",
+			"icon": "eye-open",
+			"content": "partials/showcase_effects.html"
 		},
 		{
 			"id": "test",

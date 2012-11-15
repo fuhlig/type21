@@ -17,8 +17,8 @@
 			"id": "test",
 			"name": "Testing",
 			"icon": "beaker",
-			"content": "partials/icon-font_editor.html",
-			"src": "partials/icon-font_editor.html"
+			"content": "partials/editor_icon-font.html",
+			"src": "partials/editor_icon-font.html"
 		},
 		{
 			"id": "resources",

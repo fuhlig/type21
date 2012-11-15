@@ -1,0 +1,28 @@
+<input type="range" name="fontsize-slider" min="10" max="100" value="24" ng-model="fontSize">
+<label for="fontsize-slider">font-size: {{fontSize}}px</label>
+
+<input type="range" name="blur" min="0" max="50" value="1" ng-model="shadowBlur">
+<label for="blur">font-blur: {{shadowBlur}}px</label>
+
+<input type="range" name="xOffset" min="-10" max="10" value="0" ng-model="xOffset">
+<label for="xOffset">x-offset: {{xOffset}}px</label>
+
+<input type="range" name="yOffset" min="-10" max="10" value="0" ng-model="yOffset">
+<label for="yOffset">y-offset: {{yOffset}}px</label>
+
+<h1 id="testText"
+	style="		
+		text-shadow: {{xOffset}}px {{yOffset}}px {{shadowBlur}}px;
+	    font-size: {{fontSize}}px;
+	    ">
+
+Shadow
+</h1>
+
+
+
+
+
+
+
+
