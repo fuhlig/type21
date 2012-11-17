@@ -11,7 +11,14 @@
 			"id": "showcase",
 			"name": "Showcase",
 			"icon": "eye-open",
-			"content": "partials/showcase_shadow.html"
+			"content": "partials/showcase_shadow.html",
+			"img": [
+				"img/showcase/css-textshadows-1.jpg",
+				"img/showcase/css-textshadows-2.jpg",
+				"img/showcase/css-textshadows-3.jpg",
+				"img/showcase/css-textshadows-4.jpg",
+				"img/showcase/css-textshadows-5.jpg"
+			]
 		},
 		{
 			"id": "test",

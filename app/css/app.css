@@ -1,5 +1,6 @@
 @import "fonts.css";
-/* Artfully masterminded by ZURB  */
+/* Artfully masterminded by ZURB  
+
 /* -------------------------------------------------- 
    Table of Contents
 -----------------------------------------------------
@@ -17,6 +18,17 @@
 /* -----------------------------------------
    Mixins
 ----------------------------------------- */
+.createPolygon-top,
+.createPolygon-bottom {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: solid transparent;
+  border-right: solid transparent;
+  border-bottom: solid #91c53e;
+}
 /* -----------------------------------------
    Shared Styles
 ----------------------------------------- */
@@ -241,53 +253,137 @@ nav li.textFx {
 .lesson-features li a:hover span {
   display: block;
 }
-.polygon {
+.polygon.small {
+  height: 30px;
+  width: 50px;
+}
+.polygon.big {
+  height: 60px;
+  width: 100px;
+}
+.polygon.badge-polygon {
+  height: 120px;
+  width: 199px;
+}
+.polygon.mograph {
   position: relative;
   text-align: center;
   margin-bottom: 1.8em !important;
   line-height: 1em;
   background-color: #91c53e;
-}
-.polygon.big {
+  /*todo*/
+
   font-size: 2em;
-  width: 100px;
-  height: 60px;
-}
-.polygon.small {
-  font-size: 2em;
-  width: 50px;
-  height: 30px;
-}
-.polygon a {
-  color: white;
-}
-.polygon.mograph {
   background-color: #91c53e;
 }
-.polygon.tDesign {
-  background-color: #e82929;
+.polygon.mograph a {
+  color: white;
 }
-.polygon.textFx {
-  background-color: #fdb51c;
-}
-.polygon.web {
-  background-color: #2cb0e0;
-}
-.polygon:before {
+.polygon.mograph:before,
+.polygon.mograph:after {
   content: "";
   position: absolute;
   left: 0;
   width: 0;
   height: 0;
-  border-left: 0 solid transparent;
-  border-right: 0 solid transparent;
-  border-bottom: 0 solid #91c53e;
+  border-left: solid transparent;
+  border-right: solid transparent;
 }
-.polygon.big:before {
-  top: -30px;
-  border-left-width: 50px;
-  border-right-width: 50px;
-  border-bottom-width: 30px;
+.polygon.mograph:before {
+  border-bottom: solid #91c53e;
+}
+.polygon.mograph:after {
+  border-top: solid #91c53e;
+}
+.polygon.tDesign {
+  position: relative;
+  text-align: center;
+  margin-bottom: 1.8em !important;
+  line-height: 1em;
+  background-color: #e82929;
+  /*todo*/
+
+  font-size: 2em;
+  background-color: #e82929;
+}
+.polygon.tDesign a {
+  color: white;
+}
+.polygon.tDesign:before,
+.polygon.tDesign:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: solid transparent;
+  border-right: solid transparent;
+}
+.polygon.tDesign:before {
+  border-bottom: solid #e82929;
+}
+.polygon.tDesign:after {
+  border-top: solid #e82929;
+}
+.polygon.textFx {
+  position: relative;
+  text-align: center;
+  margin-bottom: 1.8em !important;
+  line-height: 1em;
+  background-color: #fdb51c;
+  /*todo*/
+
+  font-size: 2em;
+  background-color: #fdb51c;
+}
+.polygon.textFx a {
+  color: white;
+}
+.polygon.textFx:before,
+.polygon.textFx:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: solid transparent;
+  border-right: solid transparent;
+}
+.polygon.textFx:before {
+  border-bottom: solid #fdb51c;
+}
+.polygon.textFx:after {
+  border-top: solid #fdb51c;
+}
+.polygon.web {
+  position: relative;
+  text-align: center;
+  margin-bottom: 1.8em !important;
+  line-height: 1em;
+  background-color: #2cb0e0;
+  /*todo*/
+
+  font-size: 2em;
+  background-color: #2cb0e0;
+}
+.polygon.web a {
+  color: white;
+}
+.polygon.web:before,
+.polygon.web:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: solid transparent;
+  border-right: solid transparent;
+}
+.polygon.web:before {
+  border-bottom: solid #2cb0e0;
+}
+.polygon.web:after {
+  border-top: solid #2cb0e0;
 }
 .polygon.small:before {
   top: -15px;
@@ -295,15 +391,17 @@ nav li.textFx {
   border-right-width: 25px;
   border-bottom-width: 15px;
 }
-.polygon:after {
-  content: "";
-  position: absolute;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-left: 50px solid transparent;
-  border-right: 50px solid transparent;
-  border-top: 30px solid #91c53e;
+.polygon.small:after {
+  bottom: -15px;
+  border-left-width: 25px;
+  border-right-width: 25px;
+  border-top-width: 15px;
+}
+.polygon.big:before {
+  top: -30px;
+  border-left-width: 50px;
+  border-right-width: 50px;
+  border-bottom-width: 30px;
 }
 .polygon.big:after {
   bottom: -30px;
@@ -311,11 +409,17 @@ nav li.textFx {
   border-right-width: 50px;
   border-top-width: 30px;
 }
-.polygon.small:after {
-  bottom: -15px;
-  border-left-width: 25px;
-  border-right-width: 25px;
-  border-top-width: 15px;
+.polygon.badge-polygon:before {
+  top: -20px;
+  border-left-width: 100px;
+  border-right-width: 100px;
+  border-bottom-width: 20px;
+}
+.polygon.badge-polygon:after {
+  bottom: -60px;
+  border-left-width: 100px;
+  border-right-width: 100px;
+  border-top-width: 60px;
 }
 article.description {
   background: #eee;
@@ -340,4 +444,254 @@ article.description {
 .angularSize {
   font-size: 20px;
   font-size: 100px;
+}
+/* -----------------------------------------
+   Partials
+----------------------------------------- */
+#featured {
+  background: url(../img/foundation/loading.gif) center center #f4f4f4;
+  height: 300px;
+}
+#featured img {
+  display: none;
+}
+#featured.orbit {
+  background: none;
+}
+#featured.orbit img {
+  display: block;
+}
+#quiz {
+  background-color: white;
+}
+#quiz .orbit-slide {
+  padding: 0 50px;
+}
+.reveal-modal .close-reveal-modal {
+  text-shadow: none;
+}
+[class*="badge-"] {
+  margin: 0 auto;
+  color: white;
+  text-align: center;
+}
+[class*="badge-"] ul {
+  list-style: none;
+}
+[class*="badge-"] p {
+  position: absolute;
+  z-index: 1;
+  left: 40px;
+  bottom: 0;
+  line-height: 0;
+}
+.badge-circle {
+  color: #4d4d4d;
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 300px;
+  background-color: white;
+  border: 40px solid;
+}
+.badge-circle p {
+  left: 50px;
+  bottom: 40px;
+}
+.badge-circle.mograph {
+  border-color: #91c53e;
+}
+.badge-circle.tDesign {
+  border-color: #e82929;
+}
+.badge-circle.web {
+  border-color: #2cb0e0;
+}
+.badge-circle.textFx {
+  border-color: #fdb51c;
+}
+.badge-polygon > i {
+  color: white;
+  font-size: 4em;
+  line-height: 1;
+}
+.badge-circle > i {
+  color: #4d4d4d;
+  font-size: 9em;
+  line-height: 1.5;
+}
+/*
+#badge-polygonModal.reveal-modal {
+	width: 300px;
+	margin-left: 200px;
+	padding: 100px;
+}
+*/
+.award-circle {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  border: 5px solid white;
+  z-index: 1;
+  background-color: #4d4d4d;
+  color: white;
+}
+.award-circle:nth-child(odd) {
+  left: -25px;
+}
+.award-circle:nth-child(even) {
+  right: -25px;
+}
+.award-circle:nth-child(1),
+.award-circle:nth-child(2) {
+  top: -20px;
+}
+.award-circle:nth-child(3),
+.award-circle:nth-child(4) {
+  bottom: -25px;
+}
+.award-circle:nth-child(5) {
+  left: 70px;
+  bottom: -80px;
+}
+.award-circle i {
+  font-size: 2em;
+  line-height: 1.4;
+}
+.award-circle i.disabled {
+  opacity: .2;
+}
+.award-circle.disabled {
+  background-color: white;
+}
+.ribbon-top {
+  width: 80px;
+  height: 160px;
+  position: absolute;
+  top: -200px;
+  left: 60px;
+  background-color: #75a030;
+}
+.ribbon-top:after {
+  width: 0px;
+  height: 0px;
+  border-top: 60px solid transparent;
+  border-bottom: 60px solid transparent;
+  border-left: 80px solid red;
+}
+.ribbon-bottom {
+  width: 40px;
+  height: 120px;
+  position: relative;
+  text-align: center;
+  margin-bottom: 1.8em !important;
+  line-height: 1em;
+  background-color: #2cb0e0;
+  /*todo*/
+
+  font-size: 2em;
+}
+.ribbon-bottom a {
+  color: white;
+}
+.ribbon-bottom:before,
+.ribbon-bottom:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: solid transparent;
+  border-right: solid transparent;
+}
+.ribbon-bottom:before {
+  border-bottom: solid #2cb0e0;
+}
+.ribbon-bottom:after {
+  border-top: solid #2cb0e0;
+}
+.ribbon-bottom:after {
+  bottom: -12.5px;
+  border-left-width: 21px;
+  border-right-width: 21px;
+  border-top-width: 12.5px;
+}
+.award-polygon {
+  position: relative;
+  text-align: center;
+  margin-bottom: 1.8em !important;
+  line-height: 1em;
+  background-color: #4d4d4d;
+  /*todo*/
+
+  font-size: 2em;
+  height: 30px;
+  width: 50px;
+  position: absolute;
+  z-index: 1;
+  color: white;
+}
+.award-polygon a {
+  color: white;
+}
+.award-polygon:before,
+.award-polygon:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: solid transparent;
+  border-right: solid transparent;
+}
+.award-polygon:before {
+  border-bottom: solid #4d4d4d;
+}
+.award-polygon:after {
+  border-top: solid #4d4d4d;
+}
+.award-polygon:before {
+  top: -15px;
+  border-left-width: 25px;
+  border-right-width: 25px;
+  border-bottom-width: 15px;
+}
+.award-polygon:after {
+  bottom: -15px;
+  border-left-width: 25px;
+  border-right-width: 25px;
+  border-top-width: 15px;
+}
+.award-polygon.disabled {
+  background-color: white;
+}
+.award-polygon.disabled:after,
+.award-polygon.disabled:before {
+  border-top-color: white;
+  border-bottom-color: white;
+}
+.award-polygon:nth-child(1) {
+  left: 85px;
+  top: -35px;
+}
+.award-polygon:nth-child(2) {
+  right: -35px;
+  top: 50px;
+}
+.award-polygon:nth-child(3) {
+  right: -5px;
+  bottom: -50px;
+}
+.award-polygon:nth-child(4) {
+  left: -5px;
+  bottom: -50px;
+}
+.award-polygon:nth-child(5) {
+  left: -35px;
+  top: 50px;
+}
+.award-polygon i {
+  font-size: 0.9em;
+  line-height: 1;
 }

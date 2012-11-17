@@ -2,7 +2,6 @@
 
 /* Controllers */
 
-
 function CourseListCtrl($scope, $http) {
 	$http.get("data/courses.json").success(function(data) {
 		$scope.courses = data;
@@ -51,4 +50,5 @@ function LessonCtrl($scope, $routeParams, $http) {
 	}
 
 	$scope.$routeParams = $routeParams;
+
 }

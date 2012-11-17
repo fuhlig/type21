@@ -1,8 +1,19 @@
 <!-- Button -->
-<a href="#" class="button" data-reveal-id="badgeModal">Badge</a>
+<div class="row">
+	<a href="#" class="button" data-reveal-id="badgeModal">Badge</a>
+</div>
 
 <!-- Modal -->
-<div id="badgeModal" class="reveal-modal [expand, xlarge, large, medium, small]">
-	<img src="img/logo.png">
-	<a class="close-reveal-modal">&#215;</a>
+<div id="badgeModal" class="reveal-modal">
+    <h1>New Badge earned</h1>
+    <p>well done!</p>
+    <div class="badge-circle {{$routeParams.courseId}}">
+      <i class="foundicon-{{course.icon}}"></i>
+      <p>{{course.name}}</p>
+      <ul>
+        <li ng-repeat="lesson in course.lessons" class="award-polygon"><i class="foundicon-{{lesson.icon}}"></i></li>
+      </ul>      
+    </div>
+    <a class="close-reveal-modal">&#215;</a>
+
 </div>

@@ -1,42 +1,38 @@
-<h1>Clearing</h1>
-
 <ul class="block-grid three-up" data-clearing>
-	<li><a href="img/showcase/css-textshadows-1.jpg"><img src="img/showcase/css-textshadows-1.jpg"></a></li>
-	<li><img src="img/showcase/css-textshadows-2.jpg"></a></li>
-	<li><img src="img/showcase/css-textshadows-3.jpg"></a></li>
-	<li><img src="img/showcase/css-textshadows-4.jpg"></a></li>
-	<li><img src="img/showcase/css-textshadows-5.jpg"></a></li>
-	<li><img src="img/showcase/css-textshadows-6.jpg"></a></li>
-</ul>
+	<li ng-repeat="image in lesson.features[1].img">
+		<img ng-src={{image}} />
+	</li>
+</ul> 
 
-<hr>
-<h1>Orbit</h1>
-		
-<div id="featured">
-	<img src="img/showcase/css-textshadows-1.jpg">
-	<img src="img/showcase/css-textshadows-2.jpg">
-	<img src="img/showcase/css-textshadows-3.jpg">
-	<img src="img/showcase/css-textshadows-4.jpg">
-	<img src="img/showcase/css-textshadows-5.jpg">
-	<img src="img/showcase/css-textshadows-6.jpg">	
+
+<!-- <div class="row">
+	<div class="twelve columns">
+		<h1>Orbit</h1>
+		<div id="featured">
+			<img src="img/showcase/css-textshadows-1.jpg">
+			<img src="img/showcase/css-textshadows-2.jpg">
+			<img src="img/showcase/css-textshadows-3.jpg">
+			<img src="img/showcase/css-textshadows-4.jpg">
+			<img src="img/showcase/css-textshadows-5.jpg">
+			<img src="img/showcase/css-textshadows-6.jpg">	
+		</div>
+	</div>
 </div>
+ -->
 
-<script type="text/javascript">
-   $(window).load(function() {
-       $("#featured").orbit();
-   });
+<script>
+	var $doc = $(document),
+	  Modernizr = window.Modernizr;
+
+
+	// init fn.orbit
+	$('#featured').orbit({
+		timer: false
+	});
+	console.log('init orbit');
+
+	$.fn.foundationClearing         ? $doc.foundationClearing() : null;
+	console.log('init CLEARING');
+
+
 </script>
-<hr>
-
-	
-<h1>Clearing Copy</h1>
-	
-<ul class="block-grid three-up mobile-two-up" data-clearing>
-    <li><a href="http://placekitten.com/g/1000/1000"><img data-caption="Maecenas sed diam eget risus varius blandit sit amet non magna." src="http://placekitten.com/g/1000/1000"></a></li>
-    <li><img src="http://placekitten.com/g/1000/900"></li>
-    <li><a href="http://placekitten.com/g/1000/800"><img data-caption="Integer posuere erat a ante venenatis dapibus posuere velit aliquet." src="http://placekitten.com/g/1000/800"></a></li>
-    <li><img data-caption="Pellentesque ornare sem lacinia quam venenatis vestibulum." src="http://placekitten.com/g/1000/700"></li>
-    <li><a href="http://placekitten.com/g/1000/600"><img data-caption="Etiam porta sem malesuada magna mollis euismod." src="http://placekitten.com/g/1000/600"></a></li>
-    <li><img data-caption="Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit." src="http://placekitten.com/g/1000/500"></li>
-</ul>
-

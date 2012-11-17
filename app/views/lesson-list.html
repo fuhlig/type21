@@ -2,14 +2,13 @@
 <div ng-include src="'partials/subHeader.html'"></div>
 
 
-<!-- Content -->
 <section class="row content">
 
+	<!-- Lesson List -->	
 	<aside class="one columns lesson-list">
 		<div class="connector"></div>
 		<ul class="five side-nav">
-			<li ng-repeat="lesson in course.lessons" class="polygon small">
-        <!-- <a href="#/{{$routeParams.courseId}}/{{lesson.id}}"> -->
+			<li ng-repeat="lesson in course.lessons" class="polygon small {{$routeParams.courseId}}">
 				<a href="#/{{$routeParams.courseId}}/{{lesson.id}}">
 					<i class="foundicon-{{lesson.icon}}"></i>
 					<span>{{lesson.name}}</span>
@@ -18,15 +17,18 @@
 		</ul>	
 	</aside>
 
+	<!-- Content -->
 	<div class="one columns"></div>
 	<article class="eight columns lesson-content">
 	  <h1>{{lesson.title}}</h1>
 	  <p>{{content}}</p>
 		<div ng-include src="content"></div>
-
+		<div ng-include src="'partials/badge.html'"></div>
 	</article>
 	<div class="one columns"></div>
 
+
+	<!-- Feature List -->
   	<aside class="one columns lesson-features">
   		<ul class="three side-nav">
   			<li ng-repeat="feature in lesson.features" ng-click="setContent(feature.content)">
@@ -35,5 +37,3 @@
   		</ul>
   	</aside>
 </section>
-
-<!-- <div ng-include src="partials/badge.html"></div> -->

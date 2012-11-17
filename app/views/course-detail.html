@@ -12,7 +12,7 @@
   <ul class="block-grid five-up mobile-three-up">
     <li ng-repeat="lesson in course.lessons">
         <a href="#/{{$routeParams.courseId}}/{{lesson.id}}">
-          <div class="polygon big {{course.id}}">
+          <div class="polygon big {{$routeParams.courseId}}">
             <i class="foundicon-{{lesson.icon}}"></i>
             <p>{{lesson.name}}</p>
           </div>

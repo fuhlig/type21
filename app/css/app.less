@@ -1,4 +1,4 @@
-/* Artfully masterminded by ZURB  */
+/* Artfully masterminded by ZURB  
 
 /* -------------------------------------------------- 
    Table of Contents
@@ -27,7 +27,7 @@
 /* -----------------------------------------
    Metrics
 ----------------------------------------- */
-
+@polygonSize: 30px;
 
 
 /* -----------------------------------------
@@ -44,6 +44,64 @@
 			0 6px 1px rgba(0,0,0,.1);	
 			color: white;
 }
+
+// polygon Mixin
+.createPolygon(@color: @mograph) {
+	position: relative;
+	text-align: center;
+	margin-bottom: 1.8em !important;
+	// margin-top: @polygon;   					TODO
+	line-height: 1em;
+	background-color: @color; /*todo*/
+	font-size: 2em;
+	a {
+		color: white;
+	}
+	&:before, &:after {
+		content: "";
+		position: absolute;
+		left: 0;
+		width: 0;
+		height: 0;
+		border-left: solid transparent;
+		border-right: solid transparent;
+	}	
+	&:before {
+		border-bottom: solid @color;	
+	}
+	&:after {
+		border-top: solid @color;	
+	}
+
+}
+.createPolygon-rect(@size: 30px) {
+	height: @size;
+	width: round(@size * 1.66);
+}
+.createPolygon-top(@size) {
+	top: -(@size) / 2;
+	border-left-width: round(@size / 2 * 1.66);
+	border-right-width: round(@size / 2 * 1.66);
+	border-bottom-width: @size / 2;	
+}
+.createPolygon-bottom(@size) {
+	bottom: -(@size) / 2;
+	border-left-width: round(@size / 2 * 1.66);
+	border-right-width: round(@size / 2 * 1.66);
+	border-top-width: @size / 2;	
+}
+.createPolygon-top,
+.createPolygon-bottom {
+	content: "";
+	position: absolute;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-left: solid transparent;
+	border-right: solid transparent;
+	border-bottom: solid @mograph;	
+}
+
 
 
 /* -----------------------------------------
@@ -308,83 +366,60 @@ nav li {
 }
 
 .polygon {
-	position: relative;
-	text-align: center;
-	margin-bottom: 1.8em !important;
-	line-height: 1em;
-	background-color: @mograph;
-
-	&.big {
-		font-size: 2em;
-		width: 100px;
-		height: 60px;
-	}
 	&.small {
-		font-size: 2em;
-		width: 50px;
-		height: 30px;	
+		.createPolygon-rect(@polygonSize);
 	}
-	a {
-		color: white;
+	&.big {
+		.createPolygon-rect(@polygonSize * 2);	
+	}
+	&.badge-polygon {
+		.createPolygon-rect(@polygonSize * 4);
 	}
 
+	// Colors
 	&.mograph {
+		.createPolygon(@mograph);
 		background-color: @mograph;
 	}
 	&.tDesign {
+		.createPolygon(@tDesign);
 		background-color: @tDesign;
 	}
 	&.textFx {
+		.createPolygon(@textFx);
 		background-color: @textFx;
 	}
 	&.web {
+		.createPolygon(@web);
 		background-color: @web;
 	}
 
 }
-.polygon:before {
-	content: "";
-	position: absolute;
-	left: 0;
-	width: 0;
-	height: 0;
-	border-left: 0 solid transparent;
-	border-right: 0 solid transparent;
-	border-bottom: 0 solid @mograph;
-}
-.polygon.big:before {
-	top: -30px;
-	border-left-width: 50px;
-	border-right-width: 50px;
-	border-bottom-width: 30px;
-}
 .polygon.small:before {
-	top: -15px;
-	border-left-width: 25px;
-	border-right-width: 25px;
-	border-bottom-width: 15px;
-}
-.polygon:after {
-	content: "";
-	position: absolute;
-	left: 0;
-	width: 0;
-	height: 0;
-	border-left: 50px solid transparent;
-	border-right: 50px solid transparent;
-	border-top: 30px solid @mograph;
-}
-.polygon.big:after {
-	bottom: -30px;
-	border-left-width: 50px;
-	border-right-width: 50px;
-	border-top-width: 30px;
+	.createPolygon-top(@polygonSize);
 }
 .polygon.small:after {
-	bottom: -15px;
-	border-left-width: 25px;
-	border-right-width: 25px;
-	border-top-width: 15px;
+	.createPolygon-bottom(@polygonSize);
+}
+
+.polygon.big:before {
+	.createPolygon-top(@polygonSize * 2);
+}
+.polygon.big:after {
+	.createPolygon-bottom(@polygonSize * 2);
+}
+
+.polygon.badge-polygon:before {
+	top: -20px;
+	border-left-width: 100px;
+	border-right-width: 100px;
+	border-bottom-width: 20px;
+}
+.polygon.badge-polygon:after {
+	bottom: -60px;
+	border-left-width: 100px;
+	border-right-width: 100px;
+	border-top-width: 60px;
 }
 
 article.description {
@@ -422,4 +457,221 @@ article.description {
 .angularSize {
 	.fontSize(20px);
 	font-size: 100px;
+}
+
+
+/* -----------------------------------------
+   Partials
+----------------------------------------- */
+
+// Orbit
+#featured { 
+	background: url(../img/foundation/loading.gif) center center #f4f4f4; 
+	height: 300px; 
+}
+#featured img { 
+	display: none; 
+}
+
+#featured.orbit { 
+	background: none; 
+}
+#featured.orbit img {
+	display: block; 
+}
+
+#quiz {
+	background-color: white;
+}
+
+#quiz .orbit-slide {
+	padding: 0 50px;
+}
+
+// badge-polygon
+.reveal-modal .close-reveal-modal {
+	text-shadow: none;
+}
+[class*="badge-"] {
+	margin: 0 auto;
+	color: white;
+	text-align: center;
+	ul {
+		list-style: none;
+	}
+	p {
+		position: absolute;
+		z-index: 1;
+		left: 40px;
+		bottom: 0;
+		line-height: 0;
+	}
+}
+
+.badge-circle {
+	color: @borderColor;
+	position: relative;
+	width: 300px;
+	height: 300px;
+	border-radius: 300px;
+	background-color: white;
+	border: 40px solid;
+	p {
+		left: 50px;
+		bottom: 40px;
+	}
+	&.mograph {
+		border-color: @mograph;
+	}
+	&.tDesign {
+		border-color: @tDesign;
+	}
+	&.web {
+		border-color: @web;
+	}
+	&.textFx {
+		border-color: @textFx;
+	}
+}
+
+// [class*="badge-"] > i
+.badge-polygon > i {
+	color: white;
+	font-size: 4em;
+	line-height: 1;
+}
+.badge-circle > i {
+	color: @borderColor;
+	font-size: 9em;
+	line-height: 1.5;
+}
+/*
+#badge-polygonModal.reveal-modal {
+	width: 300px;
+	margin-left: 200px;
+	padding: 100px;
+}
+*/
+.award-circle {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	border-radius: 50px;
+	border: 5px solid white;
+	z-index: 1;
+	background-color: @borderColor;
+	color: white;
+	&:nth-child(odd) {
+		left: -25px;
+	}
+	&:nth-child(even) {
+		right: -25px;
+	}
+	&:nth-child(1),	&:nth-child(2) {
+		top: -20px;
+	}
+	&:nth-child(3),	&:nth-child(4) {
+		bottom: -25px;
+	}
+	&:nth-child(5) {
+		left: 70px;
+		bottom: -80px;
+	}
+	i {
+		font-size: 2em;
+		line-height: 1.4;
+	}
+}
+
+.award-circle i.disabled {
+	opacity: .2;
+}
+.award-circle.disabled {
+	background-color: white;
+}
+
+
+.ribbon-top {
+	width: 80px;
+	height: 160px;
+	position: absolute;
+	top: -200px;
+	left: 60px;
+	background-color: darken(@mograph, 10%);
+}
+.ribbon-top:after {
+	width: 0px;
+	height: 0px;
+	border-top: 60px solid transparent;
+	border-bottom: 60px solid transparent;
+	border-left: 80px solid red;
+}
+
+
+.ribbon-bottom {
+	width: 40px;
+	height: 120px;
+	// background-color: black;
+	// position: absolute;
+	// left: 70px;
+	.createPolygon(@web);
+	&:after {
+		.createPolygon-bottom(25px);
+	}
+}
+
+
+.award-polygon {
+		.createPolygon(@borderColor);
+		.createPolygon-rect(30px);
+		position: absolute;
+		z-index: 1;
+		color: white;
+	&:before {
+		.createPolygon-top(@polygonSize);
+	}
+	&:after {
+		.createPolygon-bottom(@polygonSize);
+	}
+	&.disabled {
+		background-color: white;
+		&:after, &:before {
+			border-top-color: white;
+			border-bottom-color: white;
+		}
+	}
+	&:nth-child(1) {
+		left: 85px;
+		top: -35px;
+	}
+	&:nth-child(2) {
+		right: -35px;
+		top: 50px;
+	}	
+	&:nth-child(3) {
+		right: -5px;
+		bottom: -50px;
+		// -webkit-transform: rotate(45deg);
+		// -moz-transform: rotate(45deg);
+	}	
+	&:nth-child(4) {
+		left: -5px;
+		bottom: -50px;
+		// -webkit-transform: rotate(-45deg);
+		// -moz-transform: rotate(-45deg);
+	}
+	&:nth-child(5) {
+		left: -35px;
+		top: 50px;
+	}
+	&:nth-child(1),	&:nth-child(2) {
+		// top: 40px;
+	}
+	&:nth-child(3),	&:nth-child(4) {
+		// bottom: -25px;
+	}
+	i {
+		font-size: 0.9em;
+		line-height: 1;
+	}
 }

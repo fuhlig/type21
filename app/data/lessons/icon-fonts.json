@@ -8,12 +8,6 @@
 			"content": "Symbols or Icons are visually really powerful as they deliver instant information without any cultural or lingual barrier. Icons can support the displayed text or stand on their own."
 		},
 		{
-			"id": "tutorial",
-			"name": "Tutorial",
-			"icon": "group",
-			"content": "tutorial here"
-		},
-		{
 			"id": "test",
 			"name": "Testing",
 			"icon": "beaker",
@@ -25,6 +19,12 @@
 			"name": "Resources",
 			"icon": "sitemap",
 			"content": "additional resources"
+		},
+		{
+			"id": "quiz",
+			"name": "quiz",
+			"icon": "question-sign",
+			"content": "partials/quiz_icon-font.html"
 		}
 	]
 }
