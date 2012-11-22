@@ -7,27 +7,32 @@
 		{
 			"name":	"Type in Motion",
 			"id":	"type-motion",
-			"icon": "star"
+			"icon": "star",
+			"archived": false
 		},
 		{
 			"name":	"Kinetic Typography",
 			"id":	"kinetic-type",
-			"icon": "star"
+			"icon": "star",
+			"archived": true
 		},
 		{
 			"name":	"Title Sequence",
 			"id":	"title-sequence",
-			"icon": "star"
+			"icon": "star",
+			"archived": true
 		},
 		{
 			"name": "Billing Block",
 			"id": "billing-block",
-			"icon": "star"
+			"icon": "star",
+			"archived": true
 		},
 		{
 			"name": "Expressive Type",
 			"id": "expressive-type",
-			"icon": "star"
+			"icon": "star",
+			"archived": false
 		}
 	]
 }

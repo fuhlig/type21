@@ -14,15 +14,12 @@
 	style="		
 		text-shadow: {{xOffset}}px {{yOffset}}px {{shadowBlur}}px;
 	    font-size: {{fontSize}}px;
-	    ">
+	    "
+	class="shadow {{shadowClass}}">
 
 Shadow
 </h1>
 
-
-
-
-
-
-
-
+<a class="small blue button" ng-click="shadowClass='smooth'">smooth</a>
+<a class="small blue button" ng-click="shadowClass='color'">color</a>
+<a class="small blue button" ng-click="shadowClass='neon'">neon</a>

@@ -10,8 +10,8 @@
 		<ul class="five side-nav">
 			<li ng-repeat="lesson in course.lessons" class="polygon small {{$routeParams.courseId}}">
 				<a href="#/{{$routeParams.courseId}}/{{lesson.id}}">
-					<i class="foundicon-{{lesson.icon}}"></i>
-					<span>{{lesson.name}}</span>
+					<i class="icon-{{lesson.icon}}"></i>
+					<span class="{{$routeParams.courseId}}">{{lesson.name}}</span>
 				</a>
 			</li>
 		</ul>	

@@ -7,27 +7,32 @@
 		{
 			"name":	"Web-Fonts",
 			"id":	"webfonts",
-			"icon": "star"
+			"icon": "star",
+			"archived": true
 		},
 		{
 			"name":	"Responsive Type",
 			"id":	"responsive-type",
-			"icon": "star"
+			"icon": "star",
+			"archived": true
 		},
 		{
 			"name":	"Dos and Donts",
 			"id":	"dodont",
-			"icon": "star"
+			"icon": "star",
+			"archived": true
 		},
 		{
 			"name": "@font-face",
 			"id": "font-face",
-			"icon": "star"
+			"icon": "star",
+			"archived": true
 		},
 		{
 			"name": "px vs. em",
 			"id": "px-vs-em",
-			"icon": "star"
+			"icon": "star",
+			"archived": true
 		}
 	]
 }

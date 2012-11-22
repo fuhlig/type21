@@ -6,27 +6,32 @@
 		{
 			"name":	"Effects",
 			"id":	"effects",
-			"icon": "star"
+			"icon": "map-marker",
+			"archived": true
 		},
 		{
 			"name":	"Text Shadow",
 			"id":	"shadow",
-			"icon": "star"
+			"icon": "bolt",
+			"archived": true
 		},
 		{
 			"name":	"3D",
 			"id":	"3d",
-			"icon": "star"
+			"icon": "bell",
+			"archived": true
 		},
 		{
 			"name": "Engraving",
 			"id": "engraving",
-			"icon": "star"
+			"icon": "bullhorn",
+			"archived": true
 		},
 		{
 			"name": "Color Effects",
 			"id": "color",
-			"icon": "star"
+			"icon": "inbox",
+			"archived": false
 		}
 	]
 }

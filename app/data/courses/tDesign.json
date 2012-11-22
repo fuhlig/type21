@@ -7,27 +7,32 @@
 		{
 			"name":	"History",
 			"id":	"history",
-			"icon": "star"
+			"icon": "star",
+			"archived": false
 		},
 		{
 			"name":	"Icon Fonts",
 			"id":	"icon-fonts",
-			"icon": "tools"
+			"icon": "search",
+			"archived": true
 		},
 		{
 			"name":	"Spacing",
 			"id":	"spacing",
-			"icon": "calendar"
+			"icon": "calendar",
+			"archived": false
 		},
 		{
 			"name": "Choosing the right Type",
 			"id": "choosing-type",
-			"icon": "cloud"
+			"icon": "cloud",
+			"archived": false
 		},
 		{
 			"name": "Print vs. Screen",
 			"id": "print-vs-screen",
-			"icon": "trash"
+			"icon": "trash",
+			"archived": false
 		}
 	]
 }

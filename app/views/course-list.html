@@ -11,7 +11,10 @@
     <li ng-repeat="course in courses" class="row ">
       <a href="#/courses/{{course.id}}">
         <div id="{{course.id}}" class="eight columns category offset-by-three {{course.id}}">
-          <i class="foundicon-{{course.icon}} circle big hide-for-small" ng-class-odd="'left'" ng-class-even="'right'"></i>
+          <span class="circle big hide-for-small" ng-class-odd="'left'" ng-class-even="'right'">
+            <i class="foundicon-{{course.icon}}"></i>
+          </span>
+          <!-- Mobile -->
           <i class="foundicon-{{course.icon}} circle big show-for-small"></i>
           <h1>{{course.name}}</h1>
         </div>
