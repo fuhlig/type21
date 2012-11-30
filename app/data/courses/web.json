@@ -29,8 +29,8 @@
 			"archived": true
 		},
 		{
-			"name": "px vs. em",
-			"id": "px-vs-em",
+			"name": "Font Sizing",
+			"id": "font-sizing",
 			"icon": "star",
 			"archived": true
 		}

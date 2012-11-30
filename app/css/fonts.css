@@ -102,9 +102,9 @@
     font-family: 'RobotoThin';
     src: url('Roboto-Thin-webfont.eot');
     src: url('Roboto-Thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Roboto-Thin-webfont.svg#RobotoThin') format('svg'),
          url('Roboto-Thin-webfont.woff') format('woff'),
-         url('Roboto-Thin-webfont.ttf') format('truetype'),
-         url('Roboto-Thin-webfont.svg#RobotoThin') format('svg');
+         url('Roboto-Thin-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 
