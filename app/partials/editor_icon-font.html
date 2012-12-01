@@ -1,0 +1,32 @@
+<div class="row">
+	<p>This is a little demo which shows the easy customization with css. Try yourself!</p>
+	
+	<div class="three columns">
+		fontSize: {{fontSize}}
+	</div>
+	<div class="nine columns">
+		<input type="range" min="10" max="100" value="24" ng-model="fontSize">
+	</div>
+	
+
+	<div class="three columns">
+		<p>color: {{color1}}, {{color2}}, {{color3}}</p><br>
+		<p>opacity: {{opacity}}</p>
+	</div>
+	<div class="nine columns">
+		<input type="range" min="0" max="255" value="150" ng-model="color1">
+		<input type="range" min="0" max="255" value="150" ng-model="color2">
+		<input type="range" min="0" max="255" value="150" ng-model="color3">
+		<input type="range" min="0.05" max="1" step="0.01" value="1" ng-model="opacity">
+	</div>
+		
+</div>
+	
+<div class="row" ng-init="icons = [ 'home', 'settings', 'heart', 'star', 'mail', 'remove', 'page', 'tools', 'globe']">
+	
+	<ul class="block-grid five-up">
+		<li ng-repeat="icon in icons">
+			<i class="foundicon-{{icon}}" style="font-size: {{fontSize}}px; color: rgba({{color1}}, {{color2}}, {{color3}}, {{opacity}})"></i>
+		</li>
+	</ul>
+</div>

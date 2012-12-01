@@ -1,0 +1,1012 @@
+/* Artfully masterminded by ZURB  
+
+/* -------------------------------------------------- 
+   Table of Contents
+-----------------------------------------------------
+:: Colors
+:: Shared Styles
+:: Page Name 1
+:: Page Name 2
+*/
+
+
+/* -----------------------------------------
+   Colors
+----------------------------------------- */
+@bgColor: #fafafa;
+
+// categories
+@mograph: #91c53e;
+@tDesign: #e82929;
+@textFx: #fdb51c;
+@web: #2cb0e0;
+
+@borderColor: #4d4d4d;
+
+
+/* -----------------------------------------
+   Metrics
+----------------------------------------- */
+@polygonSize: 30px;
+
+
+/* -----------------------------------------
+   Mixins
+----------------------------------------- */
+// by MarkDotto.com
+.3d-text() {
+	text-shadow: 
+			0 1px 0 #ccc, 
+			0 2px 0 #c9c9c9,
+			0 3px 0 #bbb,
+			0 4px 0 #b9b9b9,
+			0 5px 0 #aaa,
+			0 6px 1px rgba(0,0,0,.1);	
+			color: white;
+}
+
+.box-radius(@size: 5px, @color: @borderColor) {
+	box-shadow: inset 0px 0px 0px @size @color;
+	&:hover {
+		box-shadow: inset 0px 0px 0px @size*6 @color;
+		a {
+			// color: white;
+		}
+	}
+}
+
+// polygon Mixin
+.createPolygon(@color: @mograph) {
+	position: relative;
+	text-align: center;
+	margin-bottom: 1.8em !important;
+	// margin-top: @polygon;   					TODO
+	line-height: 1em;
+	background-color: @color; /*todo*/
+	font-size: 2em;
+	a {
+		color: white;
+	}
+	&:before, &:after {
+		content: "";
+		position: absolute;
+		left: 0;
+		width: 0;
+		height: 0;
+		border-left: solid transparent;
+		border-right: solid transparent;
+	}	
+	&:before {
+		border-bottom: solid @color;	
+	}
+	&:after {
+		border-top: solid @color;	
+	}
+
+}
+.createPolygon-rect(@size: 30px) {
+	height: @size;
+	width: round(@size * 1.66);
+}
+.createPolygon-top(@size) {
+	top: -(@size) / 2;
+	border-left-width: round(@size / 2 * 1.66);
+	border-right-width: round(@size / 2 * 1.66);
+	border-bottom-width: @size / 2;	
+}
+.createPolygon-bottom(@size) {
+	bottom: -(@size) / 2;
+	border-left-width: round(@size / 2 * 1.66);
+	border-right-width: round(@size / 2 * 1.66);
+	border-top-width: @size / 2;	
+}
+.createPolygon-top,
+.createPolygon-bottom {
+	content: "";
+	position: absolute;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-left: solid transparent;
+	border-right: solid transparent;
+	border-bottom: solid @mograph;	
+}
+
+.transition(@property: all, @duration: 0.5s, @timing: ease) {
+	-webkit-transition: @property @duration @timing;
+	-moz-transition: @property @duration @timing;
+	-o-transition: @property @duration @timing;
+	-ms-transition: @property @duration @timing;
+	transition: @property @duration @timing;
+}
+
+// EFFECTS
+
+
+/* -----------------------------------------
+   Shared Styles
+----------------------------------------- */
+@import "fonts.css";
+
+body {
+	background-color: @bgColor;
+}
+.content {
+	margin-top: 1em;
+	// background-color: white;
+}
+
+a {
+	// color: white !important;
+}
+
+
+
+/* -----------------------------------------
+   Main Header
+----------------------------------------- */
+
+h1, h2, h3 {
+	font-family: 'RobotoThin';
+	// .3d-text();
+}
+p {
+	font-family: 'RobotoLight';
+	font-size: 16px;
+}
+header h2 {
+	font-size: 1.5em;
+	margin: 0;
+}
+header h3 {
+	font-size: 0.9em;
+}
+header .five.columns {
+	top: 3em;
+}
+header .five.columns:first-child {
+	text-align: right;
+}
+header {
+	margin-top: 1em !important;
+}
+
+hr {
+	border-color: rgba(1, 1, 1, 0.1);
+	margin: 0;
+}
+
+
+/* -----------------------------------------
+   Sub Header
+----------------------------------------- */
+
+.logo img {
+	width: 80px;
+}
+.sub-logo .columns {
+	padding: 0;
+}
+
+
+nav {
+	a {
+	color: @borderColor;
+	}
+	i {
+	font-size: 2em;
+	// border-radius
+	margin-left: 12px; 
+	line-height: 50px !important;
+	
+	// box-shadow
+	// margin-left: 15px; 
+	// line-height: 60px !important;
+	}
+	li {
+		width: 60px;
+		height: 60px;
+		border-radius: 60px;
+		border: 4px solid @borderColor;
+		// .box-radius();
+		background-color: white;
+		.transition(all, 0.3s, ease-in-out);
+		&.mograph {
+			// .box-radius(5px, @mograph);
+			border-color: @mograph;
+		}
+		&.web {
+			// .box-radius(5px, @web);
+			border-color: @web;
+		}
+		&.tDesign {
+			// .box-radius(5px, @tDesign);
+			border-color: @tDesign;
+		}
+		&.textFx {
+			// .box-radius(5px, @textFx);
+			border-color: @textFx;
+		}
+		/* Hover animation */
+		&:hover {
+			// border-color: white;
+			a {
+				// color: white;
+				color: lighten(@borderColor, 20%);
+			}
+			// &.mograph {
+			// 	background-color: @mograph;
+			// }
+			// &.web {
+			// 	background-color: @web;
+			// }
+			// &.tDesign {
+			// 	background-color: @tDesign;
+			// }
+			// &.textFx {
+			// 	background-color: @textFx;
+			// }
+		}
+	}
+}
+
+
+// Hover Animation
+.ch-item {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	position: relative;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+	cursor: default;
+}
+
+.ch-info-wrap, 
+.ch-info{
+	position: absolute;
+	width: 52px;
+	height: 52px;
+	border-radius: 50%;
+	
+	.transition(all, 0.4s, ease-in-out);
+	
+	-webkit-perspective: 800px;
+	-moz-perspective: 800px;
+	-o-perspective: 800px;
+	-ms-perspective: 800px;
+	perspective: 800px;
+}
+
+.ch-info-wrap {
+	background: #f9f9f9;
+	box-shadow: 
+		0 0 0 20px rgba(255,255,255,0.2), 
+		inset 0 0 3px rgba(115,114, 23, 0.8);
+	
+}
+
+.ch-info {
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+.ch-info > div {
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	background-position: center center;
+	.transition(all, 0.6s, ease-in-out);
+}
+
+.ch-info .ch-info-front {
+	-webkit-transform-origin: 50% 100%;
+	-moz-transform-origin: 50% 100%;
+	-o-transform-origin: 50% 100%;
+	-ms-transform-origin: 50% 100%;
+	transform-origin: 50% 100%;
+	
+	z-index: 100;
+	box-shadow: 
+		inset 2px 1px 4px rgba(0,0,0,0.1);
+}
+
+.ch-info .ch-info-back {
+	background: rgba(230,132,107,0);
+}
+
+
+.ch-info h3 {
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 14px;
+	margin: 0 25px;
+	padding: 40px 0 0 0;
+	height: 90px;
+	font-family: 'Open Sans', Arial, sans-serif;
+	text-shadow: 
+		0 0 1px #fff, 
+		0 1px 2px rgba(0,0,0,0.3);
+}
+
+.ch-info p {
+	color: #fff;
+	padding: 10px 5px;
+	font-style: italic;
+	margin: 0 30px;
+	font-size: 12px;
+	border-top: 1px solid rgba(255,255,255,0.5);
+}
+
+.ch-info p a {
+	display: block;
+	color: #fff;
+	color: rgba(255,255,255,0.7);
+	font-style: normal;
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 9px;
+	letter-spacing: 1px;
+	padding-top: 4px;
+	font-family: 'Open Sans', Arial, sans-serif;
+}
+
+.ch-info p a:hover {
+	color: #fff222;
+	color: rgba(255,242,34, 0.8);
+}
+
+
+.ch-item:hover .ch-info-front {
+	-webkit-transform: rotate3d(1,0,0,-180deg);
+	-moz-transform: rotate3d(1,0,0,-180deg);
+	-o-transform: rotate3d(1,0,0,-180deg);
+	-ms-transform: rotate3d(1,0,0,-180deg);
+	transform: rotate3d(1,0,0,-180deg);
+	
+	box-shadow: 
+		inset 0 0 5px rgba(255,255,255,0.2), 
+		inset 0 0 3px rgba(0,0,0,0.3);
+}
+
+.ch-item:hover .ch-info-back {
+	background: rgba(230,132,107,0.6);
+}
+
+
+
+/* -----------------------------------------
+   Home (category list)
+----------------------------------------- */
+// PANEL
+.category {
+	height: 80px;
+	margin: 3em 0 1em 0;
+	padding: 1em;
+	position: relative;
+	border-radius: 0.5em;	
+	font-size: 2em;
+	line-height: 1em;
+	text-align: center;
+	color: white;
+	.transition(all, 0.3s, ease-in-out);
+
+	& h1 {
+		font-size: 0.8em;
+		line-height: 0;
+		color: white;
+		text-transform: uppercase;
+	}
+
+	// &:hover {
+	// 	box-shadow: 0 0 0 5px @borderColor;
+	// }
+
+	&.mograph {
+		background-color: @mograph;
+		// &:hover {
+		// 	background-color: darken(@mograph, 8%);
+		// }
+	}
+	&.tDesign {
+		background-color: @tDesign;
+		// &:hover {
+		// 	background-color: darken(@tDesign, 8%);
+		// }
+	}
+	&.textFx {
+		background-color: @textFx;
+		// &:hover {
+		// 	background-color: darken(@textFx, 8%);
+		// }
+	}
+	&.web {
+		background-color: @web;
+		// &:hover {
+		// 	background-color: darken(@web, 8%);
+		// }
+		&:active {
+			background-color: lighten(@web, 2%);
+		}
+	}
+}
+@media only screen and (max-width: 767px) {
+ .category {
+ 	margin-top: 1em;
+ 	margin-bottom: 0.5em;
+ }
+}
+
+a .circle i {
+	.transition(all, 0.5s, ease);
+}
+
+a:hover {
+	& #textFx i {
+		text-shadow:
+		    -1px 1px #ccc,
+		    -2px 2px #ccc,
+		    -3px 3px #ccc,
+		    -4px 4px #ccc,
+		    -5px 5px #ccc,
+		    -6px 6px #ccc,
+		    -7px 7px #ccc,
+		    -8px 8px #ccc;
+	}
+}
+
+.circle {
+	position: absolute;
+	color: @borderColor;
+	z-index: 1;
+	background-color: white;
+	border-radius: 2em;
+	border: 0.15em solid @borderColor;
+	text-align: center;
+	line-height: 1.7em;
+	&.big {
+		width: 2em;
+		height: 2em;
+		font-size: 2em;
+		top: -25%;
+	}
+	&.small {
+		width: 2em;
+		height: 2em;
+		font-size: 1em;
+		top: 10%;
+	}
+	&.left {
+		left: -25%;
+	}
+	&.right {
+		right: -25%;
+	}
+}
+
+
+#introTour {
+	display: none;
+}
+#startTour {
+	display: none;
+}
+
+
+
+/* -----------------------------------------
+   Lesson
+----------------------------------------- */
+.course-intro {
+	height: 200px;
+	margin-bottom: 1em;
+	h1 {
+		text-align: center;
+		text-transform: uppercase;
+	}
+}
+
+
+
+
+/* -----------------------------------------
+   Lesson
+----------------------------------------- */
+.connector {
+	width: 3px;
+	height: 300px;
+	background-color: @borderColor;
+	position: absolute;
+	left: 38px;
+	top: 60px;
+}
+
+#lessons .polygon {
+	margin-top: 30px;
+}
+.lesson-list {
+	margin-top: 15px;  						// fix when polygon-mixin (top-size)
+}
+
+.lesson-list li span,
+.lesson-features li span {
+	width: 150px;
+	height: auto;
+	padding: 10px;
+	color: white;
+	z-index: 31;
+	position: absolute;
+	font-size: 14px;
+	border-radius: 5px;
+	border: 3px solid white;
+	background-color: lighten(@borderColor, 20%);	// Feature-Tooltip
+	box-shadow: 1px 2px 2px rgba(0,0,0,0.3);
+	display: none;
+	&.mograph {
+		background-color: lighten(@mograph, 10%),
+	}
+	&.tDesign {
+		background-color: lighten(@tDesign, 10%),
+	}
+	&.web {
+		background-color: lighten(@web, 10%),
+	}
+	&.textFx {
+		background-color: lighten(@textFx, 10%),
+	}
+}
+.lesson-list li span {
+	left: 60px;
+	top: -13px;
+}
+.lesson-features li span {
+	right: 60px;
+	top: 0;
+}
+
+.lesson-list li a:hover span, 
+.lesson-features li a:hover span {
+	display: block;
+}
+
+.polygon {
+	&.small {
+		.createPolygon-rect(@polygonSize);
+	}
+	&.big {
+		.createPolygon-rect(@polygonSize * 2);	
+	}
+	&.badge-polygon {
+		.createPolygon-rect(@polygonSize * 4);
+	}
+
+	// Colors
+	&.mograph {
+		.createPolygon(@mograph);
+		background-color: @mograph;
+	}
+	&.tDesign {
+		.createPolygon(@tDesign);
+		background-color: @tDesign;
+	}
+	&.textFx {
+		.createPolygon(@textFx);
+		background-color: @textFx;
+	}
+	&.web {
+		.createPolygon(@web);
+		background-color: @web;
+	}
+
+}
+.polygon.small:before {
+	.createPolygon-top(@polygonSize);
+}
+.polygon.small:after {
+	.createPolygon-bottom(@polygonSize);
+}
+
+.polygon.big:before {
+	.createPolygon-top(@polygonSize * 2);
+}
+.polygon.big:after {
+	.createPolygon-bottom(@polygonSize * 2);
+}
+
+.polygon.badge-polygon:before {
+	top: -20px;
+	border-left-width: 100px;
+	border-right-width: 100px;
+	border-bottom-width: 20px;
+}
+.polygon.badge-polygon:after {
+	bottom: -60px;
+	border-left-width: 100px;
+	border-right-width: 100px;
+	border-top-width: 60px;
+}
+
+article.description {
+	background: #eee;
+	height: 500px;
+	padding: 0 1.5em;
+}
+
+#lessons a {
+	color: white;
+}
+
+.lesson-content {
+	// background-color: white;
+}
+
+.lesson-features li {
+	width: 48px;
+	height: 48px;
+	border-radius: 10px 0 0 10px;
+	background-color: @borderColor;
+	font-size: 2em;
+	position: relative;
+	text-align: center;
+	a {
+		color: white;
+	}
+}
+	
+
+.fontSize (@size: 20px) {
+	font-size: @size;
+}
+
+.angularSize {
+	.fontSize(20px);
+	font-size: 100px;
+}
+
+
+/* -----------------------------------------
+   Partials
+----------------------------------------- */
+
+// Orbit
+#featured { 
+	background: url(../img/foundation/loading.gif) center center #f4f4f4; 
+	height: 300px; 
+}
+#featured img { 
+	display: none; 
+}
+
+#featured.orbit { 
+	background: none; 
+}
+#featured.orbit img {
+	display: block; 
+}
+
+#quiz {
+	background-color: white;
+}
+
+#quiz .orbit-slide {
+	padding: 0 50px;
+}
+
+// badge-polygon
+
+#badgeModal {
+	top: 0;
+}
+
+.reveal-modal {
+	padding-bottom: 100px;
+	.close-reveal-modal {
+		text-shadow: none;
+	}
+}
+[class*="badge-"] {
+	margin: 0 auto;
+	color: white;
+	text-align: center;
+	ul {
+		list-style: none;
+	}
+	p {
+		position: relative;
+		top: -30px;
+		z-index: 1;
+		line-height: 0;
+	}
+}
+
+.badge-circle {
+	color: @borderColor;
+	position: relative;
+	width: 300px;
+	height: 300px;
+	border-radius: 300px;
+	background-color: white;
+	border: 40px solid;
+	&.mograph {
+		border-color: @mograph;
+	}
+	&.tDesign {
+		border-color: @tDesign;
+	}
+	&.web {
+		border-color: @web;
+	}
+	&.textFx {
+		border-color: @textFx;
+	}
+}
+
+// [class*="badge-"] > i
+.badge-polygon > i {
+	color: white;
+	font-size: 4em;
+	line-height: 1;
+}
+.badge-circle > i {
+	color: @borderColor;
+	font-size: 9em;
+	line-height: 1.5;
+}
+/*
+#badge-polygonModal.reveal-modal {
+	width: 300px;
+	margin-left: 200px;
+	padding: 100px;
+}
+*/
+.award-circle {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	border-radius: 50px;
+	border: 5px solid white;
+	z-index: 1;
+	background-color: @borderColor;
+	color: white;
+	&:nth-child(odd) {
+		left: -25px;
+	}
+	&:nth-child(even) {
+		right: -25px;
+	}
+	&:nth-child(1),	&:nth-child(2) {
+		top: -20px;
+	}
+	&:nth-child(3),	&:nth-child(4) {
+		bottom: -25px;
+	}
+	&:nth-child(5) {
+		left: 70px;
+		bottom: -80px;
+	}
+	i {
+		font-size: 2em;
+		line-height: 1.4;
+	}
+}
+
+.award-circle i.disabled {
+	opacity: .2;
+}
+.award-circle.disabled {
+	background-color: white;
+}
+
+
+.ribbon-top {
+	width: 80px;
+	height: 160px;
+	position: absolute;
+	top: -200px;
+	left: 60px;
+	background-color: darken(@mograph, 10%);
+}
+.ribbon-top:after {
+	width: 0px;
+	height: 0px;
+	border-top: 60px solid transparent;
+	border-bottom: 60px solid transparent;
+	border-left: 80px solid red;
+}
+
+
+.ribbon-bottom {
+	width: 40px;
+	height: 120px;
+	position: absolute;
+	text-align: center;
+	margin-bottom: 1.8em !important;
+	// margin-top: @polygon;   					TODO
+	line-height: 1em;
+	font-size: 2em;
+	z-index: -1;
+	a {
+		color: white;
+	}
+	&:before, &:after {
+		content: "";
+		position: absolute;
+		left: 0;
+		width: 0;
+		height: 0;
+		border-left: solid transparent;
+		border-right: solid transparent;
+	}	
+	&:before {
+		border-bottom: solid white;
+		top: 101px;
+		border-left-width: 20px;
+		border-right-width: 20px;
+		border-bottom-width: 20px;
+	}
+	&:nth-of-type(1) {
+		left: 70px;
+		-webkit-transform: rotate(15deg);
+		-moz-transform: rotate(15deg);
+
+		&.mograph {
+			background-color: darken(@mograph, 5%);
+		}
+		&.web {
+			background-color: darken(@web, 5%);
+		}
+		&.tDesign {
+			background-color: darken(@tDesign, 5%);
+		}
+		&.textFx {
+			background-color: darken(@textFx, 5%);
+		}
+	}
+	&:nth-of-type(2) {
+		right: 70px;
+		-webkit-transform: rotate(-15deg);
+		-moz-transform: rotate(-15deg);
+		z-index: -2;
+
+		&.mograph {
+			background-color: darken(@mograph, 10%);
+		}
+		&.web {
+			background-color: darken(@web, 10%);
+		}
+		&.tDesign {
+			background-color: darken(@tDesign, 10%);
+		}
+		&.textFx {
+			background-color: darken(@textFx, 10%);
+		}
+
+	}
+}
+
+
+.award-polygon {
+		.createPolygon(@borderColor);
+		.createPolygon-rect(30px);
+		position: absolute;
+		z-index: 1;
+		color: white;
+		-webkit-transition: -webkit-transform 2s ease-in-out;
+	&:before {
+		.createPolygon-top(@polygonSize);
+	}
+	&:after {
+		.createPolygon-bottom(@polygonSize);
+	}
+	&.false {
+		background-color: white;
+		-webkit-transform: rotate(180deg);
+		&:after, &:before {
+			border-top-color: white;
+			border-bottom-color: white;
+		}
+	}
+	&:nth-child(1) {
+		left: 85px;
+		top: -35px;
+	}
+	&:nth-child(2) {
+		right: -40px;
+		top: 50px;
+	}	
+	&:nth-child(3) {
+		right: -5px;
+		bottom: -50px;
+		// -webkit-transform: rotate(45deg);
+		// -moz-transform: rotate(45deg);
+	}	
+	&:nth-child(4) {
+		left: -5px;
+		bottom: -50px;
+		// -webkit-transform: rotate(-45deg);
+		// -moz-transform: rotate(-45deg);
+	}
+	&:nth-child(5) {
+		left: -40px;
+		top: 50px;
+	}
+	&:nth-child(1),	&:nth-child(2) {
+		// top: 40px;
+	}
+	&:nth-child(3),	&:nth-child(4) {
+		// bottom: -25px;
+	}
+	i {
+		font-size: 0.9em;
+		line-height: 1;
+	}
+}
+
+
+.shadow {
+	&.simple {
+	    text-shadow: 1px 1px #333333;
+	}
+	&.color {
+	    text-shadow:
+	    1px 1px #ccc,
+	    2px 2px #ccc,
+	    3px 3px #ccc,
+	    4px 4px #ccc,
+	    5px 5px #ccc,
+	    6px 6px #ccc;
+	}
+	&.stack {
+		text-shadow:
+		1px 0 #EEEEEE, 0 1px #CCCCCC,
+		2px 1px #EEEEEE, 1px 2px #CCCCCC,
+		3px 2px #EEEEEE, 2px 3px #CCCCCC,
+		4px 3px #EEEEEE, 3px 4px #CCCCCC,
+		5px 4px #EEEEEE, 4px 5px #CCCCCC,
+		6px 5px #EEEEEE, 5px 6px #CCCCCC,
+		6px 6px #EEEEEE;
+	}
+	&.smooth {
+		text-shadow:
+		1px 0px 1px #eee, 0px 1px 1px #ccc,
+		2px 1px 1px #eee, 1px 2px 1px #ccc,
+		3px 2px 1px #eee, 2px 3px 1px #ccc,
+		4px 3px 1px #eee, 3px 4px 1px #ccc,
+		5px 4px 1px #eee, 4px 5px 1px #ccc,
+		6px 5px 1px #eee, 5px 6px 1px #ccc,
+		6px 6px 1px #eee;
+	}
+	&.stroke {
+		text-shadow: 0 -1px #999999, 1px 0 #999999, 0 1px #999999, -1px 0 #999999;
+	}
+	&.inset {
+	 	text-shadow: 0 -1px 1px #666666, 0 1px 1px #FFFFFF;
+	}
+	&.emboss {
+		text-shadow: 0 -1px 1px #FFFFFF, 0 1px 1px #666666;
+	}
+	&.glow {
+		text-shadow: 0 0 0.2em #8877FF, 0 0 0.2em #8877FF, 0 0 0.2em #8877FF;
+	}
+	&.neon {
+	    text-shadow:
+	    0 0 10px #FFFFFF,
+	    0 0 20px #FFFFFF,
+	    0 0 30px #FFFFFF,
+	    0 0 40px #FF00DE,
+	    0 0 70px #FF00DE,
+	    0 0 80px #FF00DE,
+	    0 0 100px #FF00DE,
+	    0 0 150px #FF00DE;
+	}
+}
+
+
+markdown {
+	color: red;
+}
