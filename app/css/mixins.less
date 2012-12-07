@@ -87,3 +87,11 @@
 	-ms-transition: @property @duration @timing;
 	transition: @property @duration @timing;
 }
+
+// font-sizing mixin by css-tricks.com
+.font-size(@sizeValue) {
+  @remValue: @sizeValue;
+  @pxValue: (@sizeValue * 10);
+  font-size: ~"@{pxValue}px"; 
+  font-size: ~"@{remValue}rem";
+}

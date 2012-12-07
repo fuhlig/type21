@@ -13,19 +13,23 @@
 					<i class="icon-{{lesson.icon}}"></i>
 					<span class="{{$routeParams.courseId}}">{{lesson.name}}</span>
 				</a>
+
+<!-- 	            <div class="frame">
+	              <div class="polygon small frame-inner"></div>
+	              <div class="polygon small frame-outer {{$routeParams.courseId}}"></div>
+	            </div>
+ -->
 			</li>
 		</ul>	
 	</aside>
 
 	<!-- Content -->
-	<div class="one columns"></div>
+	<div id="content" class="one columns"></div>
 	<article class="eight columns lesson-content">
 	  <h1>{{lesson.title}}</h1>
 	  <p>{{content}}</p>
 	  	  
 		<div ng-include src="content"></div>
-		<div ng-include src="'partials/badge.html'"></div>
-		
 	</article>
 	<div class="one columns"></div>
 
