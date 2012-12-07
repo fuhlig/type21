@@ -16,6 +16,9 @@
    Metrics
 ----------------------------------------- */
 /* -----------------------------------------
+   Shared Styles
+----------------------------------------- */
+/* -----------------------------------------
    Mixins
 ----------------------------------------- */
 .createPolygon-top,
@@ -29,9 +32,6 @@
   border-right: solid transparent;
   border-bottom: solid #91c53e;
 }
-/* -----------------------------------------
-   Shared Styles
------------------------------------------ */
 body {
   background-color: #fafafa;
 }
@@ -319,6 +319,7 @@ a:hover #textFx i {
 .course-intro {
   height: 200px;
   margin-bottom: 1em;
+  text-align: justify;
 }
 .course-intro h1 {
   text-align: center;
@@ -336,7 +337,16 @@ a:hover #textFx i {
   top: 60px;
 }
 #lessons .polygon {
-  margin-top: 30px;
+  margin-top: 50px;
+}
+#lessons a {
+  color: white;
+}
+#lessons li {
+  text-align: center;
+}
+#lessons li > a {
+  display: inline-block;
 }
 .lesson-list {
   margin-top: 15px;
@@ -395,6 +405,49 @@ a:hover #textFx i {
 .polygon.badge-polygon {
   height: 120px;
   width: 199px;
+}
+.polygon .frame {
+  position: absolute;
+  top: -50px;
+}
+.polygon.frame-inner {
+  position: relative;
+  text-align: center;
+  margin-bottom: 1.8em !important;
+  line-height: 1em;
+  background-color: #ffffff;
+  /*todo*/
+
+  font-size: 2em;
+  position: absolute;
+  z-index: -1;
+  background-color: white;
+  -webkit-transform: scale(1.1);
+}
+.polygon.frame-inner a {
+  color: white;
+}
+.polygon.frame-inner:before,
+.polygon.frame-inner:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: solid transparent;
+  border-right: solid transparent;
+}
+.polygon.frame-inner:before {
+  border-bottom: solid #ffffff;
+}
+.polygon.frame-inner:after {
+  border-top: solid #ffffff;
+}
+.polygon.frame-outer {
+  position: absolute;
+  background-color: white;
+  -webkit-transform: scale(1.2);
+  z-index: -2;
 }
 .polygon.mograph {
   position: relative;
@@ -516,6 +569,21 @@ a:hover #textFx i {
 .polygon.web:after {
   border-top: solid #2cb0e0;
 }
+.polygon p {
+  font-size: 14px;
+}
+.award-polygon .frame-outer {
+  top: 0 !important;
+  left: 0;
+  z-index: -1;
+  -webkit-transform: scale(1.1);
+  background-color: white;
+}
+.award-polygon .frame-outer:before,
+.award-polygon .frame-outer:after {
+  border-bottom-color: white;
+  border-top-color: white;
+}
 .polygon.small:before {
   top: -15px;
   border-left-width: 25px;
@@ -556,9 +624,6 @@ article.description {
   background: #eee;
   height: 500px;
   padding: 0 1.5em;
-}
-#lessons a {
-  color: white;
 }
 .lesson-features li {
   width: 48px;
