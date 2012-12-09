@@ -1,0 +1,37 @@
+{
+	"title": "Text Shadow",
+	"features": [
+		{
+			"id": "info",
+			"name": "Information",
+			"icon": "info-sign",
+			"content": "Symbols or Icons are visually really powerful as they deliver instant information without any cultural or lingual barrier. Icons can support the displayed text or stand on their own."
+		},
+		{
+			"id": "showcase",
+			"name": "Showcase",
+			"icon": "eye-open",
+			"content": "partials/showcase_shadow.html",
+			"img": [
+				"img/showcase/css-textshadows-1.jpg",
+				"img/showcase/css-textshadows-2.jpg",
+				"img/showcase/css-textshadows-3.jpg",
+				"img/showcase/css-textshadows-4.jpg",
+				"img/showcase/css-textshadows-5.jpg"
+			]
+		},
+		{
+			"id": "test",
+			"name": "Testing",
+			"icon": "beaker",
+			"content": "partials/editor_text-shadow.html",
+			"src": "partials/icon-font_editor.html"
+		},
+		{
+			"id": "resources",
+			"name": "Resources",
+			"icon": "sitemap",
+			"content": "additional resources"
+		}
+	]
+}

@@ -1,0 +1,38 @@
+{
+	"name": "Type Design",
+	"icon": "edit",
+	"description": 
+		"Type design is performed by a type designer. Although recently there have been many amateur typefaces available on CDs in batches of hundreds, type design remains an artistic profession of applied art comparable with architecture.",
+	"lessons": [
+		{
+			"name":	"History",
+			"id":	"history",
+			"icon": "star",
+			"archived": false
+		},
+		{
+			"name":	"Icon Fonts",
+			"id":	"icon-fonts",
+			"icon": "search",
+			"archived": true
+		},
+		{
+			"name":	"Spacing",
+			"id":	"spacing",
+			"icon": "calendar",
+			"archived": false
+		},
+		{
+			"name": "Choosing Type",
+			"id": "choosing-type",
+			"icon": "cloud",
+			"archived": false
+		},
+		{
+			"name": "Print vs. Screen",
+			"id": "print-vs-screen",
+			"icon": "trash",
+			"archived": false
+		}
+	]
+}
