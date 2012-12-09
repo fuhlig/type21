@@ -7,7 +7,7 @@ angular.module('type21', ['mdConverter']).
   $routeProvider.
       when('/courses', {templateUrl: 'views/course-list.html',   controller: CourseListCtrl}).
       when('/courses/:courseId', {templateUrl: 'views/course-detail.html',   controller: CourseDetailCtrl}).
-      when('/:courseId/:lessonId', {templateUrl: 'views/lesson-list.html', controller: LessonCtrl}).
+      when('/:courseId/:lessonId', {templateUrl: 'views/lesson.html', controller: LessonCtrl}).
       otherwise({redirectTo: '/courses'});
 // }]);
 

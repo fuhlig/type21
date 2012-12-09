@@ -16,6 +16,9 @@
    Metrics
 ----------------------------------------- */
 /* -----------------------------------------
+   Shared Styles
+----------------------------------------- */
+/* -----------------------------------------
    Mixins
 ----------------------------------------- */
 .createPolygon-top,
@@ -29,9 +32,106 @@
   border-right: solid transparent;
   border-bottom: solid #91c53e;
 }
-/* -----------------------------------------
-   Shared Styles
------------------------------------------ */
+html {
+  font-size: 62.5%;
+}
+h1,
+h2,
+h3 {
+  font-family: 'RobotoThin';
+}
+p {
+  font-family: 'RobotoLight';
+}
+h1 {
+  font-size: 44px;
+  font-size: 4.4rem;
+}
+h2 {
+  font-size: 37px;
+  font-size: 3.7rem;
+}
+h3 {
+  font-size: 27px;
+  font-size: 2.7rem;
+}
+h4 {
+  font-size: 23px;
+  font-size: 2.3rem;
+}
+h5 {
+  font-size: 17px;
+  font-size: 1.7rem;
+}
+h6 {
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+p {
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+header h2 {
+  font-size: 20px;
+  font-size: 2rem;
+}
+header h3 {
+  font-size: 13px;
+  font-size: 1.3rem;
+}
+nav a {
+  font-size: 28px;
+  font-size: 2.8rem;
+}
+.category {
+  font-size: 28px;
+  font-size: 2.8rem;
+}
+.category h1 {
+  font-size: 22px;
+  font-size: 2.2rem;
+}
+.circle.big {
+  font-size: 56px;
+  font-size: 5.6rem;
+}
+.circle.small {
+  font-size: 10px;
+  font-size: 1rem;
+}
+.lesson-features li {
+  font-size: 28px;
+  font-size: 2.8rem;
+}
+.lesson-list li span,
+.lesson-features li span {
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+.polygon p {
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+.badge-polygon > i {
+  font-size: 40px;
+  font-size: 4rem;
+}
+.badge-circle > i {
+  font-size: 126px;
+  font-size: 12.6rem;
+}
+.award-circle i {
+  font-size: 25px;
+  font-size: 2.5rem;
+}
+.award-polygon i {
+  font-size: 25px;
+  font-size: 2.5rem;
+}
+.ribbon-bottom {
+  font-size: 28px;
+  font-size: 2.8rem;
+}
 body {
   background-color: #fafafa;
 }
@@ -41,21 +141,8 @@ body {
 /* -----------------------------------------
    Main Header
 ----------------------------------------- */
-h1,
-h2,
-h3 {
-  font-family: 'RobotoThin';
-}
-p {
-  font-family: 'RobotoLight';
-  font-size: 16px;
-}
 header h2 {
-  font-size: 1.5em;
   margin: 0;
-}
-header h3 {
-  font-size: 0.9em;
 }
 header .five.columns {
   top: 3em;
@@ -83,7 +170,6 @@ nav a {
   color: #4d4d4d;
 }
 nav i {
-  font-size: 2em;
   margin-left: 12px;
   line-height: 50px !important;
 }
@@ -116,113 +202,6 @@ nav li.textFx {
 nav li:hover a {
   color: #808080;
 }
-.ch-item {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  position: relative;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-  cursor: default;
-}
-.ch-info-wrap,
-.ch-info {
-  position: absolute;
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  -webkit-transition: all 0.4s ease-in-out;
-  -moz-transition: all 0.4s ease-in-out;
-  -o-transition: all 0.4s ease-in-out;
-  -ms-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-  -webkit-perspective: 800px;
-  -moz-perspective: 800px;
-  -o-perspective: 800px;
-  -ms-perspective: 800px;
-  perspective: 800px;
-}
-.ch-info-wrap {
-  background: #f9f9f9;
-  box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.2), inset 0 0 3px rgba(115, 114, 23, 0.8);
-}
-.ch-info {
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  -o-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-}
-.ch-info > div {
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background-position: center center;
-  -webkit-transition: all 0.6s ease-in-out;
-  -moz-transition: all 0.6s ease-in-out;
-  -o-transition: all 0.6s ease-in-out;
-  -ms-transition: all 0.6s ease-in-out;
-  transition: all 0.6s ease-in-out;
-}
-.ch-info .ch-info-front {
-  -webkit-transform-origin: 50% 100%;
-  -moz-transform-origin: 50% 100%;
-  -o-transform-origin: 50% 100%;
-  -ms-transform-origin: 50% 100%;
-  transform-origin: 50% 100%;
-  z-index: 100;
-  box-shadow: inset 2px 1px 4px rgba(0, 0, 0, 0.1);
-}
-.ch-info .ch-info-back {
-  background: rgba(230, 132, 107, 0);
-}
-.ch-info h3 {
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 14px;
-  margin: 0 25px;
-  padding: 40px 0 0 0;
-  height: 90px;
-  font-family: 'Open Sans', Arial, sans-serif;
-  text-shadow: 0 0 1px #ffffff, 0 1px 2px rgba(0, 0, 0, 0.3);
-}
-.ch-info p {
-  color: #fff;
-  padding: 10px 5px;
-  font-style: italic;
-  margin: 0 30px;
-  font-size: 12px;
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
-}
-.ch-info p a {
-  display: block;
-  color: #fff;
-  color: rgba(255, 255, 255, 0.7);
-  font-style: normal;
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: 9px;
-  letter-spacing: 1px;
-  padding-top: 4px;
-  font-family: 'Open Sans', Arial, sans-serif;
-}
-.ch-info p a:hover {
-  color: #fff222;
-  color: rgba(255, 242, 34, 0.8);
-}
-.ch-item:hover .ch-info-front {
-  -webkit-transform: rotate3d(1, 0, 0, -180deg);
-  -moz-transform: rotate3d(1, 0, 0, -180deg);
-  -o-transform: rotate3d(1, 0, 0, -180deg);
-  -ms-transform: rotate3d(1, 0, 0, -180deg);
-  transform: rotate3d(1, 0, 0, -180deg);
-  box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.2), inset 0 0 3px rgba(0, 0, 0, 0.3);
-}
-.ch-item:hover .ch-info-back {
-  background: rgba(230, 132, 107, 0.6);
-}
 /* -----------------------------------------
    Home (category list)
 ----------------------------------------- */
@@ -232,7 +211,6 @@ nav li:hover a {
   padding: 1em;
   position: relative;
   border-radius: 0.5em;
-  font-size: 2em;
   line-height: 1em;
   text-align: center;
   color: white;
@@ -243,7 +221,6 @@ nav li:hover a {
   transition: all 0.3s ease-in-out;
 }
 .category h1 {
-  font-size: 0.8em;
   line-height: 0;
   color: white;
   text-transform: uppercase;
@@ -292,13 +269,11 @@ a:hover #textFx i {
 .circle.big {
   width: 2em;
   height: 2em;
-  font-size: 2em;
   top: -25%;
 }
 .circle.small {
   width: 2em;
   height: 2em;
-  font-size: 1em;
   top: 10%;
 }
 .circle.left {
@@ -319,6 +294,7 @@ a:hover #textFx i {
 .course-intro {
   height: 200px;
   margin-bottom: 1em;
+  text-align: justify;
 }
 .course-intro h1 {
   text-align: center;
@@ -336,7 +312,16 @@ a:hover #textFx i {
   top: 60px;
 }
 #lessons .polygon {
-  margin-top: 30px;
+  margin-top: 50px;
+}
+#lessons a {
+  color: white;
+}
+#lessons li {
+  text-align: center;
+}
+#lessons li > a {
+  display: inline-block;
 }
 .lesson-list {
   margin-top: 15px;
@@ -349,7 +334,6 @@ a:hover #textFx i {
   color: white;
   z-index: 31;
   position: absolute;
-  font-size: 14px;
   border-radius: 5px;
   border: 3px solid white;
   background-color: #808080;
@@ -395,6 +379,54 @@ a:hover #textFx i {
 .polygon.badge-polygon {
   height: 120px;
   width: 199px;
+}
+.polygon.big .frame {
+  top: -50px;
+}
+.polygon.small .frame {
+  top: 0;
+}
+.polygon .frame {
+  position: absolute;
+}
+.polygon.frame-inner {
+  position: relative;
+  text-align: center;
+  margin-bottom: 1.8em !important;
+  line-height: 1em;
+  background-color: #ffffff;
+  /*todo*/
+
+  font-size: 2em;
+  position: absolute;
+  z-index: -1;
+  background-color: white;
+  -webkit-transform: scale(1.1);
+}
+.polygon.frame-inner a {
+  color: white;
+}
+.polygon.frame-inner:before,
+.polygon.frame-inner:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: solid transparent;
+  border-right: solid transparent;
+}
+.polygon.frame-inner:before {
+  border-bottom: solid #ffffff;
+}
+.polygon.frame-inner:after {
+  border-top: solid #ffffff;
+}
+.polygon.frame-outer {
+  position: absolute;
+  background-color: white;
+  -webkit-transform: scale(1.2);
+  z-index: -2;
 }
 .polygon.mograph {
   position: relative;
@@ -516,6 +548,18 @@ a:hover #textFx i {
 .polygon.web:after {
   border-top: solid #2cb0e0;
 }
+.award-polygon .frame-outer {
+  top: 0 !important;
+  left: 0;
+  z-index: -1;
+  -webkit-transform: scale(1.1);
+  background-color: white;
+}
+.award-polygon .frame-outer:before,
+.award-polygon .frame-outer:after {
+  border-bottom-color: white;
+  border-top-color: white;
+}
 .polygon.small:before {
   top: -15px;
   border-left-width: 25px;
@@ -557,24 +601,16 @@ article.description {
   height: 500px;
   padding: 0 1.5em;
 }
-#lessons a {
-  color: white;
-}
 .lesson-features li {
   width: 48px;
   height: 48px;
   border-radius: 10px 0 0 10px;
   background-color: #4d4d4d;
-  font-size: 2em;
   position: relative;
   text-align: center;
 }
 .lesson-features li a {
   color: white;
-}
-.angularSize {
-  font-size: 20px;
-  font-size: 100px;
 }
 /* -----------------------------------------
    Partials
@@ -644,12 +680,10 @@ article.description {
 }
 .badge-polygon > i {
   color: white;
-  font-size: 4em;
   line-height: 1;
 }
 .badge-circle > i {
   color: #4d4d4d;
-  font-size: 9em;
   line-height: 1.5;
 }
 /*
@@ -688,7 +722,6 @@ article.description {
   bottom: -80px;
 }
 .award-circle i {
-  font-size: 2em;
   line-height: 1.4;
 }
 .award-circle i.disabled {
@@ -719,7 +752,6 @@ article.description {
   text-align: center;
   margin-bottom: 1.8em !important;
   line-height: 1em;
-  font-size: 2em;
   z-index: -1;
 }
 .ribbon-bottom a {
@@ -854,7 +886,6 @@ article.description {
   top: 50px;
 }
 .award-polygon i {
-  font-size: 0.9em;
   line-height: 1;
 }
 .shadow.simple {
@@ -910,4 +941,7 @@ article.description {
 }
 markdown {
   color: red;
+}
+.lesson-content h3 {
+  border-bottom: 1px solid rgba(1, 1, 1, 0.2);
 }
