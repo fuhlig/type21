@@ -47,11 +47,11 @@ body {
 }
 .content {
 	margin-top: 1em;
-	// background-color: white;
+	// background-color: white
 }
 
 a {
-	// color: white !important;
+	// color: white !important
 }
 
 
@@ -74,8 +74,8 @@ header {
 }
 
 hr {
-	border-color: rgba(1, 1, 1, 0.1);
 	margin: 0;
+	border-color: rgba(1, 1, 1, 0.1);
 }
 
 
@@ -96,37 +96,35 @@ nav {
 	color: @borderColor;
 	}
 	i {
-	// border-radius
-	margin-left: 12px; 
-	line-height: 50px !important;
 	
 	// box-shadow
 	// margin-left: 15px; 
-	// line-height: 60px !important;
+	line-height: 50px !important;
+	// border-radius
+	margin-left: 12px; 
+	// line-height: 60px !important
 	}
 	li {
 		width: 60px;
 		height: 60px;
-		border-radius: 60px;
 		border: 4px solid @borderColor;
-		// .box-radius();
+		border-radius: 60px;
 		background-color: white;
-		.transition(all, 0.3s, ease-in-out);
 		&.mograph {
-			// .box-radius(5px, @mograph);
 			border-color: @mograph;
+			// .box-radius(5px, @mograph);
 		}
 		&.web {
-			// .box-radius(5px, @web);
 			border-color: @web;
+			// .box-radius(5px, @web);
 		}
 		&.tDesign {
-			// .box-radius(5px, @tDesign);
 			border-color: @tDesign;
+			// .box-radius(5px, @tDesign);
 		}
 		&.textFx {
-			// .box-radius(5px, @textFx);
 			border-color: @textFx;
+			// .box-radius(5px, @textFx);
 		}
 		/* Hover animation */
 		&:hover {
@@ -148,6 +146,8 @@ nav {
 			// 	background-color: @textFx;
 			// }
 		}
+		// .box-radius();
+		.transition(all, 0.3s, ease-in-out);
 	}
 }
 
@@ -159,20 +159,19 @@ nav {
 ----------------------------------------- */
 // PANEL
 .category {
-	height: 80px;
+	position: relative;
 	margin: 3em 0 1em 0;
 	padding: 1em;
-	position: relative;
-	border-radius: 0.5em;	
-	line-height: 1em;
-	text-align: center;
+	height: 80px;
+	border-radius: 0.5em;
 	color: white;
-	.transition(all, 0.3s, ease-in-out);
+	text-align: center;	
+	line-height: 1em;
 
 	& h1 {
-		line-height: 0;
 		color: white;
 		text-transform: uppercase;
+		line-height: 0;
 	}
 
 	// &:hover {
@@ -206,6 +205,7 @@ nav {
 			background-color: lighten(@web, 2%);
 		}
 	}
+	.transition(all, 0.3s, ease-in-out);
 }
 @media only screen and (max-width: 767px) {
  .category {
@@ -234,22 +234,22 @@ a:hover {
 
 .circle {
 	position: absolute;
-	color: @borderColor;
 	z-index: 1;
-	background-color: white;
-	border-radius: 2em;
 	border: 0.15em solid @borderColor;
+	border-radius: 2em;
+	background-color: white;
+	color: @borderColor;
 	text-align: center;
 	line-height: 1.7em;
 	&.big {
+		top: -25%;
 		width: 2em;
 		height: 2em;
-		top: -25%;
 	}
 	&.small {
+		top: 10%;
 		width: 2em;
 		height: 2em;
-		top: 10%;
 	}
 	&.left {
 		left: -25%;
@@ -273,8 +273,8 @@ a:hover {
    Lesson
 ----------------------------------------- */
 .course-intro {
-	height: 200px;
 	margin-bottom: 1em;
+	height: 200px;
 	text-align: justify;
 	h1 {
 		text-align: center;
@@ -289,13 +289,13 @@ a:hover {
    Lesson
 ----------------------------------------- */
 .connector {
+	position: absolute;
+	top: 60px;
+	left: 38px;
 	width: 3px;
 	height: 300px;
 	background-color: @borderColor;
-	position: absolute;
-	left: 38px;
-	top: 60px;
-	// z-index: -1;
+	// z-index: -1
 }
 
 #lessons {
@@ -322,37 +322,37 @@ a:hover {
 
 .lesson-list li span,
 .lesson-features li span {
+	position: absolute;
+	z-index: 30;
+	display: none;
+	padding: 10px;
 	width: 150px;
 	height: auto;
-	padding: 10px;
-	color: white;
-	z-index: 30;
-	position: absolute;
-	border-radius: 5px;
 	border: 3px solid white;
-	background-color: lighten(@borderColor, 20%);	// Feature-Tooltip
+	border-radius: 5px;
+	background-color: lighten(@borderColor, 20%);
+	color: white;	// Feature-Tooltip
 	box-shadow: 1px 2px 2px rgba(0,0,0,0.3);
-	display: none;
 	&.mograph {
-		background-color: lighten(@mograph, 10%),
+		background-color: lighten(@mograph, 10%),;
 	}
 	&.tDesign {
-		background-color: lighten(@tDesign, 10%),
+		background-color: lighten(@tDesign, 10%),;
 	}
 	&.web {
-		background-color: lighten(@web, 10%),
+		background-color: lighten(@web, 10%),;
 	}
 	&.textFx {
-		background-color: lighten(@textFx, 10%),
+		background-color: lighten(@textFx, 10%),;
 	}
 }
 .lesson-list li span {
-	left: 60px;
 	top: -13px;
+	left: 60px;
 }
 .lesson-features li span {
-	right: 60px;
 	top: 0;
+	right: 60px;
 }
 
 .lesson-list li a:hover span, 
@@ -376,7 +376,7 @@ a:hover {
 	}
 	&.small .frame {
 		top: 0;
-		// left: 1px;
+		// left: 1px
 	}
 
 	// frame
@@ -385,35 +385,35 @@ a:hover {
 		z-index: -1;
 	}
 	&.frame-inner {
-		.createPolygon(white);
 		position: absolute;
 		z-index: -1;
 		background-color: white;
+		.createPolygon(white);
 		.scale(1.1);
 	}
 	&.frame-outer {
 		position: absolute;
+		z-index: -2;
 		background-color: white;
 		.scale(1.2);
-		z-index: -2;
 	}
 
 	// Colors
 	&.mograph {
-		.createPolygon(@mograph);
 		background-color: @mograph;
+		.createPolygon(@mograph);
 	}
 	&.tDesign {
-		.createPolygon(@tDesign);
 		background-color: @tDesign;
+		.createPolygon(@tDesign);
 	}
 	&.textFx {
-		.createPolygon(@textFx);
 		background-color: @textFx;
+		.createPolygon(@textFx);
 	}
 	&.web {
-		.createPolygon(@web);
 		background-color: @web;
+		.createPolygon(@web);
 	}
 }
 
@@ -421,12 +421,12 @@ a:hover {
 	top: 0 !important;
 	left: 0;
 	z-index: -1;
-	.scale(1.1);
 	background-color: white;
 	&:before, &:after {
-		border-bottom-color: white;
 		border-top-color: white;
+		border-bottom-color: white;
 	}
+	.scale(1.1);
 }
 
 .polygon.small:before {
@@ -445,30 +445,30 @@ a:hover {
 
 .polygon.badge-polygon:before {
 	top: -20px;
-	border-left-width: 100px;
 	border-right-width: 100px;
 	border-bottom-width: 20px;
+	border-left-width: 100px;
 }
 .polygon.badge-polygon:after {
 	bottom: -60px;
-	border-left-width: 100px;
-	border-right-width: 100px;
 	border-top-width: 60px;
+	border-right-width: 100px;
+	border-left-width: 100px;
 }
 
 article.description {
-	background: #eee;
-	height: 500px;
 	padding: 0 1.5em;
+	height: 500px;
+	background: #eee;
 }
 
 
 .lesson-features li {
+	position: relative;
 	width: 48px;
 	height: 48px;
 	border-radius: 10px 0 0 10px;
 	background-color: @borderColor;
-	position: relative;
 	text-align: center;
 	a {
 		color: white;
@@ -482,8 +482,8 @@ article.description {
 
 // Orbit
 #featured { 
-	background: url(../img/foundation/loading.gif) center center #f4f4f4; 
 	height: 300px; 
+	background: url(../img/foundation/loading.gif) center center #f4f4f4; 
 }
 #featured img { 
 	display: none; 
@@ -532,13 +532,13 @@ article.description {
 }
 
 .badge-circle {
-	color: @borderColor;
 	position: relative;
 	width: 300px;
 	height: 300px;
+	border: 40px solid;
 	border-radius: 300px;
 	background-color: white;
-	border: 40px solid;
+	color: @borderColor;
 	&.mograph {
 		border-color: @mograph;
 	}
@@ -562,20 +562,17 @@ article.description {
 	color: @borderColor;
 	line-height: 1.5;
 }
-/*
-#badge-polygonModal.reveal-modal {
-	width: 300px;
-	margin-left: 200px;
-	padding: 100px;
-}
-*/
+/* #badge-polygonModal.reveal-modal {
+	width: 300px; */
+/* margin-left: 200px; */
+/* padding: 100px; */
 .award-circle {
 	position: absolute;
+	z-index: 1;
 	width: 50px;
 	height: 50px;
-	border-radius: 50px;
 	border: 5px solid white;
-	z-index: 1;
+	border-radius: 50px;
 	background-color: @borderColor;
 	color: white;
 	&:nth-child(odd) {
@@ -591,8 +588,8 @@ article.description {
 		bottom: -25px;
 	}
 	&:nth-child(5) {
-		left: 70px;
 		bottom: -80px;
+		left: 70px;
 	}
 	i {
 		line-height: 1.4;
@@ -608,11 +605,11 @@ article.description {
 
 
 .ribbon-top {
-	width: 80px;
-	height: 160px;
 	position: absolute;
 	top: -200px;
 	left: 60px;
+	width: 80px;
+	height: 160px;
 	background-color: darken(@mograph, 10%);
 }
 .ribbon-top:after {
@@ -625,36 +622,35 @@ article.description {
 
 
 .ribbon-bottom {
+	position: absolute;
+	z-index: -1;
+	// margin-top: @polygon;
+	margin-bottom: 1.8em !important;
 	width: 40px;
 	height: 120px;
-	position: absolute;
 	text-align: center;
-	margin-bottom: 1.8em !important;
-	// margin-top: @polygon;   					TODO
 	line-height: 1em;
-	z-index: -1;
 	a {
 		color: white;
 	}
 	&:before, &:after {
-		content: "";
 		position: absolute;
 		left: 0;
 		width: 0;
 		height: 0;
-		border-left: solid transparent;
 		border-right: solid transparent;
+		border-left: solid transparent;
+		content: "";
 	}	
 	&:before {
-		border-bottom: solid white;
 		top: 101px;
-		border-left-width: 20px;
 		border-right-width: 20px;
+		border-bottom: solid white;
 		border-bottom-width: 20px;
+		border-left-width: 20px;
 	}
 	&:nth-of-type(1) {
 		left: 70px;
-		.rotation(15deg);
 
 		&.mograph {
 			background-color: darken(@mograph, 5%);
@@ -668,10 +664,10 @@ article.description {
 		&.textFx {
 			background-color: darken(@textFx, 5%);
 		}
+		.rotation(15deg);
 	}
 	&:nth-of-type(2) {
 		right: 70px;
-		.rotation(15deg);
 		z-index: -2;
 
 		&.mograph {
@@ -686,18 +682,16 @@ article.description {
 		&.textFx {
 			background-color: darken(@textFx, 10%);
 		}
+		.rotation(15deg);
 
 	}
 }
 
 
 .award-polygon {
-		.createPolygon(@borderColor);
-		.createPolygon-rect(30px);
 		position: absolute;
 		z-index: 1;
 		color: white;
-		.transition(all, 2s ease-in-out);
 		// -webkit-transition: -webkit-transform 2s ease-in-out;
 	&:before {
 		.createPolygon-top(@polygonSize);
@@ -707,43 +701,46 @@ article.description {
 	}
 	&.false {
 		background-color: white;
-		.rotation(180deg);
 		&:after, &:before {
 			border-top-color: white;
 			border-bottom-color: white;
 		}
+		.rotation(180deg);
 	}
 	&:nth-child(1) {
-		left: 85px;
 		top: -35px;
+		left: 85px;
 	}
 	&:nth-child(2) {
-		right: -40px;
 		top: 50px;
+		right: -40px;
 	}	
 	&:nth-child(3) {
 		right: -5px;
 		bottom: -50px;
-		// .rotation(45deg);
+		// .rotation(45deg)
 	}	
 	&:nth-child(4) {
-		left: -5px;
 		bottom: -50px;
-		// .rotation(-45deg);
+		left: -5px;
+		// .rotation(-45deg)
 	}
 	&:nth-child(5) {
-		left: -40px;
 		top: 50px;
+		left: -40px;
 	}
 	&:nth-child(1),	&:nth-child(2) {
-		// top: 40px;
+		// top: 40px
 	}
 	&:nth-child(3),	&:nth-child(4) {
-		// bottom: -25px;
+		// bottom: -25px
 	}
 	i {
 		line-height: 1;
 	}
+		.createPolygon(@borderColor);
+		.createPolygon-rect(30px);
+		.transition(all, 2s ease-in-out);
 }
 
 

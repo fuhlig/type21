@@ -154,8 +154,8 @@ header {
   margin-top: 1em !important;
 }
 hr {
-  border-color: rgba(1, 1, 1, 0.1);
   margin: 0;
+  border-color: rgba(1, 1, 1, 0.1);
 }
 /* -----------------------------------------
    Sub Header
@@ -170,22 +170,22 @@ nav a {
   color: #4d4d4d;
 }
 nav i {
-  margin-left: 12px;
   line-height: 50px !important;
+  margin-left: 12px;
 }
 nav li {
   width: 60px;
   height: 60px;
-  border-radius: 60px;
   border: 4px solid #4d4d4d;
+  border-radius: 60px;
   background-color: white;
+  /* Hover animation */
+
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  /* Hover animation */
-
 }
 nav li.mograph {
   border-color: #91c53e;
@@ -206,14 +206,14 @@ nav li:hover a {
    Home (category list)
 ----------------------------------------- */
 .category {
-  height: 80px;
+  position: relative;
   margin: 3em 0 1em 0;
   padding: 1em;
-  position: relative;
+  height: 80px;
   border-radius: 0.5em;
-  line-height: 1em;
-  text-align: center;
   color: white;
+  text-align: center;
+  line-height: 1em;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
@@ -221,9 +221,9 @@ nav li:hover a {
   transition: all 0.3s ease-in-out;
 }
 .category h1 {
-  line-height: 0;
   color: white;
   text-transform: uppercase;
+  line-height: 0;
 }
 .category.mograph {
   background-color: #91c53e;
@@ -258,23 +258,23 @@ a:hover #textFx i {
 }
 .circle {
   position: absolute;
-  color: #4d4d4d;
   z-index: 1;
-  background-color: white;
-  border-radius: 2em;
   border: 0.15em solid #4d4d4d;
+  border-radius: 2em;
+  background-color: white;
+  color: #4d4d4d;
   text-align: center;
   line-height: 1.7em;
 }
 .circle.big {
+  top: -25%;
   width: 2em;
   height: 2em;
-  top: -25%;
 }
 .circle.small {
+  top: 10%;
   width: 2em;
   height: 2em;
-  top: 10%;
 }
 .circle.left {
   left: -25%;
@@ -292,8 +292,8 @@ a:hover #textFx i {
    Lesson
 ----------------------------------------- */
 .course-intro {
-  height: 200px;
   margin-bottom: 1em;
+  height: 200px;
   text-align: justify;
 }
 .course-intro h1 {
@@ -304,12 +304,12 @@ a:hover #textFx i {
    Lesson
 ----------------------------------------- */
 .connector {
+  position: absolute;
+  top: 60px;
+  left: 38px;
   width: 3px;
   height: 300px;
   background-color: #4d4d4d;
-  position: absolute;
-  left: 38px;
-  top: 60px;
 }
 #lessons .polygon {
   margin-top: 50px;
@@ -328,17 +328,17 @@ a:hover #textFx i {
 }
 .lesson-list li span,
 .lesson-features li span {
+  position: absolute;
+  z-index: 30;
+  display: none;
+  padding: 10px;
   width: 150px;
   height: auto;
-  padding: 10px;
-  color: white;
-  z-index: 30;
-  position: absolute;
-  border-radius: 5px;
   border: 3px solid white;
+  border-radius: 5px;
   background-color: #808080;
+  color: white;
   box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.3);
-  display: none;
 }
 .lesson-list li span.mograph,
 .lesson-features li span.mograph {
@@ -357,12 +357,12 @@ a:hover #textFx i {
   background-color: #fdc54f;
 }
 .lesson-list li span {
-  left: 60px;
   top: -13px;
+  left: 60px;
 }
 .lesson-features li span {
-  right: 60px;
   top: 0;
+  right: 60px;
 }
 .lesson-list li a:hover span,
 .lesson-features li a:hover span {
@@ -391,6 +391,9 @@ a:hover #textFx i {
   z-index: -1;
 }
 .polygon.frame-inner {
+  position: absolute;
+  z-index: -1;
+  background-color: white;
   position: relative;
   text-align: center;
   margin-bottom: 1.8em !important;
@@ -399,9 +402,6 @@ a:hover #textFx i {
   /*todo*/
 
   font-size: 2em;
-  position: absolute;
-  z-index: -1;
-  background-color: white;
   -webkit-transform: scale(1.1);
   -moz-transform: scale(1.1);
   transform: scale(1.1);
@@ -427,13 +427,14 @@ a:hover #textFx i {
 }
 .polygon.frame-outer {
   position: absolute;
+  z-index: -2;
   background-color: white;
   -webkit-transform: scale(1.2);
   -moz-transform: scale(1.2);
   transform: scale(1.2);
-  z-index: -2;
 }
 .polygon.mograph {
+  background-color: #91c53e;
   position: relative;
   text-align: center;
   margin-bottom: 1.8em !important;
@@ -442,7 +443,6 @@ a:hover #textFx i {
   /*todo*/
 
   font-size: 2em;
-  background-color: #91c53e;
 }
 .polygon.mograph a {
   color: white;
@@ -464,6 +464,7 @@ a:hover #textFx i {
   border-top: solid #91c53e;
 }
 .polygon.tDesign {
+  background-color: #e82929;
   position: relative;
   text-align: center;
   margin-bottom: 1.8em !important;
@@ -472,7 +473,6 @@ a:hover #textFx i {
   /*todo*/
 
   font-size: 2em;
-  background-color: #e82929;
 }
 .polygon.tDesign a {
   color: white;
@@ -494,6 +494,7 @@ a:hover #textFx i {
   border-top: solid #e82929;
 }
 .polygon.textFx {
+  background-color: #fdb51c;
   position: relative;
   text-align: center;
   margin-bottom: 1.8em !important;
@@ -502,7 +503,6 @@ a:hover #textFx i {
   /*todo*/
 
   font-size: 2em;
-  background-color: #fdb51c;
 }
 .polygon.textFx a {
   color: white;
@@ -524,6 +524,7 @@ a:hover #textFx i {
   border-top: solid #fdb51c;
 }
 .polygon.web {
+  background-color: #2cb0e0;
   position: relative;
   text-align: center;
   margin-bottom: 1.8em !important;
@@ -532,7 +533,6 @@ a:hover #textFx i {
   /*todo*/
 
   font-size: 2em;
-  background-color: #2cb0e0;
 }
 .polygon.web a {
   color: white;
@@ -557,15 +557,15 @@ a:hover #textFx i {
   top: 0 !important;
   left: 0;
   z-index: -1;
+  background-color: white;
   -webkit-transform: scale(1.1);
   -moz-transform: scale(1.1);
   transform: scale(1.1);
-  background-color: white;
 }
 .award-polygon .frame-outer:before,
 .award-polygon .frame-outer:after {
-  border-bottom-color: white;
   border-top-color: white;
+  border-bottom-color: white;
 }
 .polygon.small:before {
   top: -15px;
@@ -593,27 +593,27 @@ a:hover #textFx i {
 }
 .polygon.badge-polygon:before {
   top: -20px;
-  border-left-width: 100px;
   border-right-width: 100px;
   border-bottom-width: 20px;
+  border-left-width: 100px;
 }
 .polygon.badge-polygon:after {
   bottom: -60px;
-  border-left-width: 100px;
-  border-right-width: 100px;
   border-top-width: 60px;
+  border-right-width: 100px;
+  border-left-width: 100px;
 }
 article.description {
-  background: #eee;
-  height: 500px;
   padding: 0 1.5em;
+  height: 500px;
+  background: #eee;
 }
 .lesson-features li {
+  position: relative;
   width: 48px;
   height: 48px;
   border-radius: 10px 0 0 10px;
   background-color: #4d4d4d;
-  position: relative;
   text-align: center;
 }
 .lesson-features li a {
@@ -623,8 +623,8 @@ article.description {
    Partials
 ----------------------------------------- */
 #featured {
-  background: url(../img/foundation/loading.gif) center center #f4f4f4;
   height: 300px;
+  background: url(../img/foundation/loading.gif) center center #f4f4f4;
 }
 #featured img {
   display: none;
@@ -665,13 +665,13 @@ article.description {
   line-height: 0;
 }
 .badge-circle {
-  color: #4d4d4d;
   position: relative;
   width: 300px;
   height: 300px;
+  border: 40px solid;
   border-radius: 300px;
   background-color: white;
-  border: 40px solid;
+  color: #4d4d4d;
 }
 .badge-circle.mograph {
   border-color: #91c53e;
@@ -693,20 +693,17 @@ article.description {
   color: #4d4d4d;
   line-height: 1.5;
 }
-/*
-#badge-polygonModal.reveal-modal {
-	width: 300px;
-	margin-left: 200px;
-	padding: 100px;
-}
-*/
+/* #badge-polygonModal.reveal-modal {
+	width: 300px; */
+/* margin-left: 200px; */
+/* padding: 100px; */
 .award-circle {
   position: absolute;
+  z-index: 1;
   width: 50px;
   height: 50px;
-  border-radius: 50px;
   border: 5px solid white;
-  z-index: 1;
+  border-radius: 50px;
   background-color: #4d4d4d;
   color: white;
 }
@@ -725,8 +722,8 @@ article.description {
   bottom: -25px;
 }
 .award-circle:nth-child(5) {
-  left: 70px;
   bottom: -80px;
+  left: 70px;
 }
 .award-circle i {
   line-height: 1.4;
@@ -738,11 +735,11 @@ article.description {
   background-color: white;
 }
 .ribbon-top {
-  width: 80px;
-  height: 160px;
   position: absolute;
   top: -200px;
   left: 60px;
+  width: 80px;
+  height: 160px;
   background-color: #75a030;
 }
 .ribbon-top:after {
@@ -753,33 +750,33 @@ article.description {
   border-left: 80px solid red;
 }
 .ribbon-bottom {
+  position: absolute;
+  z-index: -1;
+  margin-bottom: 1.8em !important;
   width: 40px;
   height: 120px;
-  position: absolute;
   text-align: center;
-  margin-bottom: 1.8em !important;
   line-height: 1em;
-  z-index: -1;
 }
 .ribbon-bottom a {
   color: white;
 }
 .ribbon-bottom:before,
 .ribbon-bottom:after {
-  content: "";
   position: absolute;
   left: 0;
   width: 0;
   height: 0;
-  border-left: solid transparent;
   border-right: solid transparent;
+  border-left: solid transparent;
+  content: "";
 }
 .ribbon-bottom:before {
-  border-bottom: solid white;
   top: 101px;
-  border-left-width: 20px;
   border-right-width: 20px;
+  border-bottom: solid white;
   border-bottom-width: 20px;
+  border-left-width: 20px;
 }
 .ribbon-bottom:nth-of-type(1) {
   left: 70px;
@@ -802,11 +799,11 @@ article.description {
 }
 .ribbon-bottom:nth-of-type(2) {
   right: 70px;
+  z-index: -2;
   -webkit-transform: rotate(15deg);
   -moz-transform: rotate(15deg);
   -ms-transform: rotate(15deg);
   transform: rotate(15deg);
-  z-index: -2;
 }
 .ribbon-bottom:nth-of-type(2).mograph {
   background-color: #75a030;
@@ -821,6 +818,9 @@ article.description {
   background-color: #e49c02;
 }
 .award-polygon {
+  position: absolute;
+  z-index: 1;
+  color: white;
   position: relative;
   text-align: center;
   margin-bottom: 1.8em !important;
@@ -831,33 +831,11 @@ article.description {
   font-size: 2em;
   height: 30px;
   width: 50px;
-  position: absolute;
-  z-index: 1;
-  color: white;
   -webkit-transition: all 2s ease-in-out ease;
   -moz-transition: all 2s ease-in-out ease;
   -o-transition: all 2s ease-in-out ease;
   -ms-transition: all 2s ease-in-out ease;
   transition: all 2s ease-in-out ease;
-}
-.award-polygon a {
-  color: white;
-}
-.award-polygon:before,
-.award-polygon:after {
-  content: "";
-  position: absolute;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-left: solid transparent;
-  border-right: solid transparent;
-}
-.award-polygon:before {
-  border-bottom: solid #4d4d4d;
-}
-.award-polygon:after {
-  border-top: solid #4d4d4d;
 }
 .award-polygon:before {
   top: -15px;
@@ -884,27 +862,46 @@ article.description {
   border-bottom-color: white;
 }
 .award-polygon:nth-child(1) {
-  left: 85px;
   top: -35px;
+  left: 85px;
 }
 .award-polygon:nth-child(2) {
-  right: -40px;
   top: 50px;
+  right: -40px;
 }
 .award-polygon:nth-child(3) {
   right: -5px;
   bottom: -50px;
 }
 .award-polygon:nth-child(4) {
-  left: -5px;
   bottom: -50px;
+  left: -5px;
 }
 .award-polygon:nth-child(5) {
-  left: -40px;
   top: 50px;
+  left: -40px;
 }
 .award-polygon i {
   line-height: 1;
+}
+.award-polygon a {
+  color: white;
+}
+.award-polygon:before,
+.award-polygon:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: solid transparent;
+  border-right: solid transparent;
+}
+.award-polygon:before {
+  border-bottom: solid #4d4d4d;
+}
+.award-polygon:after {
+  border-top: solid #4d4d4d;
 }
 .shadow.simple {
   text-shadow: 1px 1px #333333;
