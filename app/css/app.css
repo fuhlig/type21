@@ -332,7 +332,7 @@ a:hover #textFx i {
   height: auto;
   padding: 10px;
   color: white;
-  z-index: 31;
+  z-index: 30;
   position: absolute;
   border-radius: 5px;
   border: 3px solid white;
@@ -388,6 +388,7 @@ a:hover #textFx i {
 }
 .polygon .frame {
   position: absolute;
+  z-index: -1;
 }
 .polygon.frame-inner {
   position: relative;
@@ -402,6 +403,8 @@ a:hover #textFx i {
   z-index: -1;
   background-color: white;
   -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  transform: scale(1.1);
 }
 .polygon.frame-inner a {
   color: white;
@@ -426,6 +429,8 @@ a:hover #textFx i {
   position: absolute;
   background-color: white;
   -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  transform: scale(1.2);
   z-index: -2;
 }
 .polygon.mograph {
@@ -553,6 +558,8 @@ a:hover #textFx i {
   left: 0;
   z-index: -1;
   -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  transform: scale(1.1);
   background-color: white;
 }
 .award-polygon .frame-outer:before,
@@ -778,6 +785,8 @@ article.description {
   left: 70px;
   -webkit-transform: rotate(15deg);
   -moz-transform: rotate(15deg);
+  -ms-transform: rotate(15deg);
+  transform: rotate(15deg);
 }
 .ribbon-bottom:nth-of-type(1).mograph {
   background-color: #83b436;
@@ -793,8 +802,10 @@ article.description {
 }
 .ribbon-bottom:nth-of-type(2) {
   right: 70px;
-  -webkit-transform: rotate(-15deg);
-  -moz-transform: rotate(-15deg);
+  -webkit-transform: rotate(15deg);
+  -moz-transform: rotate(15deg);
+  -ms-transform: rotate(15deg);
+  transform: rotate(15deg);
   z-index: -2;
 }
 .ribbon-bottom:nth-of-type(2).mograph {
@@ -823,7 +834,11 @@ article.description {
   position: absolute;
   z-index: 1;
   color: white;
-  -webkit-transition: -webkit-transform 2s ease-in-out;
+  -webkit-transition: all 2s ease-in-out ease;
+  -moz-transition: all 2s ease-in-out ease;
+  -o-transition: all 2s ease-in-out ease;
+  -ms-transition: all 2s ease-in-out ease;
+  transition: all 2s ease-in-out ease;
 }
 .award-polygon a {
   color: white;
@@ -859,6 +874,9 @@ article.description {
 .award-polygon.false {
   background-color: white;
   -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 .award-polygon.false:after,
 .award-polygon.false:before {
