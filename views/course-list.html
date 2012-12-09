@@ -1,0 +1,31 @@
+<!-- Header -->
+<div ng-include src="'partials/mainHeader.html'"></div>
+
+<!-- Content -->
+<section>
+
+
+<div class="row">
+  <button id="startTour" class="button" ng-click="startTour()">Start Tour</button>
+  <ul class="block-grid two-up mobile">
+    <li ng-repeat="course in courses" class="row ">
+      <a href="#/courses/{{course.id}}">
+        <div id="{{course.id}}" class="eight columns category offset-by-three {{course.id}}">
+          <span class="circle big hide-for-small" ng-class-odd="'left'" ng-class-even="'right'">
+            <i class="foundicon-{{course.icon}}"></i>
+          </span>
+          <!-- Mobile -->
+          <i class="foundicon-{{course.icon}} circle big show-for-small"></i>
+          <h1>{{course.name}}</h1>
+        </div>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+
+<!-- JoyRide -->
+<ol id="introTour">
+  <li ng-repeat="course in courses" data-id="{{course.id}}">{{course.name}}</li>
+</ol>  
