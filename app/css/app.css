@@ -32,6 +32,9 @@
   border-right: solid transparent;
   border-bottom: solid #91c53e;
 }
+html {
+  font-size: 62.5%;
+}
 h1,
 h2,
 h3 {
@@ -89,8 +92,8 @@ nav a {
   font-size: 2.2rem;
 }
 .circle.big {
-  font-size: 20px;
-  font-size: 2rem;
+  font-size: 56px;
+  font-size: 5.6rem;
 }
 .circle.small {
   font-size: 10px;
@@ -128,9 +131,6 @@ nav a {
 .ribbon-bottom {
   font-size: 28px;
   font-size: 2.8rem;
-}
-html {
-  font-size: 62.5%;
 }
 body {
   background-color: #fafafa;
@@ -380,9 +380,14 @@ a:hover #textFx i {
   height: 120px;
   width: 199px;
 }
+.polygon.big .frame {
+  top: -50px;
+}
+.polygon.small .frame {
+  top: 0;
+}
 .polygon .frame {
   position: absolute;
-  top: -50px;
 }
 .polygon.frame-inner {
   position: relative;

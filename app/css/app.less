@@ -42,10 +42,6 @@
 @import "fonts.css";
 @import "typography.less";
 
-html {
-	font-size: 62.5%;
-}
-
 body {
 	background-color: @bgColor;
 }
@@ -374,10 +370,17 @@ a:hover {
 		.createPolygon-rect(@polygonSize * 4);
 	}
 
+	&.big .frame {
+		top: -50px;
+	}
+	&.small .frame {
+		top: 0;
+		// left: 1px;
+	}
+
 	// frame
 	& .frame {
 		position: absolute;
-		top: -50px;
 	}
 	&.frame-inner {
 		.createPolygon(white);
