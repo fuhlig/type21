@@ -1,0 +1,62 @@
+{
+	"title": "Macro-Typography",
+	"features": [
+		{
+			"id": "info",
+			"name": "Information",
+			"icon": "info-sign",
+			"src": "data/lessons/macro-typo-info.html"
+		},
+		{
+			"id": "Guide",
+			"name": "Guide",
+			"icon": "list",
+			"src": "data/lessons/macro-typo-list.html"
+		},
+		{
+			"id": "code",
+			"name": "CSS",
+			"icon": "edit",
+			"src": "data/lessons/macro-typo_code.html"
+		},
+		{
+			"id": "test",
+			"name": "Testing",
+			"icon": "beaker",
+			"src": "data/lessons/macro-typo_editor.html"
+		},
+		{
+			"id": "resources",
+			"name": "Resources",
+			"icon": "sitemap",
+			"src": "partials/resources.html",
+			"resources": [
+				{
+					"name": "Smashing Magazine",
+					"url": "http://www.smashingmagazine.com/2012/05/02/applying-macrotypography-for-readable-web-page/",
+					"description": "Applying Macrotypography For A More Readable Web Page"					
+				},
+				{
+					"name": "Wikipedia",
+					"url": "http://en.wikipedia.org/wiki/Readability",
+					"description": "Readability on Wikipedia"					
+				},
+				{
+					"name": "Glad Works",
+					"url": "http://www.gladworks.com/blog/macrotypography-it%E2%80%99s-all-details",
+					"description": "Macrotypography: It’s All in the Details"					
+				},
+				{
+					"name": "SJL",
+					"url": "http://www.sjlwebdesign.co.uk/sjl-blog/index.php/typography/macro-and-micro/",
+					"description": "Macro and Micro Typography"					
+				},
+				{
+					"name": "Mozilla Developer Network",
+					"url": "https://developer.mozilla.org/en-US/docs/CSS/line-height",
+					"description": "CSS: line-height"					
+				}
+			]
+		}
+	]
+}

@@ -37,7 +37,10 @@ html {
 }
 h1,
 h2,
-h3 {
+h3,
+h4,
+h5,
+h6 {
   font-family: 'RobotoThin';
 }
 body {
@@ -274,6 +277,16 @@ nav li.selected a {
 }
 nav li:hover a {
   color: #808080;
+}
+/* -----------------------------------------
+   Footer
+----------------------------------------- */
+footer {
+  position: fixed;
+  bottom: 0;
+  background: whitesmoke;
+  width: 100%;
+  padding: 0.5em;
 }
 /* -----------------------------------------
    Home (category list)
@@ -1030,10 +1043,16 @@ article.description {
 	    0 0 100px #FF00DE,
 	    0 0 150px #FF00DE;
 }
-pre {
-  padding-left: 1em;
+pre,
+code {
   color: gray;
+  background: none;
+  font-weight: normal;
+}
+pre {
   margin: 1em 0;
+  padding: 1em;
+  background-color: #f2f2f2;
 }
 .lesson-content {
   margin-bottom: 2em;
@@ -1085,10 +1104,9 @@ figure img {
 .selected .polygon.frame-inner:after {
   border-top-color: #4d4d4d;
 }
-footer {
-  position: fixed;
-  bottom: 0;
-  background: whitesmoke;
-  width: 100%;
-  padding: 0.5em;
+.example {
+  height: 20em;
+  background: white;
+  overflow: scroll;
+  font-family: serif;
 }

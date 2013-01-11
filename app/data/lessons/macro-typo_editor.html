@@ -1,0 +1,73 @@
+<div class="editor_example" ng-controller="spaceCtrl">
+  <h3>line-height</h3>
+  <div class="row">
+    <div class="four columns">
+      <div class="row collapse">
+        <div class="nine mobile-three columns">
+          <input type="text" value="{{leading}}" ng-readonly="true"/>
+        </div>
+        <div class="three mobile-one columns">
+          <span class="postfix">{{leading_value.unit}}</span>
+        </div>
+      </div>
+    </div>
+    <div class="four columns">
+      <input type="range" min="0" max="{{leading_value.maximum}}" step="1" default="1" ng-model="leading">
+    </div>
+    <div class="four columns">
+      <select ng-model="leading_value" ng-options="value.name for value in leadings"></select>
+    </div>
+  </div>
+
+
+  <p class="example" style="line-height: {{leading}}{{leading_value.unit}}">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+  <pre>line-height: {{leading}}{{leading_value.unit}} // {{leading_value.name}}</pre>
+
+
+  <h3>word-space</h3>
+  <div class="row">
+    <div class="four columns">
+      <div class="row collapse">
+        <div class="nine mobile-three columns">
+          <input type="text" value="{{wordspace}}" ng-readonly="true"/>
+        </div>
+        <div class="three mobile-one columns">
+          <span class="postfix">em</span>
+        </div>
+      </div>
+    </div>
+    <div class="eight columns">
+      <input type="range" min="-1" max="5" step="0.1" default="1" ng-model="wordspace">
+    </div>
+  </div>
+
+  <p class="example" style="word-spacing: {{wordspace}}em">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+  <pre>line-height: {{wordspace}}em</pre>
+
+
+</div>
+
+
+
+<script>
+  function spaceCtrl($scope) {
+    $scope.leadings = [
+      {name: "number", unit: "", maximum: "10"},
+      {name: "length", unit: "em", maximum: "10"},
+      {name: "percentage",unit: "%", maximum: "300"}
+    ];
+    value = $scope.leadings[0]; // number
+  }
+</script>

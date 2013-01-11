@@ -190,7 +190,16 @@ nav {
 	}
 }
 
-
+/* -----------------------------------------
+   Footer
+----------------------------------------- */
+footer {
+	position: fixed;
+	bottom: 0;
+	background: whitesmoke;
+	width: 100%;
+	padding: 0.5em;
+}
 
 
 /* -----------------------------------------
@@ -844,10 +853,16 @@ article.description {
 }
 
 
-pre {
-	padding-left: 1em;
+pre, code {
 	color: gray;
+	background: none;
+	font-weight: normal;
+}
+
+pre {
 	margin: 1em 0;
+	padding: 1em;
+	background-color: @bgCode;
 }
 
 .lesson-content {
@@ -943,10 +958,9 @@ figure {
 	// }
 }
 
-footer {
-	position: fixed;
-	bottom: 0;
-	background: whitesmoke;
-	width: 100%;
-	padding: 0.5em;
+.example {
+	height: 20em;
+	background: white;
+	overflow: scroll;
+	font-family: serif;
 }
