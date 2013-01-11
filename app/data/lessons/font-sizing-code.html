@@ -1,0 +1,32 @@
+<p><markdown>
+<p>The default base font size in browsers is 16px which equals 1em (100%). To set the text to 14px (87.5%) the font-size would be 0.875em. In order to avoid calculations it became best practice to set the base font-size to 62.5% which equals 10px. As 1em is 100% of the base font size, 1em becomes 10px aswell which makes calculations easier.</p>
+
+<pre>
+Font-size: 1em;     // 10px
+Font-size: 1.4em;   // 14px
+Font-size: 3.2em;   // 32px
+</pre>
+
+<p>The drawback of this solution is the nesting which means the font-size element of the element is relative to the parent.</p>
+
+<pre>
+Body    font-size: 62.5%;   // 1em = 10px
+H1  	font-size: 2em;     // 20px
+P   	font-size: 1.4em;   // 14px
+P li    font-size: 1em;     // not 10px! (1 * 10px = 10px)
+                            // 14px (1 * 14 = 14px)
+</pre>
+
+<p>Compared to em the root em is not relative to the parent but the document (<em>html</em>).</p> 
+
+<p>This is considered as a <em>best practice </em> especially with responsive design in mind.</p>
+
+<p>The rem unit is <a href="http://caniuse.com/#feat=rem">supported</a> by all modern browsers and devices except for legacy browsers (IE &lt; 8).
+To deliver the right font-size for these browsers aswell a fallback is needed. If the browser doesn’t support rem it takes the pixel value.</p>
+
+<pre>
+html { font-size: 62.5%; } 
+body { font-size: 14px; font-size: 1.4rem; } /* =14px */
+h1   { font-size: 24px; font-size: 2.4rem; } /* =24px */
+</pre>
+</markdown></p>

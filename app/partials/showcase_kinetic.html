@@ -1,0 +1,35 @@
+
+<div id="showcase">
+	<div data-caption="#caption1">
+		<div class="flex-video widescreen vimeo">
+			<iframe src="http://player.vimeo.com/video/33434885?badge=0&amp;color=ffffff" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+		</div>
+	</div>
+	<div data-caption="#captionTwo">
+		<div class="flex-video widescreen vimeo">
+	  		<iframe src="http://player.vimeo.com/video/21896359?badge=0&amp;color=ffffff" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+		</div>
+	</div>
+	<div data-caption="#captionThree">
+		<div class="flex-video widescreen vimeo">
+			<iframe src="http://player.vimeo.com/video/18669276?badge=0&amp;color=ffffff" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+		</div>
+	</div>
+</div>
+
+
+<!-- captions -->
+<span class="orbit-caption" id="caption1">this animation shows the history and specimen of famous typeface <em>Futura</em></span>
+<span class="orbit-caption" id="captionTwo">incorporating text and graphics to support the spoken word</span>
+<span class="orbit-caption" id="captionThree">moving text is used for storytelling</span>
+
+<p>More great kinetic typography examples can be found on <a href="http://vimeo.com/channels/kinetictypography/">vimeo's channel</a> dedicated to this topic</p> 
+
+<script>
+	// init fn.orbit
+	$('#showcase').orbit({
+		timer: false,
+		// animation: 'horizontal-push',
+		fluid: "16x9"
+	});
+</script>

@@ -3,7 +3,7 @@
   <div class="four columns">
     <div class="row sub-logo">
       <div class="three columns mobile-one">
-          <a href="index.html"><img src="img/logo.png"></a>
+          <a href="index.html" target="_self"><img src="img/logo_full.png"></a>
       </div>
       <div class="nine columns mobile-three">
         <h3>twentyone lessons that make type sexy</h3>
@@ -14,7 +14,7 @@
   <div class="eight columns mobile-four">
     <nav>
       <ul class="link-list right">
-        <li ng-repeat="course in courses" class="{{course.id}}"><a href="#/courses/{{course.id}}"><i class="foundicon-{{course.icon}}"></i></a></li>
+        <li ng-repeat="course in courses" class="{{course.id}}" ng-class="{selected: $routeParams.courseId == course.id}"><a href="#/courses/{{course.id}}"><i class="foundicon-{{course.icon}}"></i></a></li>
       </ul>
     </nav>
   </div>

@@ -11,20 +11,6 @@
 
 
 /* -----------------------------------------
-   Colors
------------------------------------------ */
-@bgColor: #fafafa;
-
-// categories
-@mograph: #91c53e;
-@tDesign: #e82929;
-@textFx: #fdb51c;
-@web: #2cb0e0;
-
-@borderColor: #4d4d4d;
-
-
-/* -----------------------------------------
    Metrics
 ----------------------------------------- */
 @polygonSize: 30px;
@@ -38,6 +24,7 @@
 /* -----------------------------------------
    Shared Styles
 ----------------------------------------- */
+@import "colors.less";
 @import "mixins.less";
 @import "fonts.css";
 @import "typography.less";
@@ -47,11 +34,11 @@ body {
 }
 .content {
 	margin-top: 1em;
-	// background-color: white
+	// background-color: white;
 }
 
 a {
-	// color: white !important
+	// color: white !important;
 }
 
 
@@ -74,8 +61,8 @@ header {
 }
 
 hr {
-	margin: 0;
 	border-color: rgba(1, 1, 1, 0.1);
+	margin: 0;
 }
 
 
@@ -86,8 +73,42 @@ hr {
 .logo img {
 	width: 80px;
 }
-.sub-logo .columns {
-	padding: 0;
+.sub-logo  {
+	.columns {
+		padding: 0;
+		text-align: center;
+	}
+	h3 {
+		margin: 0;
+		margin-top: 2em;
+	}
+	hr {
+		@gap: 3%;
+		margin-left: @gap;
+		width: (100% - @gap);
+	}
+}
+
+#logo {
+	.circle {
+		border-radius: 10em;
+		background-color: red;
+	}
+	.inner {
+		width: 5em;
+		height: 5em;
+		background-color: green;
+	}
+	.middle {
+		width: 7em;
+		height: 7em;
+		background-color: blue;
+	}
+	.outer {
+		width: 9em;
+		height: 9em;
+		background-color: yellow;
+	}
 }
 
 
@@ -96,35 +117,55 @@ nav {
 	color: @borderColor;
 	}
 	i {
+	// border-radius
+	margin-left: 12px; 
+	line-height: 50px !important;
 	
 	// box-shadow
 	// margin-left: 15px; 
-	line-height: 50px !important;
-	// border-radius
-	margin-left: 12px; 
-	// line-height: 60px !important
+	// line-height: 60px !important;
 	}
 	li {
 		width: 60px;
 		height: 60px;
-		border: 4px solid @borderColor;
 		border-radius: 60px;
+		border: 4px solid @borderColor;
+		// .box-radius();
 		background-color: white;
+		.transition(all, 0.3s, ease-in-out);
 		&.mograph {
-			border-color: @mograph;
 			// .box-radius(5px, @mograph);
+			border-color: @mograph;
+			&.selected {
+				background-color: @mograph;
+			}
 		}
 		&.web {
-			border-color: @web;
 			// .box-radius(5px, @web);
+			border-color: @web;
+			&.selected {
+				background-color: @web;
+			}
 		}
 		&.tDesign {
-			border-color: @tDesign;
 			// .box-radius(5px, @tDesign);
+			border-color: @tDesign;
+			&.selected {
+				background-color: @tDesign;
+			}
 		}
 		&.textFx {
-			border-color: @textFx;
 			// .box-radius(5px, @textFx);
+			border-color: @textFx;
+			&.selected {
+				background-color: @textFx;
+			}
+		}
+		&.selected {
+			border-color: white;
+			a {
+				color: white !important;
+			}
 		}
 		/* Hover animation */
 		&:hover {
@@ -146,8 +187,6 @@ nav {
 			// 	background-color: @textFx;
 			// }
 		}
-		// .box-radius();
-		.transition(all, 0.3s, ease-in-out);
 	}
 }
 
@@ -159,19 +198,20 @@ nav {
 ----------------------------------------- */
 // PANEL
 .category {
-	position: relative;
+	height: 80px;
 	margin: 3em 0 1em 0;
 	padding: 1em;
-	height: 80px;
-	border-radius: 0.5em;
-	color: white;
-	text-align: center;	
+	position: relative;
+	border-radius: 0.5em;	
 	line-height: 1em;
+	text-align: center;
+	color: white;
+	.transition(all, 0.3s, ease-in-out);
 
 	& h1 {
+		line-height: 0;
 		color: white;
 		text-transform: uppercase;
-		line-height: 0;
 	}
 
 	// &:hover {
@@ -205,7 +245,6 @@ nav {
 			background-color: lighten(@web, 2%);
 		}
 	}
-	.transition(all, 0.3s, ease-in-out);
 }
 @media only screen and (max-width: 767px) {
  .category {
@@ -234,22 +273,22 @@ a:hover {
 
 .circle {
 	position: absolute;
-	z-index: 1;
-	border: 0.15em solid @borderColor;
-	border-radius: 2em;
-	background-color: white;
 	color: @borderColor;
+	z-index: 1;
+	background-color: white;
+	border-radius: 2em;
+	border: 0.15em solid @borderColor;
 	text-align: center;
 	line-height: 1.7em;
 	&.big {
-		top: -25%;
 		width: 2em;
 		height: 2em;
+		top: -25%;
 	}
 	&.small {
-		top: 10%;
 		width: 2em;
 		height: 2em;
+		top: 10%;
 	}
 	&.left {
 		left: -25%;
@@ -273,8 +312,8 @@ a:hover {
    Lesson
 ----------------------------------------- */
 .course-intro {
-	margin-bottom: 1em;
 	height: 200px;
+	margin-bottom: 1em;
 	text-align: justify;
 	h1 {
 		text-align: center;
@@ -289,13 +328,13 @@ a:hover {
    Lesson
 ----------------------------------------- */
 .connector {
-	position: absolute;
-	top: 60px;
-	left: 38px;
 	width: 3px;
 	height: 300px;
 	background-color: @borderColor;
-	// z-index: -1
+	position: absolute;
+	left: 38px;
+	top: 60px;
+	z-index: -1;
 }
 
 #lessons {
@@ -322,37 +361,37 @@ a:hover {
 
 .lesson-list li span,
 .lesson-features li span {
-	position: absolute;
-	z-index: 30;
-	display: none;
-	padding: 10px;
 	width: 150px;
 	height: auto;
-	border: 3px solid white;
+	padding: 10px;
+	color: white;
+	z-index: 30;
+	position: absolute;
 	border-radius: 5px;
-	background-color: lighten(@borderColor, 20%);
-	color: white;	// Feature-Tooltip
+	border: 3px solid white;
+	background-color: lighten(@borderColor, 20%);	// Feature-Tooltip
 	box-shadow: 1px 2px 2px rgba(0,0,0,0.3);
+	display: none;
 	&.mograph {
-		background-color: lighten(@mograph, 10%),;
+		background-color: lighten(@mograph, 10%),
 	}
 	&.tDesign {
-		background-color: lighten(@tDesign, 10%),;
+		background-color: lighten(@tDesign, 10%),
 	}
 	&.web {
-		background-color: lighten(@web, 10%),;
+		background-color: lighten(@web, 10%),
 	}
 	&.textFx {
-		background-color: lighten(@textFx, 10%),;
+		background-color: lighten(@textFx, 10%),
 	}
 }
 .lesson-list li span {
-	top: -13px;
 	left: 60px;
+	top: -13px;
 }
 .lesson-features li span {
-	top: 0;
 	right: 60px;
+	top: 0;
 }
 
 .lesson-list li a:hover span, 
@@ -376,7 +415,7 @@ a:hover {
 	}
 	&.small .frame {
 		top: 0;
-		// left: 1px
+		// left: 1px;
 	}
 
 	// frame
@@ -385,35 +424,34 @@ a:hover {
 		z-index: -1;
 	}
 	&.frame-inner {
+		.createPolygon(white);
 		position: absolute;
 		z-index: -1;
-		background-color: white;
-		.createPolygon(white);
 		.scale(1.1);
 	}
 	&.frame-outer {
 		position: absolute;
-		z-index: -2;
 		background-color: white;
 		.scale(1.2);
+		z-index: -2;
 	}
 
 	// Colors
 	&.mograph {
-		background-color: @mograph;
 		.createPolygon(@mograph);
+		background-color: @mograph;
 	}
 	&.tDesign {
-		background-color: @tDesign;
 		.createPolygon(@tDesign);
+		background-color: @tDesign;
 	}
 	&.textFx {
-		background-color: @textFx;
 		.createPolygon(@textFx);
+		background-color: @textFx;
 	}
 	&.web {
-		background-color: @web;
 		.createPolygon(@web);
+		background-color: @web;
 	}
 }
 
@@ -421,12 +459,12 @@ a:hover {
 	top: 0 !important;
 	left: 0;
 	z-index: -1;
+	.scale(1.1);
 	background-color: white;
 	&:before, &:after {
-		border-top-color: white;
 		border-bottom-color: white;
+		border-top-color: white;
 	}
-	.scale(1.1);
 }
 
 .polygon.small:before {
@@ -445,30 +483,30 @@ a:hover {
 
 .polygon.badge-polygon:before {
 	top: -20px;
+	border-left-width: 100px;
 	border-right-width: 100px;
 	border-bottom-width: 20px;
-	border-left-width: 100px;
 }
 .polygon.badge-polygon:after {
 	bottom: -60px;
-	border-top-width: 60px;
-	border-right-width: 100px;
 	border-left-width: 100px;
+	border-right-width: 100px;
+	border-top-width: 60px;
 }
 
 article.description {
-	padding: 0 1.5em;
-	height: 500px;
 	background: #eee;
+	height: 500px;
+	padding: 0 1.5em;
 }
 
 
 .lesson-features li {
-	position: relative;
 	width: 48px;
 	height: 48px;
 	border-radius: 10px 0 0 10px;
 	background-color: @borderColor;
+	position: relative;
 	text-align: center;
 	a {
 		color: white;
@@ -482,8 +520,8 @@ article.description {
 
 // Orbit
 #featured { 
-	height: 300px; 
 	background: url(../img/foundation/loading.gif) center center #f4f4f4; 
+	height: 300px; 
 }
 #featured img { 
 	display: none; 
@@ -532,13 +570,13 @@ article.description {
 }
 
 .badge-circle {
+	color: @borderColor;
 	position: relative;
 	width: 300px;
 	height: 300px;
-	border: 40px solid;
 	border-radius: 300px;
 	background-color: white;
-	color: @borderColor;
+	border: 40px solid;
 	&.mograph {
 		border-color: @mograph;
 	}
@@ -562,17 +600,20 @@ article.description {
 	color: @borderColor;
 	line-height: 1.5;
 }
-/* #badge-polygonModal.reveal-modal {
-	width: 300px; */
-/* margin-left: 200px; */
-/* padding: 100px; */
+/*
+#badge-polygonModal.reveal-modal {
+	width: 300px;
+	margin-left: 200px;
+	padding: 100px;
+}
+*/
 .award-circle {
 	position: absolute;
-	z-index: 1;
 	width: 50px;
 	height: 50px;
-	border: 5px solid white;
 	border-radius: 50px;
+	border: 5px solid white;
+	z-index: 1;
 	background-color: @borderColor;
 	color: white;
 	&:nth-child(odd) {
@@ -588,8 +629,8 @@ article.description {
 		bottom: -25px;
 	}
 	&:nth-child(5) {
-		bottom: -80px;
 		left: 70px;
+		bottom: -80px;
 	}
 	i {
 		line-height: 1.4;
@@ -605,52 +646,53 @@ article.description {
 
 
 .ribbon-top {
+	width: 80px;
+	height: 160px;
 	position: absolute;
 	top: -200px;
 	left: 60px;
-	width: 80px;
-	height: 160px;
 	background-color: darken(@mograph, 10%);
 }
 .ribbon-top:after {
 	width: 0px;
 	height: 0px;
-	border-top: 60px solid transparent;
-	border-bottom: 60px solid transparent;
+	border-top: 60px solid rgba(255,0,0,0);
+	border-bottom: 60px solid rgba(255,0,0,0);
 	border-left: 80px solid red;
 }
 
 
 .ribbon-bottom {
-	position: absolute;
-	z-index: -1;
-	// margin-top: @polygon;
-	margin-bottom: 1.8em !important;
 	width: 40px;
 	height: 120px;
+	position: absolute;
 	text-align: center;
+	margin-bottom: 2em !important;
+	// margin-top: @polygon;   					TODO
 	line-height: 1em;
+	z-index: -1;
 	a {
 		color: white;
 	}
 	&:before, &:after {
+		content: "";
 		position: absolute;
 		left: 0;
 		width: 0;
 		height: 0;
-		border-right: solid transparent;
-		border-left: solid transparent;
-		content: "";
+		border-left: solid rgba(255,0,0,0);
+		border-right: solid rgba(255,0,0,0);
 	}	
 	&:before {
-		top: 101px;
-		border-right-width: 20px;
 		border-bottom: solid white;
-		border-bottom-width: 20px;
+		top: 101px;
 		border-left-width: 20px;
+		border-right-width: 20px;
+		border-bottom-width: 20px;
 	}
 	&:nth-of-type(1) {
 		left: 70px;
+		.rotation(15deg);
 
 		&.mograph {
 			background-color: darken(@mograph, 5%);
@@ -664,10 +706,10 @@ article.description {
 		&.textFx {
 			background-color: darken(@textFx, 5%);
 		}
-		.rotation(15deg);
 	}
 	&:nth-of-type(2) {
 		right: 70px;
+		.rotation(-15deg);
 		z-index: -2;
 
 		&.mograph {
@@ -682,16 +724,18 @@ article.description {
 		&.textFx {
 			background-color: darken(@textFx, 10%);
 		}
-		.rotation(15deg);
 
 	}
 }
 
 
 .award-polygon {
+		.createPolygon(@borderColor);
+		.createPolygon-rect(30px);
 		position: absolute;
 		z-index: 1;
 		color: white;
+		.transition(all, 2s ease-in-out);
 		// -webkit-transition: -webkit-transform 2s ease-in-out;
 	&:before {
 		.createPolygon-top(@polygonSize);
@@ -701,46 +745,43 @@ article.description {
 	}
 	&.false {
 		background-color: white;
+		.rotation(180deg);
 		&:after, &:before {
 			border-top-color: white;
 			border-bottom-color: white;
 		}
-		.rotation(180deg);
 	}
 	&:nth-child(1) {
-		top: -35px;
 		left: 85px;
+		top: -35px;
 	}
 	&:nth-child(2) {
-		top: 50px;
 		right: -40px;
+		top: 50px;
 	}	
 	&:nth-child(3) {
 		right: -5px;
 		bottom: -50px;
-		// .rotation(45deg)
+		// .rotation(45deg);
 	}	
 	&:nth-child(4) {
-		bottom: -50px;
 		left: -5px;
-		// .rotation(-45deg)
+		bottom: -50px;
+		// .rotation(-45deg);
 	}
 	&:nth-child(5) {
-		top: 50px;
 		left: -40px;
+		top: 50px;
 	}
 	&:nth-child(1),	&:nth-child(2) {
-		// top: 40px
+		// top: 40px;
 	}
 	&:nth-child(3),	&:nth-child(4) {
-		// bottom: -25px
+		// bottom: -25px;
 	}
 	i {
 		line-height: 1;
 	}
-		.createPolygon(@borderColor);
-		.createPolygon-rect(30px);
-		.transition(all, 2s ease-in-out);
 }
 
 
@@ -803,10 +844,109 @@ article.description {
 }
 
 
-markdown {
-	color: red;
+pre {
+	padding-left: 1em;
+	color: gray;
+	margin: 1em 0;
 }
 
-.lesson-content h3 {
-	border-bottom: 1px solid rgba(1,1,1, 0.2);
+.lesson-content {
+	// prevent fixed footer to cover content
+	margin-bottom: 2em;
+	ul {
+		text-indent: 2em;
+		list-style: none;
+	}
+	h3 {
+		margin-top: 1.5em;
+		border-bottom: 1px solid rgba(1,1,1, 0.2);
+	}
+}
+
+.th {
+	img {
+		.rounded(0);
+	}
+	&:hover img {
+		// .drop-shadow(0, 0, 0, 0);		
+	}
+}
+
+figure {
+	margin-top: 1em;
+	margin-bottom: 2em;
+	text-align: center;
+	
+	img {
+		margin: 0 auto;
+		margin-bottom: 0.5em;
+	}
+}
+
+.center {
+	text-align: center;
+}
+
+#badgeModal ul {
+	text-indent: 0;
+}
+
+.orbit-caption {
+	top: 0;
+	height: 2em;
+}
+
+
+.selected {
+
+
+	/* grey: */
+
+	& i {
+		// color: @borderColor;
+	}
+	& .polygon.frame-inner {
+		background-color: @borderColor;
+	}
+	& .polygon.frame-inner:before {
+		border-bottom-color: @borderColor;
+	}
+	& .polygon.frame-inner:after {
+		border-top-color: @borderColor;
+	}
+
+
+	/* inverted */
+
+	// background-color: white !important;
+	// & i {
+	// 	color: @tDesign;
+	// }
+	// & .polygon.frame-inner {
+	// 	background-color: @tDesign;
+	// }
+	// & .polygon.frame-inner:before {
+	// 	border-bottom-color: @tDesign;
+	// }
+	// & .polygon.frame-inner:after {
+	// 	border-top-color: @tDesign;
+	// }
+
+	// & .polygon.frame-outer {
+	// 	background-color: white !important;
+	// }
+	// &:before, & .polygon.frame-outer:before {
+	// 	border-bottom-color: white !important;
+	// }
+	// &:after, & .polygon.frame-outer:after {
+	// 	border-top-color: white !important;
+	// }
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+	background: whitesmoke;
+	width: 100%;
+	padding: 0.5em;
 }

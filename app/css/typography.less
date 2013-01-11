@@ -5,9 +5,16 @@ html {
 h1, h2, h3 {
 	font-family: 'RobotoThin';
 }
-p {
+body {
 	font-family: 'RobotoLight';
 }
+em {
+	font-family: 'RobotoLightItalic';
+}
+figcaption {
+	font-family: 'RobotoItalic';
+}
+
 
 
 h1 { .font-size(4.4); }
@@ -17,11 +24,23 @@ h4 { .font-size(2.3); }
 h5 { .font-size(1.7); }
 h6 { .font-size(1.4); }
 
-p { .font-size(1.6); }
+p, li { .font-size(1.6); }
 
 header {
 	h2 { .font-size(2); }
 	h3 { .font-size(1.3); }
+}
+
+footer {
+	text-align: center;
+	a {	
+		.font-size(1.2);
+		color: rgba(0,0,0, 0.2);
+		&:hover { 
+			color: rgba(0,0,0, 0.5);
+		}
+		.transition(all, 0.3s, ease); 
+	}	
 }
 
 nav {
@@ -40,7 +59,7 @@ nav {
 
 .lesson-features li { .font-size(2.8); }
 
-.lesson-list li span,
+.lesson-list li span, 	
 .lesson-features li span {
 	.font-size(1.4);
 }
@@ -55,3 +74,7 @@ nav {
 
 .ribbon-bottom { .font-size(2.8); }
 
+blockquote,
+blockquote p {
+	color: hsl(0, 0%, 50%);
+}

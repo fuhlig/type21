@@ -8,6 +8,7 @@ angular.module('type21', ['mdConverter']).
       when('/courses', {templateUrl: 'views/course-list.html',   controller: CourseListCtrl}).
       when('/courses/:courseId', {templateUrl: 'views/course-detail.html',   controller: CourseDetailCtrl}).
       when('/:courseId/:lessonId', {templateUrl: 'views/lesson.html', controller: LessonCtrl}).
+      when('/:courseId/:lessonId/:featureId').
       otherwise({redirectTo: '/courses'});
 // }]);
 

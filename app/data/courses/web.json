@@ -11,18 +11,6 @@
 			"archived": true
 		},
 		{
-			"name":	"Responsive Type",
-			"id":	"responsive-type",
-			"icon": "star",
-			"archived": true
-		},
-		{
-			"name":	"Dos and Donts",
-			"id":	"dodont",
-			"icon": "star",
-			"archived": true
-		},
-		{
 			"name": "@font-face",
 			"id": "font-face",
 			"icon": "star",
@@ -31,6 +19,18 @@
 		{
 			"name": "Font Sizing",
 			"id": "font-sizing",
+			"icon": "star",
+			"archived": true
+		},
+		{
+			"name":	"Responsive Type",
+			"id":	"responsive-type",
+			"icon": "star",
+			"archived": true
+		},
+		{
+			"name":	"Dos and Donts",
+			"id":	"dodont",
 			"icon": "star",
 			"archived": true
 		}

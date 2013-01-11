@@ -1,0 +1,23 @@
+<p><markdown>
+<h3 id="basic-use">basic use</h3>
+
+<p><pre>@font-face {
+  font-family: 'Roboto';  // font name for later reference
+  src: url('Roboto.eot'); // path file (local or external)
+}</pre></p>
+
+<p>As seen previously there are numerous font formats. Different browser vendors use different formats. To ensure cross browser compatibility it is necessary to include all the formats. When using services like Google Web Fonts or Adobe Edge Webfonts this is taken care of. However when using @font-face this has to be <em>manually</em> included.</p>
+
+<h3 id="cross-browser-compatibility">cross browser compatibility</h3>
+
+<p><pre>@font-face {
+  font-family: 'Roboto';
+  src: url('Roboto.eot');                         // IE9
+  src: url('Roboto.eot?#iefix') format('embedded-opentype'),  // IE6-IE8
+       url('Roboto.woff') format('woff'),         // Modern Browsers
+       url('Roboto.ttf') format('truetype'),      // Safari, Android, iOS
+       url('Roboto.svg#Roboto') format('svg');    // legacy iOS
+}</pre></p>
+
+<p>One very usefull and free service is <a href="http://www.fontsquirrel.com/fontface">Font Squirrel</a>. #this service provides not only a wide selectionTof fonts but also <em>@font-face kits</em> which include ttf, eot, woff and svg. Another feature is the <em>@font-face generator</em> which allows to upload fonts and create a kit from it - very handy for <a href="#/tDesign/icon-fonts">icon-fonts</a>.</p>
+</markdown></p>

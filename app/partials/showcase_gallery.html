@@ -1,6 +1,6 @@
 <ul class="block-grid three-up" data-clearing>
 	<li ng-repeat="image in lesson.features[1].img">
-		<img ng-src={{image}} />
+		<img ng-src={{image.url}} data-caption="{{image.caption}}"/>
 	</li>
 </ul> 
 
@@ -29,10 +29,8 @@
 	$('#featured').orbit({
 		timer: false
 	});
-	console.log('init orbit');
 
 	$.fn.foundationClearing         ? $doc.foundationClearing() : null;
-	console.log('init CLEARING');
 
 
 </script>

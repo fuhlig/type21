@@ -1,0 +1,59 @@
+<p>Web Font Services allow the use of extensive font libraries.
+To include these into a website only a script needs to be embedded with the specific font and defined in CSS.</p>
+
+<p>Two of the most free and popular services are Google Web Fonts and Adobe Egde Webfonts (formerly known as Typekit)</p>
+
+<h3 id="google-web-fonts">Google Web Fonts</h3>
+
+<p>This free service by Google is easy and fast to get started with.</p>
+
+<img src="data/img/google-webfonts.jpg">
+
+<p>Fonts can be either added to <em>Collection</em> and embedded with one script or single fonts via the <em>Quick-use</em></p>
+
+<h3 id="use">use</h3>
+
+<p>The <em>standard</em> way is to load a script  and integrate the font into the css</p>
+
+<img src="data/img/google-webfonts_use.jpg">
+
+<p>javascript</p>
+
+<blockquote>
+  <p><pre>
+&lt;head&gt;
+    &lt;link href='http://fonts.googleapis.com/css?family=Donegal+One' rel='stylesheet' type='text/css'&gt;
+&lt;/head&gt;
+</pre></p>
+</blockquote>
+
+<p>css</p>
+
+<blockquote>
+  <p><pre>font-family: 'Donegal One', serif;</pre></p>
+</blockquote>
+
+<p>CSS3 also supports the @import rule so no external javascripts needs to be loaded but works the same way. 
+Google Web Fonts also supports a pure Javascript solution as a fallback.</p>
+
+<h3 id="adobe-edge-webfonts">Adobe Edge Webfonts</h3>
+
+<p>Adobe recently launched a similar service called Egde Webfonts. Adobe aquired Typekit and integrated it within the <a href="http://html.adobe.com/edge/">Edge Services and Tools</a> (e.g. Edge Code, Reflow, Muse and others)</p>
+
+<img src="data/img/adobe-webfonts.jpg">
+
+<h3 id="use-2">use</h3>
+
+<p>Via Edge Webfonts a javascript is loaded and <em>font-family</em> integrated in CSS - similar to Google Webfonts</p>
+
+<p>javascript</p>
+
+<blockquote>
+  <p><pre>&lt;script src="http://use.edgefonts.net/droid-sans.js"&gt;&lt;/script&gt;</pre></p>
+</blockquote>
+
+<p>css</p>
+
+<blockquote>
+  <p><pre>font-family: droid-sans, serif;</pre></p>
+</blockquote>

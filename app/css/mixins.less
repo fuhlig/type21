@@ -30,7 +30,7 @@
 	margin-bottom: 1.8em !important;
 	background-color: @color; /*todo*/
 	text-align: center;
-	font-size: 2em;   					TODO
+	font-size: 2em;
 	line-height: 1em;
 	a {
 		color: white;
@@ -40,8 +40,8 @@
 		left: 0;
 		width: 0;
 		height: 0;
-		border-right: solid transparent;
-		border-left: solid transparent;
+		border-right: solid rgba(255,0,0,0);
+		border-left: solid rgba(255,0,0,0);
 		content: "";
 	}	
 	&:before {
@@ -74,9 +74,9 @@
 	left: 0;
 	width: 0;
 	height: 0;
-	border-right: solid transparent;
+	border-right: solid rgba(255,0,0,0);
 	border-bottom: solid @mograph;
-	border-left: solid transparent;
+	border-left: solid rgba(255,0,0,0);
 	content: "";	
 }
 
@@ -92,8 +92,8 @@
 .font-size(@sizeValue) {
   @remValue: @sizeValue;
   @pxValue: (@sizeValue * 10);
-  font-size: ~"@{pxValue;} 
-  font-size: ~"@{remValue;}px";rem";
+  font-size: ~"@{pxValue}px"; 
+  font-size: ~"@{remValue}rem";
 }
 
 .scale(@ratio:1.5){
@@ -107,4 +107,16 @@
   -moz-transform: rotate(@deg);
   -ms-transform: rotate(@deg);
   transform: rotate(@deg);
+}
+
+.drop-shadow(@x-axis: 0, @y-axis: 1px, @blur: 2px, @alpha: 0.1) {
+  -webkit-box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
+  -moz-box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
+  box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
+}
+
+.rounded(@radius: 2px) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  border-radius: @radius;
 }
