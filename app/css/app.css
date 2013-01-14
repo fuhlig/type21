@@ -1079,6 +1079,7 @@ pre {
   margin: 1em 0;
   padding: 1em;
   background-color: #f2f2f2;
+  overflow: scroll;
 }
 .lesson-content {
   margin-bottom: 2em;
@@ -1135,4 +1136,11 @@ figure img {
   background: white;
   overflow: scroll;
   font-family: serif;
+}
+.example-icons {
+  font-size: 10em;
+  text-align: center;
+}
+.carousel img {
+  max-height: 350px;
 }

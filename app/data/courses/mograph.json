@@ -29,8 +29,8 @@
 			"archived": true
 		},
 		{
-			"name": "Expressive Type",
-			"id": "expressive-type",
+			"name": "Movie Titles",
+			"id": "movie-titles",
 			"icon": "icon-star",
 			"archived": false
 		}

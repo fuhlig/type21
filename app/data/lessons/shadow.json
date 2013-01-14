@@ -12,6 +12,8 @@
 			"name": "Showcase",
 			"icon": "icon-eye-open",
 			"src": "partials/showcase_gallery.html",
+			"description": "",
+			"grid": "three",
 			"img": [
 				{
 					"url":	"img/showcase/css-textshadows-1.jpg",

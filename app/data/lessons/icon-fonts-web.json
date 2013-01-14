@@ -1,22 +1,22 @@
 {
-	"title": "Icon Fonts",
+	"title": "Icon Fonts - Web",
 	"features": [
 		{
 			"id": "info",
 			"name": "Information",
 			"icon": "icon-info-sign",
-			"src": "Symbols or Icons are visually really powerful as they deliver instant information without any cultural or lingual barrier. Icons can support the displayed text or stand on their own."
+			"src": "data/lessons/icon-font-web_info.html"
 		},
 		{
 			"id": "tutorial",
 			"name": "Tutorial",
-			"icon": "icon-group",
-			"src": "tutorial here"
+			"icon": "t21-tutorial",
+			"src": "data/lessons/icon-font-web_tutorial.html"
 		},
 		{
-			"id": "test",
-			"name": "Testing",
-			"icon": "icon-beaker",
+			"id": "services",
+			"name": "Services",
+			"icon": "icon-wrench",
 			"src": "partials/icon-font_editor.html"
 		},
 		{

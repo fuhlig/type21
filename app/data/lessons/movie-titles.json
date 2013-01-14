@@ -1,0 +1,65 @@
+{
+	"title": "Movie Title Fonts",
+	"features": [
+		{
+			"id": "info",
+			"name": "Information",
+			"icon": "icon-info-sign",
+			"src": "Symbols or Icons are visually really powerful as they deliver instant information without any cultural or lingual barrier. Icons can support the displayed text or stand on their own."
+		},
+		{
+			"id": "showcase",
+			"name": "Showcase",
+			"icon": "icon-eye-open",
+			"src": "partials/showcase_gallery.html",
+			"description": "This gallery displays some different movie post design to identify some key features and characteristics",
+			"grid": "two",
+			"img": [
+				{
+					"url":	"http://d3gphd0pfuxn95.cloudfront.net/151_fonts/09-Back-To-The-Future.jpg",
+					"caption": "Back to the Future"
+				},
+				{
+					"url":	"http://d3gphd0pfuxn95.cloudfront.net/151_fonts/12-CNN.jpg",
+					"caption": "CNN"
+				},
+				{
+					"url":	"http://d3gphd0pfuxn95.cloudfront.net/151_fonts/15-Grinched.jpg",
+					"caption": "Grinch"
+				},
+				{
+					"url":	"http://d3gphd0pfuxn95.cloudfront.net/151_fonts/23-Sin-City.jpg",
+					"caption": "Sin City"
+				},
+				{
+					"url":	"http://d3gphd0pfuxn95.cloudfront.net/151_fonts/25-Harry-Potter.jpg",
+					"caption": "Harry Potter"
+				},
+				{
+					"url":	"http://d3gphd0pfuxn95.cloudfront.net/151_fonts/42-300.jpg",
+					"caption": "300"
+				},
+				{
+					"url":	"http://d3gphd0pfuxn95.cloudfront.net/151_fonts/47-Mission-Impossible.jpg",
+					"caption": "Mission Impossible"
+				},
+				{
+					"url":	"http://d3gphd0pfuxn95.cloudfront.net/151_fonts/30-HALO.jpg",
+					"caption": "Halo"
+				}
+			]
+		},
+		{
+			"id": "test",
+			"name": "Testing",
+			"icon": "icon-beaker",
+			"src": "partials/icon-font_editor.html"
+		},
+		{
+			"id": "resources",
+			"name": "Resources",
+			"icon": "icon-sitemap",
+			"src": "additional resources"
+		}
+	]
+}

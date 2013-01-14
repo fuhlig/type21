@@ -1,0 +1,41 @@
+<h2>Tutorial</h2>
+
+<p>Within the design tutorial you learned how to create the icon font and converted it into an actual font. But as you <a href="#/web/webfonts">learned web fonts</a> have to be in a different formats to cross browser compatible.</p>
+
+
+<ol>
+	<li><strong>convert font to webfont</strong>: use <a href="http://www.fontsquirrel.com/fontface/generator">fontquirrel's @font-face Kit Generator</a> to convert the font to the different formats ready to use with <code>@font-face</code></li>
+
+	<li><strong>preview iconset</strong>: the generator did only convert the font it also created a CSS file and a demopage for preview</li>
+
+	<li><strong>@font-face integration</strong>: check the <a href="#/web/font-face">basics of @font-face</a></li>
+
+	<p><pre>@font-face {
+	    font-family: 'iconset';
+	    src: url('iconset-webfont.eot');
+	    src: url('iconset-webfont.eot?#iefix') format('embedded-opentype'),
+	         url('iconset-webfont.woff') format('woff'),
+	         url('iconset-webfont.ttf') format('truetype'),
+	         url('iconset-webfont.svg#iconset') format('svg');
+	    font-weight: normal;
+	    font-style: normal;
+	 }</pre></p>
+
+
+	<li><strong>embedding icon</strong>: for universal usage on buttons, navigation etc. you give the classrule with <code>iconset-</code> prefix and <a href="https://developer.mozilla.org/en-US/docs/CSS/Pseudo-elements">pseudo element</a></li>
+	<p><pre>[class*="iconset-"] {
+		font-family: 'iconset'; // referencing the font-family in @font-face rule
+	}</pre></p>
+
+	<p><pre>.iconset-icon:before {
+	  content: "a"; // matching string set in inkscape
+	}</pre></p>
+
+	<p>everytime you add the <code>class="iconset-<em>icon</em>"</code> to a HTML element the icon is displayed next to it</p>
+</ol>
+
+<div class="example-icons">
+	<span class="t21-iconfont"></span>
+	<span class="t21-responsivetype"></span>
+	<span class="t21-test"></span>
+</div>
