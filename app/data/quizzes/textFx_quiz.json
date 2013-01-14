@@ -1,0 +1,90 @@
+{
+	"course": "Text Effects",
+	"challenge": [
+		{
+			"question": "question texFx#1",
+			"answers": [
+				{
+					"answer": "answer 1a",
+					"correct": true
+				},
+				{
+					"answer": "answer 1b",
+					"correct": false
+				},
+				{
+					"answer": "answer 1b",
+					"correct": false
+				}
+			]
+		},
+		{
+			"question": "question texFx#2",
+			"answers": [
+				{
+					"answer": "answer 2a",
+					"correct": false
+				},
+				{
+					"answer": "answer 2b",
+					"correct": true
+				},
+				{
+					"answer": "answer 2b",
+					"correct": false
+				}
+			]
+		},
+		{
+			"question": "question texFx#3",
+			"answers": [
+				{
+					"answer": "answer 3a",
+					"correct": false
+				},
+				{
+					"answer": "answer 3b",
+					"correct": true
+				},
+				{
+					"answer": "answer 3b",
+					"correct": false
+				}
+			]
+		},
+		{
+			"question": "question texFx#4",
+			"answers": [
+				{
+					"answer": "answer 4a",
+					"correct": false
+				},
+				{
+					"answer": "answer 4b",
+					"correct": true
+				},
+				{
+					"answer": "answer 4b",
+					"correct": false
+				}
+			]
+		},
+		{
+			"question": "question texFx#5",
+			"answers": [
+				{
+					"answer": "answer 5a",
+					"correct": false
+				},
+				{
+					"answer": "answer 5b",
+					"correct": true
+				},
+				{
+					"answer": "answer 5b",
+					"correct": false
+				}
+			]
+		}
+	]
+}

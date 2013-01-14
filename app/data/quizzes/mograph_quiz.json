@@ -1,0 +1,95 @@
+{
+	"course": "Motion Graphics",
+	"quiz": [
+		{
+			"lessonId": "type-motion",
+			"question": "question mograph#1",
+			"answers": [
+				{
+					"choice": "answer 1a",
+					"correct": true
+				},
+				{
+					"choice": "answer 1b",
+					"correct": false
+				},
+				{
+					"choice": "answer 1c",
+					"correct": false
+				}
+			]
+		},
+		{
+			"lessonId": "kinetic-type",
+			"question": "question mograph#2",
+			"answers": [
+				{
+					"choice": "answer 2a",
+					"correct": false
+				},
+				{
+					"choice": "answer 2b",
+					"correct": true
+				},
+				{
+					"choice": "answer 2c",
+					"correct": false
+				}
+			]
+		},
+		{
+			"lessonId": "title-sequence",			
+			"question": "question mograph#3",
+			"answers": [
+				{
+					"choice": "answer 3a",
+					"correct": false
+				},
+				{
+					"choice": "answer 3b",
+					"correct": true
+				},
+				{
+					"choice": "answer 3c",
+					"correct": false
+				}
+			]
+		},
+		{
+			"lessonId": "billing-block",
+			"question": "question mograph#4",
+			"answers": [
+				{
+					"choice": "answer 4a",
+					"correct": false
+				},
+				{
+					"choice": "answer 4b",
+					"correct": true
+				},
+				{
+					"choice": "answer 4c",
+					"correct": false
+				}
+			]
+		},
+		{
+			"lessonId": "expressive-type",
+			"question": "question mograph#5",
+			"answers": [
+				{
+					"choice": "answer 5a",
+					"correct": false
+				},
+				{
+					"choice": "answer 5b",
+					"correct": true
+				},
+				{
+					"choice": "answer 5c",
+					"correct": false
+				}
+			]
+		}
+	]
+}

@@ -255,6 +255,31 @@ footer {
 		}
 	}
 }
+
+.category i[class*="t21-"] {
+	line-height: 1.8;
+}
+
+.category i.icon-play {
+	font-size: 0.9em;
+	text-indent: 0.05em;
+}
+
+#lessons i.t21-fontsize {
+	font-size: 1.3em;
+	line-height: 0.6em;
+}
+
+.t21-code,
+.t21-tutorial {
+	line-height: 1.8em;
+}
+.t21-code > span,
+.t21-tutorial > span {
+	line-height: normal;
+}
+
+
 @media only screen and (max-width: 767px) {
  .category {
  	margin-top: 1em;
@@ -266,19 +291,19 @@ a .circle i {
 	.transition(all, 0.5s, ease);
 }
 
-a:hover {
-	& #textFx i {
-		text-shadow:
-		    -1px 1px #ccc,
-		    -2px 2px #ccc,
-		    -3px 3px #ccc,
-		    -4px 4px #ccc,
-		    -5px 5px #ccc,
-		    -6px 6px #ccc,
-		    -7px 7px #ccc,
-		    -8px 8px #ccc;
-	}
-}
+// a:hover {
+// 	& #textFx i {
+// 		text-shadow:
+// 		    -1px 1px #ccc,
+// 		    -2px 2px #ccc,
+// 		    -3px 3px #ccc,
+// 		    -4px 4px #ccc,
+// 		    -5px 5px #ccc,
+// 		    -6px 6px #ccc,
+// 		    -7px 7px #ccc,
+// 		    -8px 8px #ccc;
+// 	}
+// }
 
 .circle {
 	position: absolute;
@@ -544,12 +569,23 @@ article.description {
 }
 
 #quiz {
+	background-color: red;
+}
+#quiz > div {
+	display: none;
+}
+
+#quiz.orbit {
 	background-color: white;
+}
+#quiz.orbit > div {
+	display: block;
 }
 
 #quiz .orbit-slide {
 	padding: 0 50px;
 }
+
 
 // badge-polygon
 
@@ -574,7 +610,7 @@ article.description {
 		position: relative;
 		top: -30px;
 		z-index: 1;
-		line-height: 0;
+		line-height: normal;
 	}
 }
 

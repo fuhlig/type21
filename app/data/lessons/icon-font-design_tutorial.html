@@ -1,0 +1,48 @@
+<h2 id="tutorial">Tutorial</h2>
+
+<p>Before getting creative, here are some resources that will be used in this tutorial</p>
+
+<ul>
+<li><strong>Vector Graphics software</strong> <em>(like <a href="http://www.adobe.com/de/products/illustrator.html">Adobe Illustrator</a>)</em></li>
+<li><strong><a href="http://inkscape.org/">Inkscape</a></strong> <em>(free vector graphics software with <strong>SVG font editor</strong>)</em></li>
+<li><strong><a href="https://github.com/Heydon/Community-Icon-Font/blob/master/resources/inkscape_iconfont_canvas_template.svg">Iconfont canvas template</a></strong> by <a href="https://github.com/Heydon">Heydon Pickering</a></li>
+<li><strong>Font Converter</strong> (like <a href="http://www.freefontconverter.com/">freefontconverter.com</a>)</li>
+<li><strong>Web Font Converter / @font-face Generator</strong>(like <a href="http://www.fontsquirrel.com/fontface/generator">fontsquirrel.com</a>)</li>
+</ul>
+
+<h3 id="create-icon-font">Create Icon Font</h3>
+
+<p>When creating icons for a font they have to be in svg (scalable vector graphic) format in order to be free scalable.</p>
+
+<ol>
+<li><p>open the <a href="https://github.com/Heydon/Community-Icon-Font/blob/master/resources/inkscape_iconfont_canvas_template.svg">Iconfont canvas template</a> in a vector graphic software and create an icon</p></li>
+<li><p>save icon as <em>icon</em>.svg</p></li>
+<li><p>open the open the <a href="https://github.com/Heydon/Community-Icon-Font/blob/master/resources/inkscape_iconfont_canvas_template.svg">Iconfont canvas template</a> in Inkscape</p></li>
+<li><p>setting up the workspace 
+Object -> Fill and Stroke
+Object -> Align and Distribute
+Text -> SVG Font Editor</p></li>
+<li><p>import the <em>icon</em>.svg and center it on the canvas</p></li>
+<li><p>to make the icon work for a font it needs to be converted to a path shape
+Path -> Object to Path</p>
+
+
+<li><p>to make a glyph from the shape</p>
+	<ul>
+		<li>(1) create a <strong>new glyph</strong></li>
+		<li>(2) enter a <strong>matching string</strong></li>
+		<li>(3) enter the matching string into the <strong>preview text</strong></li>
+		<li>(4) and select <strong>Get curves from selection</strong></li>
+	</ul>
+
+<h4><em>troubleshooting</em></h4>
+<p>if the following steps with <em>get curves from selection</em> don't work apply the following steps aswell:</p>
+<ol>
+	<li>Path -> Combine</li>
+	<li>Path -> Union</li>
+	<li>Fill -> Solid Color</li>
+</ol>
+
+<li><p>save icon as <em>iconset</em>.svg</p></li>
+<li><p>convert the svg to a font with a service like <a href="http://www.freefontconverter.com/">freefontconverter.com</a></p></li>
+</ol>

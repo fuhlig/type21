@@ -4,19 +4,19 @@
 		{
 			"id": "info",
 			"name": "Information",
-			"icon": "info-sign",
+			"icon": "icon-info-sign",
 			"src": "data/lessons/font-sizing-info.html"
 		},
 		{
 			"id": "code",
 			"name": "Code Samples",
-			"icon": "edit",
+			"icon": "t21-code",
 			"src": "data/lessons/font-sizing-code.html"
 		},
 		{
 			"id": "resources",
 			"name": "Resources",
-			"icon": "sitemap",
+			"icon": "icon-sitemap",
 			"src": "partials/resources.html",
 			"resources": [
 				{

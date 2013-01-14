@@ -4,25 +4,25 @@
 		{
 			"id": "info",
 			"name": "Information",
-			"icon": "info-sign",
+			"icon": "icon-info-sign",
 			"src": "data/lessons/choosing-type-info.html"
 		},
 		{
 			"id": "guide",
 			"name": "Guide",
-			"icon": "list",
+			"icon": "icon-list",
 			"src": "data/lessons/choosing-type-list.html"
 		},
 		{
 			"id": "service",
 			"name": "Typecast",
-			"icon": "wrench",
+			"icon": "icon-wrench",
 			"src": "data/lessons/choosing-type-tool.html"
 		},
 		{
 			"id": "resources",
 			"name": "Resources",
-			"icon": "sitemap",
+			"icon": "icon-sitemap",
 			"src": "additional resources"
 		}
 	]

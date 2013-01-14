@@ -26,6 +26,7 @@ function CourseDetailCtrl($scope, $routeParams, $http) {
 		$scope.course = data;
 	});
 	$scope.$routeParams = $routeParams;
+
 }
 
 function LessonCtrl($scope, $routeParams, $http, $location) {
@@ -51,6 +52,13 @@ function LessonCtrl($scope, $routeParams, $http, $location) {
 		// }
 	});
 
+	// get quiz data
+	$http.get("data/quizzes/web_quiz.json").success(function(quizData) {
+		$scope.quiz = quizData.quiz;
+	console.log("quiz loaded");
+	});
+
+
 	// set content according to data
 	$scope.setContent = function(content) {
 		$scope.content = content;
@@ -64,5 +72,11 @@ function LessonCtrl($scope, $routeParams, $http, $location) {
 
 	$scope.$routeParams = $routeParams;
 	$scope.$location = $location;
-
 }
+
+// function QuizControl($scope, $http) {
+// 	$http.get("data/quizzes.json").success(function(quizData) {
+// 		$scope.quiz = quizData;
+// 	});
+// }
+

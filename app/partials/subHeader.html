@@ -14,7 +14,7 @@
   <div class="eight columns mobile-four">
     <nav>
       <ul class="link-list right">
-        <li ng-repeat="course in courses" class="{{course.id}}" ng-class="{selected: $routeParams.courseId == course.id}"><a href="#/courses/{{course.id}}"><i class="foundicon-{{course.icon}}"></i></a></li>
+        <li ng-repeat="course in courses" class="{{course.id}}" ng-class="{selected: $routeParams.courseId == course.id}"><a href="#/courses/{{course.id}}"><i class="{{course.icon}}"></i></a></li>
       </ul>
     </nav>
   </div>

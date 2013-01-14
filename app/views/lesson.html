@@ -10,7 +10,7 @@
 		<ul class="five side-nav">
 			<li ng-repeat="lesson in course.lessons" class="polygon small {{$routeParams.courseId}}" ng-class="{selected: $routeParams.lessonId == lesson.id}">
 				<a href="#/{{$routeParams.courseId}}/{{lesson.id}}">
-					<i class="icon-{{lesson.icon}}"></i>
+					<i class="{{lesson.icon}}"></i>
 					<span class="{{$routeParams.courseId}}">{{lesson.name}}</span>
 				</a>
 
@@ -46,7 +46,7 @@
   			ng-click="
   				setContent(feature.src); 
 			">
-  				<a><i class="icon-{{feature.icon}}"><span>{{feature.name}}</span></i></a>
+  				<a><i class="{{feature.icon}}"><span>{{feature.name}}</span></i></a>
   			</li>
   		</ul>
   	</aside>
