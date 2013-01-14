@@ -1,30 +1,57 @@
 {
-	"title": "Font Face",
+	"title": "@font-face",
 	"features": [
 		{
 			"id": "info",
 			"name": "Information",
-			"icon": "info-sign",
-			"content": "Symbols or Icons are visually really powerful as they deliver instant information without any cultural or lingual barrier. Icons can support the displayed text or stand on their own."
+			"icon": "icon-info-sign",
+			"src": "data/lessons/font-face-info.html"
 		},
 		{
-			"id": "tutorial",
-			"name": "Tutorial",
-			"icon": "group",
-			"content": "tutorial here"
+			"id": "formats",
+			"name": "Formats",
+			"icon": "icon-list",
+			"src": "data/lessons/font-face-formats.html"
 		},
 		{
-			"id": "test",
-			"name": "Testing",
-			"icon": "beaker",
-			"content": "partials/icon-font_editor.html",
-			"src": "partials/icon-font_editor.html"
+			"id": "code",
+			"name": "CSS",
+			"icon": "t21-code",
+			"src": "data/lessons/font-face-code.html"
 		},
 		{
 			"id": "resources",
 			"name": "Resources",
-			"icon": "sitemap",
-			"content": "additional resources"
+			"icon": "icon-sitemap",
+			"src": "partials/resources.html",
+			"resources": [
+				{
+					"name": "Smashing Magazine",
+					"url": "http://www.smashingmagazine.com/2011/03/02/the-font-face-rule-revisited-and-useful-tricks/",
+					"description": "The @Font-Face Rule And Useful Web Font Tricks"
+				},
+				{
+					"name": "A List",
+					"url": "http://www.alistapart.com/articles/fonts-at-the-crossing/",
+					"description": "Web Fonts at the Crossing"
+				},
+				{
+					"name": "Six Revisions",
+					"url": "http://sixrevisions.com/css/font-face-guide/",
+					"description": "The Essential Guide to @font-face"
+				},
+				{
+					"name": "Font Squirrel",
+					"url": "http://www.fontsquirrel.com/fontface",
+					"description": "@font-face kits"
+				},
+				{
+					"name": "Font Squirrel",
+					"url": "http://www.fontsquirrel.com/fontface/generator",
+					"description": "@font-face generator"
+				}
+		
+			]
 		}
 	]
 }

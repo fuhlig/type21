@@ -1,6 +1,11 @@
 <!-- Button -->
 <div class="row">
-	<a href="#" class="button" data-reveal-id="badgeModal">Badge</a>
+  <div class="center">
+    <a href="#" class="secondary button" data-reveal-id="badgeModal">
+      <i class="t21-ribbon"></i>
+      Badge
+    </a>
+  </div>
 </div>
 
 <!-- Modal -->
@@ -8,11 +13,11 @@
     <h1>New Badge earned</h1>
     <p>well done!</p>
     <div class="badge-circle {{$routeParams.courseId}}">
-      <i class="foundicon-{{course.icon}}"></i>
+      <i class="{{course.icon}}"></i>
       <p>{{course.name}}</p>
       <ul>
         <li ng-repeat="lesson in course.lessons" class="award-polygon {{lesson.archived}}">
-          <i class="icon-{{lesson.icon}}"></i>
+          <i class="{{lesson.icon}}"></i>
           <!-- <div class="award-polygon frame-outer"></div> -->
         </li>
         

@@ -11,20 +11,6 @@
 
 
 /* -----------------------------------------
-   Colors
------------------------------------------ */
-@bgColor: #fafafa;
-
-// categories
-@mograph: #91c53e;
-@tDesign: #e82929;
-@textFx: #fdb51c;
-@web: #2cb0e0;
-
-@borderColor: #4d4d4d;
-
-
-/* -----------------------------------------
    Metrics
 ----------------------------------------- */
 @polygonSize: 30px;
@@ -38,6 +24,7 @@
 /* -----------------------------------------
    Shared Styles
 ----------------------------------------- */
+@import "colors.less";
 @import "mixins.less";
 @import "fonts.css";
 @import "typography.less";
@@ -86,8 +73,42 @@ hr {
 .logo img {
 	width: 80px;
 }
-.sub-logo .columns {
-	padding: 0;
+.sub-logo  {
+	.columns {
+		padding: 0;
+		text-align: center;
+	}
+	h3 {
+		margin: 0;
+		margin-top: 2em;
+	}
+	hr {
+		@gap: 3%;
+		margin-left: @gap;
+		width: (100% - @gap);
+	}
+}
+
+#logo {
+	.circle {
+		border-radius: 10em;
+		background-color: red;
+	}
+	.inner {
+		width: 5em;
+		height: 5em;
+		background-color: green;
+	}
+	.middle {
+		width: 7em;
+		height: 7em;
+		background-color: blue;
+	}
+	.outer {
+		width: 9em;
+		height: 9em;
+		background-color: yellow;
+	}
 }
 
 
@@ -115,18 +136,36 @@ nav {
 		&.mograph {
 			// .box-radius(5px, @mograph);
 			border-color: @mograph;
+			&.selected {
+				background-color: @mograph;
+			}
 		}
 		&.web {
 			// .box-radius(5px, @web);
 			border-color: @web;
+			&.selected {
+				background-color: @web;
+			}
 		}
 		&.tDesign {
 			// .box-radius(5px, @tDesign);
 			border-color: @tDesign;
+			&.selected {
+				background-color: @tDesign;
+			}
 		}
 		&.textFx {
 			// .box-radius(5px, @textFx);
 			border-color: @textFx;
+			&.selected {
+				background-color: @textFx;
+			}
+		}
+		&.selected {
+			border-color: white;
+			a {
+				color: white !important;
+			}
 		}
 		/* Hover animation */
 		&:hover {
@@ -151,7 +190,16 @@ nav {
 	}
 }
 
-
+/* -----------------------------------------
+   Footer
+----------------------------------------- */
+footer {
+	position: fixed;
+	bottom: 0;
+	background: whitesmoke;
+	width: 100%;
+	padding: 0.5em;
+}
 
 
 /* -----------------------------------------
@@ -207,6 +255,31 @@ nav {
 		}
 	}
 }
+
+.category i[class*="t21-"] {
+	line-height: 1.8;
+}
+
+.category i.icon-play {
+	font-size: 0.9em;
+	text-indent: 0.05em;
+}
+
+#lessons i.t21-fontsize {
+	font-size: 1.3em;
+	line-height: 0.6em;
+}
+
+.t21-code,
+.t21-tutorial {
+	line-height: 1.8em;
+}
+.t21-code > span,
+.t21-tutorial > span {
+	line-height: normal;
+}
+
+
 @media only screen and (max-width: 767px) {
  .category {
  	margin-top: 1em;
@@ -218,19 +291,19 @@ a .circle i {
 	.transition(all, 0.5s, ease);
 }
 
-a:hover {
-	& #textFx i {
-		text-shadow:
-		    -1px 1px #ccc,
-		    -2px 2px #ccc,
-		    -3px 3px #ccc,
-		    -4px 4px #ccc,
-		    -5px 5px #ccc,
-		    -6px 6px #ccc,
-		    -7px 7px #ccc,
-		    -8px 8px #ccc;
-	}
-}
+// a:hover {
+// 	& #textFx i {
+// 		text-shadow:
+// 		    -1px 1px #ccc,
+// 		    -2px 2px #ccc,
+// 		    -3px 3px #ccc,
+// 		    -4px 4px #ccc,
+// 		    -5px 5px #ccc,
+// 		    -6px 6px #ccc,
+// 		    -7px 7px #ccc,
+// 		    -8px 8px #ccc;
+// 	}
+// }
 
 .circle {
 	position: absolute;
@@ -295,7 +368,7 @@ a:hover {
 	position: absolute;
 	left: 38px;
 	top: 60px;
-	// z-index: -1;
+	z-index: -1;
 }
 
 #lessons {
@@ -388,7 +461,6 @@ a:hover {
 		.createPolygon(white);
 		position: absolute;
 		z-index: -1;
-		background-color: white;
 		.scale(1.1);
 	}
 	&.frame-outer {
@@ -497,12 +569,23 @@ article.description {
 }
 
 #quiz {
+	background-color: red;
+}
+#quiz > div {
+	display: none;
+}
+
+#quiz.orbit {
 	background-color: white;
+}
+#quiz.orbit > div {
+	display: block;
 }
 
 #quiz .orbit-slide {
 	padding: 0 50px;
 }
+
 
 // badge-polygon
 
@@ -527,7 +610,7 @@ article.description {
 		position: relative;
 		top: -30px;
 		z-index: 1;
-		line-height: 0;
+		line-height: normal;
 	}
 }
 
@@ -618,8 +701,8 @@ article.description {
 .ribbon-top:after {
 	width: 0px;
 	height: 0px;
-	border-top: 60px solid transparent;
-	border-bottom: 60px solid transparent;
+	border-top: 60px solid rgba(255,0,0,0);
+	border-bottom: 60px solid rgba(255,0,0,0);
 	border-left: 80px solid red;
 }
 
@@ -629,7 +712,7 @@ article.description {
 	height: 120px;
 	position: absolute;
 	text-align: center;
-	margin-bottom: 1.8em !important;
+	margin-bottom: 2em !important;
 	// margin-top: @polygon;   					TODO
 	line-height: 1em;
 	z-index: -1;
@@ -642,8 +725,8 @@ article.description {
 		left: 0;
 		width: 0;
 		height: 0;
-		border-left: solid transparent;
-		border-right: solid transparent;
+		border-left: solid rgba(255,0,0,0);
+		border-right: solid rgba(255,0,0,0);
 	}	
 	&:before {
 		border-bottom: solid white;
@@ -671,7 +754,7 @@ article.description {
 	}
 	&:nth-of-type(2) {
 		right: 70px;
-		.rotation(15deg);
+		.rotation(-15deg);
 		z-index: -2;
 
 		&.mograph {
@@ -806,10 +889,114 @@ article.description {
 }
 
 
-markdown {
-	color: red;
+pre, code {
+	color: gray;
+	background: none;
+	font-weight: normal;
 }
 
-.lesson-content h3 {
-	border-bottom: 1px solid rgba(1,1,1, 0.2);
+pre {
+	margin: 1em 0;
+	padding: 1em;
+	background-color: @bgCode;
+}
+
+.lesson-content {
+	// prevent fixed footer to cover content
+	margin-bottom: 2em;
+	ul {
+		text-indent: 2em;
+		list-style: none;
+	}
+	h3 {
+		margin-top: 1.5em;
+		border-bottom: 1px solid rgba(1,1,1, 0.2);
+	}
+}
+
+.th {
+	img {
+		.rounded(0);
+	}
+	&:hover img {
+		// .drop-shadow(0, 0, 0, 0);		
+	}
+}
+
+figure {
+	margin-top: 1em;
+	margin-bottom: 2em;
+	text-align: center;
+	
+	img {
+		margin: 0 auto;
+		margin-bottom: 0.5em;
+	}
+}
+
+.center {
+	text-align: center;
+}
+
+#badgeModal ul {
+	text-indent: 0;
+}
+
+.orbit-caption {
+	top: 0;
+	height: 2em;
+}
+
+
+.selected {
+
+
+	/* grey: */
+
+	& i {
+		// color: @borderColor;
+	}
+	& .polygon.frame-inner {
+		background-color: @borderColor;
+	}
+	& .polygon.frame-inner:before {
+		border-bottom-color: @borderColor;
+	}
+	& .polygon.frame-inner:after {
+		border-top-color: @borderColor;
+	}
+
+
+	/* inverted */
+
+	// background-color: white !important;
+	// & i {
+	// 	color: @tDesign;
+	// }
+	// & .polygon.frame-inner {
+	// 	background-color: @tDesign;
+	// }
+	// & .polygon.frame-inner:before {
+	// 	border-bottom-color: @tDesign;
+	// }
+	// & .polygon.frame-inner:after {
+	// 	border-top-color: @tDesign;
+	// }
+
+	// & .polygon.frame-outer {
+	// 	background-color: white !important;
+	// }
+	// &:before, & .polygon.frame-outer:before {
+	// 	border-bottom-color: white !important;
+	// }
+	// &:after, & .polygon.frame-outer:after {
+	// 	border-top-color: white !important;
+	// }
+}
+
+.example {
+	height: 20em;
+	background: white;
+	overflow: scroll;
+	font-family: serif;
 }

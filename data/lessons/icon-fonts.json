@@ -4,27 +4,38 @@
 		{
 			"id": "info",
 			"name": "Information",
-			"icon": "info-sign",
-			"content": "Symbols or Icons are visually really powerful as they deliver instant information without any cultural or lingual barrier. Icons can support the displayed text or stand on their own."
+			"icon": "icon-info-sign",
+			"src": "data/lessons/icon-font-design_info.html"
+		},		
+		{
+			"id": "list",
+			"name": "Guide",
+			"icon": "icon-question-sign",
+			"src": "data/lessons/icon-font-design_list.html"
+		},
+		{
+			"id": "tutorial",
+			"name": "Tutorial",
+			"icon": "t21-tutorial",
+			"src": "data/lessons/icon-font-design_tutorial.html"
 		},
 		{
 			"id": "test",
 			"name": "Testing",
-			"icon": "beaker",
-			"content": "partials/editor_icon-font.html",
+			"icon": "icon-beaker",
 			"src": "partials/editor_icon-font.html"
 		},
 		{
 			"id": "resources",
 			"name": "Resources",
-			"icon": "sitemap",
-			"content": "additional resources"
+			"icon": "icon-warning-sign",
+			"src": "partials/quiz.html"
 		},
 		{
 			"id": "quiz",
 			"name": "quiz",
-			"icon": "question-sign",
-			"content": "partials/quiz_icon-font.html"
+			"icon": "icon-question-sign",
+			"src": "partials/quiz_icon-font.html"
 		}
 	]
 }

@@ -1,0 +1,64 @@
+<!-- <div id="quiz">
+	<div ng-repeat="challenge in quiz">
+		<h1>lesson: {{challenge.lessonId}}</h1>
+		<label>question: {{challenge.question}}</label>
+		<ul>
+			<li ng-repeat="answer in challenge.answers">
+				<label>answer #{{[$index+1]}}: {{answer.choice}} ({{answer.correct}})</label>
+			</li>
+		</ul>
+	</div>	
+</div>
+ -->
+
+<!-- multiple choice test -->
+<!-- <div id="quiz">
+	<div>
+		<h2>lesson: {{quiz[0].lessonId}}</h2>
+		<p>{{quiz[0].question}}</p>
+		<ul>
+			<li ng-repeat="answer in quiz[0].answers">{{answer}}
+			</li>
+		</ul>
+
+		<input type="radio" ng-model="userChoice" value="{{quiz[0].answers[0].choice}}">
+			{{quiz[0].answers[0].choice}} <br> 
+		<input type="radio" ng-model="userChoice" value="{{quiz[0].answers[1].choice}}">
+			{{quiz[0].answers[1].choice}} <br> 
+		<input type="radio" ng-model="userChoice" value="{{quiz[0].answers[2].choice}}">
+			{{quiz[0].answers[2].choice}} <br> 
+
+
+		<p>Your Answer: {{userChoice}}</p>
+	</div>
+</div>
+ -->
+
+<p style="font-family: 't21-fontregular'; font-size: 5rem">
+	abcdefghij
+</p>
+
+
+<div ng-repeat="challenge in quiz">
+	<div class="row">
+		<span class="eight columns">
+			{{challenge.question}}
+		</span>
+		<span class="two columns">
+			<a class="secondary button"><i style="font-family: 't21-fontregular'">b</i></a>
+		</span>
+		<span class="two columns">
+			<a class="secondary button"><i class="t21-code"></i></a>
+		</span>
+	</div>
+</div>
+
+<script>
+	// init fn.orbit
+	$('#quiz').orbit({
+		timer: false,
+		// animation: 'horizontal-push',
+		fluid: "16x9"
+	});
+	console.log("orbit loaded");
+</script>

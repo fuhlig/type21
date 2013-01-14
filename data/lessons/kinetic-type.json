@@ -1,30 +1,54 @@
 {
-	"title": "Kinetic Type",
+	"title": "Kinetic Typography",
 	"features": [
 		{
 			"id": "info",
 			"name": "Information",
-			"icon": "info-sign",
-			"content": "Symbols or Icons are visually really powerful as they deliver instant information without any cultural or lingual barrier. Icons can support the displayed text or stand on their own."
+			"icon": "icon-info-sign",
+			"src": "data/lessons/kinetic-type.html"
 		},
 		{
-			"id": "tutorial",
-			"name": "Tutorial",
-			"icon": "group",
-			"content": "tutorial here"
-		},
-		{
-			"id": "test",
-			"name": "Testing",
-			"icon": "beaker",
-			"content": "partials/icon-font_editor.html",
-			"src": "partials/icon-font_editor.html"
+			"id": "showcase",
+			"name": "showcase",
+			"icon": "icon-facetime-video",
+			"src": "partials/showcase_kinetic.html",
+			"video": [
+				{
+					"url": "http://player.vimeo.com/video/33434885",
+					"caption": "this animation shows the history and specimen of famous typeface Futura"
+				},
+				{
+					"url": "http://player.vimeo.com/video/21896359",
+					"caption": "incorporating text and graphics to support the spoken word"
+				},
+				{
+					"url": "http://player.vimeo.com/video/18669276",
+					"caption": "moving text is used for storytelling"
+				}
+			]
 		},
 		{
 			"id": "resources",
 			"name": "Resources",
-			"icon": "sitemap",
-			"content": "additional resources"
+			"icon": "icon-sitemap",
+			"src": "partials/resources.html",
+			"resources": [
+				{
+					"name": "Wikipedia",
+					"url": "http://en.wikipedia.org/wiki/Kinetic_typography",
+					"description": "Wikipedia article"
+				},
+				{
+					"name": "Vimeo",
+					"url": "http://vimeo.com/channels/kinetictypography",
+					"description": "vimeo channel"
+				},
+				{
+					"name": "Johnny Lee",
+					"url": "http://johnnylee.net/kt/",
+					"description": "typographer"
+				}
+			]
 		}
 	]
 }

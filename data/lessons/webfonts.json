@@ -4,27 +4,55 @@
 		{
 			"id": "info",
 			"name": "Information",
-			"icon": "info-sign",
-			"content": "Symbols or Icons are visually really powerful as they deliver instant information without any cultural or lingual barrier. Icons can support the displayed text or stand on their own."
+			"icon": "icon-info-sign",
+			"src": "data/lessons/web-fonts-info.html"
 		},
 		{
-			"id": "tutorial",
-			"name": "Tutorial",
-			"icon": "group",
-			"content": "tutorial here"
+			"id": "services",
+			"name": "Services",
+			"icon": "icon-wrench",
+			"src": "data/lessons/web-fonts-services.html"
 		},
 		{
 			"id": "test",
 			"name": "Testing",
-			"icon": "beaker",
-			"content": "partials/icon-font_editor.html",
-			"src": "partials/icon-font_editor.html"
+			"icon": "t21-test",
+			"src": "data/lessons/web-fonts-test.html",
+			"fonts": [
+				{
+					"name": "Arvo",
+					"src": "arvo"
+				},
+				{
+					"name": "Lobster Two",
+					"src": "lobster-two"
+				},
+				{
+					"name": "Droid Sans",
+					"src": "droid-sans"
+				}
+			]
 		},
 		{
 			"id": "resources",
 			"name": "Resources",
-			"icon": "sitemap",
-			"content": "additional resources"
+			"icon": "icon-sitemap",
+			"src": "partials/resources.html",
+			"resources": [
+				{
+					"name": "Google Web Fonts",
+					"url": "http://www.google.com/webfonts"
+				},
+				{
+					"name": "Adobe Edge Web Fonts",
+					"url": "http://html.adobe.com/edge/webfonts/"
+				},
+				{
+					"name": "Smashing Magazine",
+					"url": "http://www.smashingmagazine.com/2010/10/20/review-of-popular-web-font-embedding-services/&sa=U&ei=FuPuUISmDMGNtAbzo4CADQ&ved=0CBkQFjAG&client=internal-uds-cse&usg=AFQjCNEtt6Zyk8_hs4Giy60hFmQAjqJpQA",
+					"description": "Review of popular Web Font Embedding Services"
+				}
+			]
 		}
 	]
 }

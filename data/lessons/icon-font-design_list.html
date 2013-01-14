@@ -1,0 +1,40 @@
+<h2 id="why-use-icon-fonts">Why use icon fonts?</h2>
+
+<p>There are several reasons but I want to start bottom up:</p>
+
+<h3 id="graphics">Graphics</h3>
+
+<p>Pixelgraphics (<em>simple graphics</em>) often get the job done until its about to <strong>maintain</strong>, <strong>customize</strong> and <strong>scale</strong> them</p>
+
+<blockquote>
+  <p><strong>not scalable</strong>: with an increasing device and screen landscape with different hard- and software attributes it would need x versions (low, medium, high, retina resolution) in order to display the graphic on many devices as possible in a decent quality</p>
+  
+  <p><strong>performance</strong>: serving <a href="http://www.alistapart.com/articles/responsive-images-how-they-almost-worked-and-what-we-need/">responsive images</a> is a difficult task with (yet) not entirely satifying results. Serving multiple images has a negative affect on the performance (client + network). If an image has different states (active, hover, inactive, ...) this multiplies the server requests and maintainability.</p>
+</blockquote>
+
+<h3 id="css-sprites">CSS Sprites</h3>
+
+<p>A possible solution to these issues would be using <a href="http://css-tricks.com/css-sprites/">CSS sprites</a>. When using multicolor, image-like icons - this is the way to go.
+But creating sprites is not that easy</p>
+
+<blockquote>
+  <p><strong>complex creating</strong>: all images have to be arranged in a grid with all possible states. Multiple resolutions mean multiple sprites</p>
+  
+  <p><strong>complex positioning</strong>: the visible area has to be positioned pixel-perfect (thats were the grid comes in handy) with <code>background-position</code></p>
+  
+  <p><strong>consuming maintenance</strong>: when adding or editing icons the entire sprite has to be recreated and repositioned</p>
+</blockquote>
+
+<p>To ease and streamline the workflow with CSS sprites there are some great tools like <a href="http://compass-style.org/help/tutorials/spriting/">Compass for SASS</a>.</p>
+
+<h3 id="icon-fonts">Icon Fonts</h3>
+
+<p>But when aiming for a simplified design approach (like type21) with monochrome icons using icon fonts is probably the best solution in terms of performance, cross device and browser compatibility.</p>
+
+<blockquote>
+  <p><strong>free scalable</strong>: as icon fonts are <em>fonts</em> and consist basicly of vectors they can scale without quality loss - perfect for big and small screens</p>
+  
+  <p><strong>performance</strong>: despite the different formats only the format compatible to the browser is downloaded by the client (few kb) which result in less http requests.</p>
+  
+  <p><strong>flexible and customizable</strong>: having a font all the effects that can be applied by CSS to text can be applied to the icons: size, color, shadow, transformations, animations etc.</p>
+</blockquote>

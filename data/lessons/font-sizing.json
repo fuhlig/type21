@@ -4,27 +4,42 @@
 		{
 			"id": "info",
 			"name": "Information",
-			"icon": "info-sign",
-			"content": "data/lessons/font-sizing.html"
+			"icon": "icon-info-sign",
+			"src": "data/lessons/font-sizing-info.html"
 		},
 		{
-			"id": "tutorial",
-			"name": "Tutorial",
-			"icon": "group",
-			"content": "tutorial here"
-		},
-		{
-			"id": "test",
-			"name": "Testing",
-			"icon": "beaker",
-			"content": "partials/icon-font_editor.html",
-			"src": "partials/icon-font_editor.html"
+			"id": "code",
+			"name": "Code Samples",
+			"icon": "t21-code",
+			"src": "data/lessons/font-sizing-code.html"
 		},
 		{
 			"id": "resources",
 			"name": "Resources",
-			"icon": "sitemap",
-			"content": "additional resources"
+			"icon": "icon-sitemap",
+			"src": "partials/resources.html",
+			"resources": [
+				{
+					"name": "Pressed Web",
+					"url": "http://pressedweb.com/css/the-history-and-future-of-font-sizing/",
+					"description": "The History and Future of Font Sizing"					
+				},
+				{
+					"name": "Kyle Schaeffer",
+					"url": "http://kyleschaeffer.com/user-experience/css-font-size-em-vs-px-vs-pt-vs/",
+					"description": "EM vs. PX vs. PT vs. PERCENT"					
+				},
+				{
+					"name": "Snook",
+					"url": "snook.ca/archives/html_and_css/font-size-with-rem",
+					"description": "Font Sizing with REM"					
+				},
+				{
+					"name": "PX TO EM",
+					"url": "http://pxtoem.com/",
+					"description": "Converts Pixel to EM values"					
+				}
+			]
 		}
 	]
 }

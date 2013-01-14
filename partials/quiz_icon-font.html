@@ -1,4 +1,4 @@
-<div id="quiz">
+<div id="quiz" ng-controller="QuizControl">
 	<div>
 		<h1>First</h1>
 		<form name="firstQuiz">
@@ -11,7 +11,7 @@
 	<div>
 		<h1>Second</h1>
 		<form name="firstQuiz">
-			<input type="checkbox" ng-model="check1" ng-true-value="correct" ng-false-value="incorrect">One <br>
+			<input type="checkbox" ng-model="check1" ng-true-value="richtig" ng-false-value="incorrect">One <br>
 			<input type="checkbox" ng-model="check2" ng-true-value="incorrect" ng-false-value="correct">Two <br>
 			<input type="checkbox" ng-model="check3">Three <br>
 		</form>
@@ -21,10 +21,13 @@
 	</div>
 	<div>
 		<h1>Third</h1>
+		<h2>course: {{quiz[0].course}}</h2>
+		<h2>questions: {{quiz[0].questions}}</h2>
+		<h2>answers: {{quiz[0].answers}}</h2>
 	</div>
 </div>
 
-<div ng-include src="'partials/badge.html'"></div>
+
 
 
 

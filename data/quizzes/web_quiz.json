@@ -1,0 +1,25 @@
+{
+	"course": "Web",
+	"quiz": [
+		{
+			"question": "icon fonts scale like vector graphics",
+			"correct": false
+		},
+		{
+			"question": "icon fonts scale like vector graphics",
+			"correct": true
+		},
+		{
+			"question": "icon fonts scale like vector graphics",
+			"correct": true
+		},
+		{
+			"question": "icon fonts scale like vector graphics",
+			"correct": false
+		},
+		{
+			"question": "icon fonts scale like vector graphics",
+			"correct": true
+		}
+	]
+}

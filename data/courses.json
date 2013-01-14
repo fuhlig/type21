@@ -2,21 +2,21 @@
 	{
 		"name": "Motion Graphics",
 		"id": "mograph",
-		"icon": "video"
+		"icon": "icon-play"
 	},
 	{
 		"name": "Web",
 		"id": "web",
-		"icon": "globe"
+		"icon": "t21-web"
 	},
 	{
 		"name": "Type Design",
 		"id": "tDesign",
-		"icon": "edit"
+		"icon": "t21-tDesign"
 	},
 	{
 		"name": "Text Effects",
 		"id": "textFx",
-		"icon": "smiley"
+		"icon": "t21-textFx"
 	}
 ]

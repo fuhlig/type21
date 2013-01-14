@@ -1,0 +1,25 @@
+<div id="showcase">
+	<div class="flex-video widescreen vimeo">
+		<div ng-repeat="video in lesson.features[1].video">
+			<iframe src="{{video.url}}?badge=0&amp;color=ffffff" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+		</div>
+	</div>
+</div>
+
+
+<!-- captions -->
+<!-- <span ng-repeat="video in lesson.features[1].video" class="orbit-caption" id="caption1">
+	{{video.caption}}
+</span>
+ -->
+<!-- info -->
+<p>More great kinetic typography examples can be found on <a href="http://vimeo.com/channels/kinetictypography/">vimeo's channel</a> dedicated to this topic</p> 
+
+<script>
+	// init fn.orbit
+	$('#showcase').orbit({
+		timer: false,
+		// animation: 'horizontal-push',
+		fluid: "16x9"
+	});
+</script>

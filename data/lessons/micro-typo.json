@@ -1,0 +1,72 @@
+{
+	"title": "Micro-Typography",
+	"features": [
+		{
+			"id": "info",
+			"name": "Information",
+			"icon": "icon-info-sign",
+			"src": "data/lessons/micro-typo-info.html"
+		},
+		{
+			"id": "guide",
+			"name": "Guide",
+			"icon": "icon-list",
+			"src": "data/lessons/micro-typo-list.html"
+		},
+		{
+			"id": "code",
+			"name": "CSS",
+			"icon": "icon-edit",
+			"src": "data/lessons/micro-typo_code.html"
+		},
+		{
+			"id": "test",
+			"name": "Testing",
+			"icon": "icon-beaker",
+			"src": "data/lessons/micro-typo_editor.html"
+		},
+		{
+			"id": "resources",
+			"name": "Resources",
+			"icon": "icon-sitemap",
+			"src": "partials/resources.html",
+			"resources": [
+				{
+					"name": "mmprint",
+					"url": "http://www.mmprint.com/blog/2011/typography-kerning-leading-tracking/",
+					"description": "Typography: Kerning, Leading and Tracking"					
+				},
+				{
+					"name": "Wikipedia",
+					"url": "http://en.wikipedia.org/wiki/Legibility",
+					"description": "Legibility on Wikipedia"					
+				},
+				{
+					"name": "About.com",
+					"url": "http://desktoppub.about.com/cs/typespacing/a/kerningtracking.htm",
+					"description": "Kerning and Tracking"					
+				},
+				{
+					"name": "KERNTYPE",
+					"url": "http://type.method.ac/",
+					"description": "A Kerning Game"					
+				},
+				{
+					"name": "sitepoint",
+					"url": "http://www.sitepoint.com/principles-beautiful-typography/",
+					"description": "The Principles of Beautiful Typography"					
+				},
+				{
+					"name": "SJL",
+					"url": "http://www.sjlwebdesign.co.uk/sjl-blog/index.php/typography/macro-and-micro/",
+					"description": "Macro and Micro Typography"					
+				},
+				{
+					"name": "Mozilla Developer Network",
+					"url": "https://developer.mozilla.org/en-US/docs/CSS/letter-spacing",
+					"description": "CSS: letter-spacing"					
+				}				
+			]
+		}
+	]
+}

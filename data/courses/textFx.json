@@ -1,36 +1,36 @@
 {
 	"name": "Text Effects",
-	"icon": "smiley",
+	"icon": "t21-textFx",
 	"description": "Photoshop’s text and layer tools can be used to create some really awesome Typography’s. We’ve put together a list of 33 of the best  Typography tutorials we could find to help you stay up to date on the latest trends and techniques. You’ll find some really cool grunge and glass styles, learn how some of the best designers create their unique effects using typography.",
 	"lessons": [
 		{
 			"name":	"Effects",
 			"id":	"effects",
-			"icon": "map-marker",
+			"icon": "icon-magic",
 			"archived": true
 		},
 		{
 			"name":	"Text Shadow",
 			"id":	"shadow",
-			"icon": "bolt",
+			"icon": "t21-textshadow",
 			"archived": true
 		},
 		{
 			"name":	"3D",
 			"id":	"3d",
-			"icon": "bell",
+			"icon": "t21-3d",
 			"archived": true
 		},
 		{
 			"name": "Engraving",
 			"id": "engraving",
-			"icon": "bullhorn",
+			"icon": "t21-engraving",
 			"archived": true
 		},
 		{
 			"name": "Color Effects",
 			"id": "color",
-			"icon": "inbox",
+			"icon": "t21-color",
 			"archived": false
 		}
 	]

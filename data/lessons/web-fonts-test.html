@@ -1,0 +1,17 @@
+<select ng-model="font"	ng-options="font.name for font in lesson.features[2].fonts">
+</select>
+<input type="text" ng-model="previewTxt" value="preview">
+
+<script src="http://use.edgefonts.net/arvo.js"></script>
+<script src="http://use.edgefonts.net/lobster-two.js"></script>
+<script src="http://use.edgefonts.net/droid-sans.js"></script>
+
+<p>selected: {{font}}</p>
+
+<h1 id="preview">{{previewTxt}}</h1>
+
+<style>
+#preview {
+	font-family: {{font.src}}, sarif;
+}
+</style>
