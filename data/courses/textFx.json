@@ -1,7 +1,7 @@
 {
 	"name": "Text Effects",
 	"icon": "t21-textFx",
-	"description": "Photoshop’s text and layer tools can be used to create some really awesome Typography’s. We’ve put together a list of 33 of the best  Typography tutorials we could find to help you stay up to date on the latest trends and techniques. You’ll find some really cool grunge and glass styles, learn how some of the best designers create their unique effects using typography.",
+	"description": "Text effects make it possible to make text a design object itself. As type doesn't have to bring only information across but it can be made visually very appealing to support the information or standalone.",
 	"lessons": [
 		{
 			"name":	"Effects",

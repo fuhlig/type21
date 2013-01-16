@@ -1,0 +1,56 @@
+{
+	"title": "Icon Fonts - Design",
+	"features": [
+		{
+			"id": "info",
+			"name": "Information",
+			"icon": "icon-info-sign",
+			"src": "data/lessons/icon-font-design_info.html"
+		},		
+		{
+			"id": "list",
+			"name": "Guide",
+			"icon": "icon-list",
+			"src": "data/lessons/icon-font-design_list.html"
+		},
+		{
+			"id": "tutorial",
+			"name": "Tutorial",
+			"icon": "t21-tutorial",
+			"src": "data/lessons/icon-font-design_tutorial.html"
+		},
+		{
+			"id": "resources",
+			"name": "Resources",
+			"icon": "icon-sitemap",
+			"src": "partials/resources.html",
+			"resources": [
+				{
+					"name": "The Noun Project",
+					"url": "http://thenounproject.com",
+					"description": "Excellent resource for symbols and icons in vector format"
+				},
+				{
+					"name": "iconmonstr",
+					"url": "http://iconmonstr.com/",
+					"description": "Great collection of vector icons"
+				},
+				{
+					"name": "Webdesigner Depot",
+					"url": "http://www.webdesignerdepot.com/2012/01/how-to-make-your-own-icon-webfont/",
+					"description": "How to make your own icon webfont"
+				},
+				{
+					"name": "Stephen Wyatt Bush",
+					"url": "http://blog.stephenwyattbush.com/2012/02/01/making-an-icon-font",
+					"description": "Making an Icon Font"
+				},
+				{
+					"name": "CSS Tricks",
+					"url": "http://css-tricks.com/examples/IconFont/",
+					"description": "Icon Fonts are awesome"
+				}
+			]
+		}
+	]
+}

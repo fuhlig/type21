@@ -1,0 +1,33 @@
+## Tutorial
+
+Within the design tutorial you learned how to create the icon font and converted it into an actual font. But as you learned web fonts have to be in a different formats to cross browser compatible.
+
+**convert font to webfont**: use [fontquirrel's @font-face Kit Generator](http://www.fontsquirrel.com/fontface/generator) to convert the font to the different formats ready to use with `@font-face`
+
+**preview iconset**: the generator did only convert the font it also created a CSS file and a demopage for preview
+
+**@font-face integration**: check the [basics of @font-face](#/web/font-face)
+
+`@font-face {
+    font-family: 'iconset';
+    src: url('iconset-webfont.eot');
+    src: url('iconset-webfont.eot?#iefix') format('embedded-opentype'),
+         url('iconset-webfont.woff') format('woff'),
+         url('iconset-webfont.ttf') format('truetype'),
+         url('iconset-webfont.svg#iconset') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}`
+
+`[class*="iconset-"] {
+	font-family: 'iconset';	// referencing the font-family in @font-face rule
+}`
+
+
+**embedding icon**: for universal usage on buttons, navigation etc. you give the classrule with `iconset-` prefix 
+
+`.iconset-paw:before {
+  content: "a"; // matching string set in inkscape
+}`
+
+everytime you add the `class="iconset-*icon*` to a HTML element the icon is displayed next to it

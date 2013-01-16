@@ -5,25 +5,31 @@
 			"id": "info",
 			"name": "Information",
 			"icon": "icon-info-sign",
-			"src": "Symbols or Icons are visually really powerful as they deliver instant information without any cultural or lingual barrier. Icons can support the displayed text or stand on their own."
+			"src": "data/lessons/title-sequence_info.html"
 		},
 		{
-			"id": "tutorial",
-			"name": "Tutorial",
-			"icon": "icon-group",
-			"src": "tutorial here"
-		},
-		{
-			"id": "test",
-			"name": "Testing",
-			"icon": "icon-beaker",
-			"src": "partials/editor_icon-font.html"
+			"id": "showcase",
+			"name": "Showcase",
+			"icon": "icon-facetime-video",
+			"src": "data/lessons/title-sequence_showcase.html"
 		},
 		{
 			"id": "resources",
 			"name": "Resources",
 			"icon": "icon-sitemap",
-			"src": "additional resources"
+			"src": "partials/resources.html",
+			"resources": [
+				{
+					"name": "Art of the Title",
+					"url": "http://www.artofthetitle.com/",
+					"description": "online resource for title sequences"
+				},
+				{
+					"name": "Watch the Titles",
+					"url": "http://www.watchthetitles.com",
+					"description": "online resource for title sequences"
+				}
+			]
 		}
 	]
 }

@@ -5,25 +5,70 @@
 			"id": "info",
 			"name": "Information",
 			"icon": "icon-info-sign",
-			"src": "Symbols or Icons are visually really powerful as they deliver instant information without any cultural or lingual barrier. Icons can support the displayed text or stand on their own."
+			"src": "data/lessons/billing-block_info.html"
 		},
 		{
-			"id": "tutorial",
-			"name": "Tutorial",
-			"icon": "icon-group",
-			"src": "tutorial here"
+			"id": "showcase",
+			"name": "Showcase",
+			"icon": "icon-eye-open",
+			"src": "partials/showcase_gallery.html",
+			"description": "This gallery displays some different movie post design to identify some key features and characteristics",
+			"grid": "two",
+			"img": [
+				{
+					"url":	"http://www.joblo.com/posters/images/full/shutter-island-poster1.jpg",
+					"caption": "displaying extended information on the bottom with condensed typeface and center aligned text"
+				},
+				{
+					"url":	"http://www.joblo.com/posters/images/full/Jack-the-Giant-Slayer_giantposter2PPP.jpg",
+					"caption": "displaying only basic information"
+				},
+				{
+					"url":	"http://www.joblo.com/posters/images/full/springbreakers-french-poste.jpg",
+					"caption": "billing block with right alignment in the bottom right corner, giving the image more room"
+				},
+				{
+					"url":	"http://www.joblo.com/posters/images/full/2009-twelve_rounds-1.jpg",
+					"caption": "integrated into the title design"
+				},
+				{
+					"url":	"http://www.joblo.com/posters/images/full/Taken2poster3large.jpg",
+					"caption": "standard information with high and medium contrast from left to right"
+				},
+				{
+					"url":	"http://www.joblo.com/posters/images/full/taken2-french-poster.jpg",
+					"caption": "...and some posters have no billing block at all"
+				}
+			]
 		},
 		{
-			"id": "test",
-			"name": "Testing",
-			"icon": "icon-beaker",
-			"src": "partials/icon-font_editor.html"
+			"id": "guide",
+			"name": "Guide",
+			"icon": "icon-list",
+			"src": "data/lessons/billing-block_list.html"
 		},
 		{
 			"id": "resources",
 			"name": "Resources",
 			"icon": "icon-sitemap",
-			"src": "additional resources"
+			"src": "partials/resources.html",
+			"resources": [
+				{
+					"name": "JoBlo Movie Network",
+					"url": "http://www.joblo.com/",
+					"description": "Movie Poster Archive"
+				},
+				{
+					"name": "Video Copilot",
+					"url": "http://www.videocopilot.net/blog/2012/09/knock-your-block-out/",
+					"description": "Free font and template for billing blocks"
+				},
+				{
+					"name": "eHow.com",
+					"url": "http://www.ehow.com/how_12095682_create-movie-poster-billing-block.html",
+					"description": "How to Create a Movie Poster Billing Block"
+				}
+			]
 		}
 	]
 }

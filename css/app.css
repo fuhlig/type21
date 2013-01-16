@@ -90,22 +90,6 @@ header h3 {
   font-size: 13px;
   font-size: 1.3rem;
 }
-footer {
-  text-align: center;
-}
-footer a {
-  font-size: 12px;
-  font-size: 1.2rem;
-  color: rgba(0, 0, 0, 0.2);
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-footer a:hover {
-  color: rgba(0, 0, 0, 0.5);
-}
 nav a {
   font-size: 28px;
   font-size: 2.8rem;
@@ -285,9 +269,65 @@ nav li:hover a {
 footer {
   position: fixed;
   bottom: 0;
-  background: whitesmoke;
+  background: black;
   width: 100%;
-  padding: 0.5em;
+  padding: 1em;
+  text-align: center;
+  opacity: 0.05;
+  color: white;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-transform: translate(0em, 2em);
+  -moz-transform: translate(0em, 2em);
+  -o-transform: translate(0em, 2em);
+  -ms-transform: translate(0em, 2em);
+  transform: translate(0em, 2em);
+}
+footer:hover {
+  opacity: 0.2;
+  -webkit-transform: translate(0em, 0em);
+  -moz-transform: translate(0em, 0em);
+  -o-transform: translate(0em, 0em);
+  -ms-transform: translate(0em, 0em);
+  transform: translate(0em, 0em);
+}
+footer a {
+  font-size: 12px;
+  font-size: 1.2rem;
+  color: whitesmoke;
+  text-shadow: 1px 1px 0 rgba(1, 1, 1, 0.1);
+}
+footer a:hover {
+  text-shadow: none;
+}
+footer div.buttons i {
+  position: absolute;
+  top: 0;
+  padding: 0.4em 0.8em;
+  font-size: 2.4rem;
+}
+footer div.buttons i:hover {
+  background-color: #333;
+}
+footer .button-award {
+  right: 0;
+}
+footer .button-tour {
+  left: 0;
+}
+footer .button-arrow {
+  color: white;
+  position: absolute;
+  top: 0;
+}
+footer:hover .button-arrow {
+  -webkit-transform: rotatex(180deg);
+  -moz-transform: rotatex(180deg);
+  -ms-transform: rotatex(180deg);
+  transform: rotatex(180deg);
 }
 /* -----------------------------------------
    Home (category list)
@@ -339,7 +379,8 @@ footer {
   line-height: 0.6em;
 }
 .t21-code,
-.t21-tutorial {
+.t21-tutorial,
+.t21-test {
   line-height: 1.8em;
 }
 .t21-code > span,
@@ -350,6 +391,12 @@ footer {
   .category {
     margin-top: 1em;
     margin-bottom: 0.5em;
+  }
+  .category .circle {
+    left: 0.2em;
+  }
+  .category i.icon-play {
+    font-size: 5.6rem;
   }
 }
 a .circle i {
@@ -385,6 +432,18 @@ a .circle i {
 .circle.right {
   right: -25%;
 }
+#awardModal {
+  text-align: center;
+}
+#awardModal .circle {
+  position: initial;
+}
+#awardModal ul {
+  list-style: none;
+}
+#awardModal .polygon > span {
+  font-size: 1.8rem;
+}
 #introTour {
   display: none;
 }
@@ -395,7 +454,7 @@ a .circle i {
    Lesson
 ----------------------------------------- */
 .course-intro {
-  height: 200px;
+  height: 12em;
   margin-bottom: 1em;
   text-align: justify;
 }
@@ -995,23 +1054,23 @@ article.description {
   border-top-color: white;
   border-bottom-color: white;
 }
-.award-polygon:nth-child(1) {
+.badge-circle .award-polygon:nth-child(1) {
   left: 85px;
   top: -35px;
 }
-.award-polygon:nth-child(2) {
+.badge-circle .award-polygon:nth-child(2) {
   right: -40px;
   top: 50px;
 }
-.award-polygon:nth-child(3) {
+.badge-circle .award-polygon:nth-child(3) {
   right: -5px;
   bottom: -50px;
 }
-.award-polygon:nth-child(4) {
+.badge-circle .award-polygon:nth-child(4) {
   left: -5px;
   bottom: -50px;
 }
-.award-polygon:nth-child(5) {
+.badge-circle .award-polygon:nth-child(5) {
   left: -40px;
   top: 50px;
 }
@@ -1069,6 +1128,10 @@ article.description {
 	    0 0 100px #FF00DE,
 	    0 0 150px #FF00DE;
 }
+.shadow.retro {
+  text-shadow: 3px 3px 0 #FFFFFF, 
+		5px 5px 0 #222;
+}
 pre,
 code {
   color: gray;
@@ -1079,6 +1142,7 @@ pre {
   margin: 1em 0;
   padding: 1em;
   background-color: #f2f2f2;
+  overflow: scroll;
 }
 .lesson-content {
   margin-bottom: 2em;
@@ -1135,4 +1199,30 @@ figure img {
   background: white;
   overflow: scroll;
   font-family: serif;
+}
+.example-icons {
+  font-size: 10em;
+  text-align: center;
+}
+.carousel img {
+  max-height: 350px;
+}
+blockquote {
+  padding-right: 0;
+}
+.reveal-modal {
+  padding-bottom: 0;
+}
+.reveal-modal h1 {
+  text-align: center;
+}
+#badgeModal.reveal-modal,
+#awardModal.reveal-modal {
+  width: 80%;
+  left: 10%;
+  margin: 0;
+  height: 550px;
+}
+#badgeModal.reveal-modal .orbit-wrapper {
+  height: 500px !important;
 }

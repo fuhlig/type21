@@ -1,0 +1,47 @@
+{
+	"title": "Typographic Shapes",
+	"features": [
+		{
+			"id": "info",
+			"name": "Information",
+			"icon": "icon-info-sign",
+			"src": "data/lessons/shape_info.html"
+		},
+		{
+			"id": "showcase",
+			"name": "Showcase",
+			"icon": "icon-eye-open",
+			"src": "partials/showcase_gallery.html",
+			"description": "",
+			"grid": "two",
+			"img": [
+				{
+					"url":	"http://2.bp.blogspot.com/-_-22V7BdfW4/TXHId1SHEbI/AAAAAAAAABo/zaUVFXWjK8E/s1600/aa.jpg",
+					"caption": "death by typography - simple gun shaped by letters"
+				},
+				{
+					"url":	"http://www.thefirstfew.com/wp-content/uploads/Dockers.jpg",
+					"caption": "WEAR THE PANTS by Dockers - body shaped with adjusted line width (left) and clipping (right)"
+				},
+				{
+					"url":	"http://img142.imageshack.us/img142/5333/tmp9641.jpg",
+					"caption": "obama - catchphrases from his campaign to form his portrait"
+				},
+				{
+					"url":	"data/img/portrait.jpg",
+					"caption": "Another detailed portrait with tranformed text"
+				},
+				{
+					"url":	"data/img/typo_heart.jpg",
+					"caption": "I'm sorry - translations shaped into a heart"
+				}
+			]
+		},
+		{
+			"id": "video",
+			"name": "Video",
+			"icon": "icon-facetime-video",
+			"src": "data/lessons/shape_video.html"
+		}	
+	]
+}

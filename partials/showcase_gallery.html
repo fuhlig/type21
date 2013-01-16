@@ -1,36 +1,16 @@
-<ul class="block-grid three-up" data-clearing>
+<p>{{lesson.features[1].description}}</p>
+
+<ul class="block-grid {{lesson.features[1].grid}}-up mobile" data-clearing>
 	<li ng-repeat="image in lesson.features[1].img">
-		<img ng-src={{image.url}} data-caption="{{image.caption}}"/>
+		<a href="{{image.url}}" class="th"><img ng-src={{image.url}} data-caption="{{image.caption}}"/></a>
 	</li>
 </ul> 
 
 
-<!-- <div class="row">
-	<div class="twelve columns">
-		<h1>Orbit</h1>
-		<div id="featured">
-			<img src="img/showcase/css-textshadows-1.jpg">
-			<img src="img/showcase/css-textshadows-2.jpg">
-			<img src="img/showcase/css-textshadows-3.jpg">
-			<img src="img/showcase/css-textshadows-4.jpg">
-			<img src="img/showcase/css-textshadows-5.jpg">
-			<img src="img/showcase/css-textshadows-6.jpg">	
-		</div>
-	</div>
-</div>
- -->
 
 <script>
 	var $doc = $(document),
 	  Modernizr = window.Modernizr;
 
-
-	// init fn.orbit
-	$('#featured').orbit({
-		timer: false
-	});
-
-	$.fn.foundationClearing         ? $doc.foundationClearing() : null;
-
-
+	$.fn.foundationClearing ? $doc.foundationClearing() : null;
 </script>

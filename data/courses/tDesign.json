@@ -2,7 +2,7 @@
 	"name": "Type Design",
 	"icon": "t21-tDesign",
 	"description": 
-		"Type design is performed by a type designer. Although recently there have been many amateur typefaces available on CDs in batches of hundreds, type design remains an artistic profession of applied art comparable with architecture.",
+		"Typography is an over underrated topic - even for designers. But it can be a powerfull tool in a designer's toolkit. This specific course deals with making the right choices, text readable and how to design a font.",
 	"lessons": [
 		{
 			"name":	"Macro-Typo",
@@ -18,7 +18,7 @@
 		},
 		{
 			"name":	"Icon Fonts",
-			"id":	"icon-fonts",
+			"id":	"icon-fonts-design",
 			"icon": "t21-iconfont",
 			"archived": true
 		},
@@ -29,9 +29,9 @@
 			"archived": false
 		},
 		{
-			"name": "Print vs. Screen",
-			"id": "print-vs-screen",
-			"icon": "t21-printscreen",
+			"name": "Grid System",
+			"id": "grid",
+			"icon": "icon-th",
 			"archived": false
 		}
 	]

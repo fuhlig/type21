@@ -108,6 +108,12 @@
   -ms-transform: rotate(@deg);
   transform: rotate(@deg);
 }
+.rotateX(@deg){
+  -webkit-transform: rotateX(@deg);
+  -moz-transform: rotateX(@deg);
+  -ms-transform: rotateX(@deg);
+  transform: rotateX(@deg);
+}
 
 .drop-shadow(@x-axis: 0, @y-axis: 1px, @blur: 2px, @alpha: 0.1) {
   -webkit-box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
@@ -119,4 +125,16 @@
   -webkit-border-radius: @radius;
   -moz-border-radius: @radius;
   border-radius: @radius;
+}
+
+.transform(...) {
+  -webkit-transform: @arguments;
+  -moz-transform: @arguments;
+  -o-transform: @arguments;
+  -ms-transform: @arguments;
+  transform: @arguments;
+}
+
+.translate(@x:0, @y:0) {
+  .transform(translate(@x, @y));
 }

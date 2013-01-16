@@ -1,0 +1,66 @@
+{
+	"title": "Movie Title Fonts",
+	"features": [
+		{
+			"id": "info",
+			"name": "Information",
+			"icon": "icon-info-sign",
+			"src": "data/lessons/movie-titles_info.html"
+		},
+		{
+			"id": "showcase",
+			"name": "Showcase",
+			"icon": "icon-eye-open",
+			"src": "partials/showcase_gallery.html",
+			"description": "This gallery shows some movie / tv themed fonts with a high level of recognition.",
+			"grid": "two",
+			"img": [
+				{
+					"url":	"http://d3gphd0pfuxn95.cloudfront.net/151_fonts/09-Back-To-The-Future.jpg",
+					"caption": "Back to the Future"
+				},
+				{
+					"url":	"http://d3gphd0pfuxn95.cloudfront.net/151_fonts/12-CNN.jpg",
+					"caption": "CNN"
+				},
+				{
+					"url":	"http://d3gphd0pfuxn95.cloudfront.net/151_fonts/15-Grinched.jpg",
+					"caption": "Grinch"
+				},
+				{
+					"url":	"http://d3gphd0pfuxn95.cloudfront.net/151_fonts/23-Sin-City.jpg",
+					"caption": "Sin City"
+				},
+				{
+					"url":	"http://d3gphd0pfuxn95.cloudfront.net/151_fonts/25-Harry-Potter.jpg",
+					"caption": "Harry Potter"
+				},
+				{
+					"url":	"http://d3gphd0pfuxn95.cloudfront.net/151_fonts/42-300.jpg",
+					"caption": "300"
+				},
+				{
+					"url":	"http://d3gphd0pfuxn95.cloudfront.net/151_fonts/47-Mission-Impossible.jpg",
+					"caption": "Mission Impossible"
+				},
+				{
+					"url":	"http://d3gphd0pfuxn95.cloudfront.net/151_fonts/30-HALO.jpg",
+					"caption": "Halo"
+				}
+			]
+		},
+		{
+			"id": "resources",
+			"name": "Resources",
+			"icon": "icon-sitemap",
+			"src": "partials/resources.html",
+			"resources": [
+				{
+					"name": "ae tuts+",
+					"url": "http://ae.tutsplus.com/articles/roundup/50-free-movie-themed-fonts-you-can-download/",
+					"description": "Complete list of 50 movie themed fonts"
+				}
+			]
+		}
+	]
+}

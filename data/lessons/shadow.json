@@ -5,13 +5,15 @@
 			"id": "info",
 			"name": "Information",
 			"icon": "icon-info-sign",
-			"src": "Symbols or Icons are visually really powerful as they deliver instant information without any cultural or lingual barrier. Icons can support the displayed text or stand on their own."
+			"src": "data/lessons/text-shadow_info.html"
 		},
 		{
 			"id": "showcase",
 			"name": "Showcase",
 			"icon": "icon-eye-open",
 			"src": "partials/showcase_gallery.html",
+			"description": "",
+			"grid": "three",
 			"img": [
 				{
 					"url":	"img/showcase/css-textshadows-1.jpg",
@@ -39,7 +41,7 @@
 			"id": "test",
 			"name": "Testing",
 			"icon": "t21-test",
-			"src": "partials/icon-font_editor.html"
+			"src": "partials/editor_text-shadow.html"
 		},
 		{
 			"id": "resources",

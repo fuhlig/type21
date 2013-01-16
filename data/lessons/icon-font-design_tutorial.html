@@ -1,4 +1,4 @@
-<h2 id="tutorial">Tutorial</h2>
+<h2>Tutorial</h2>
 
 <p>Before getting creative, here are some resources that will be used in this tutorial</p>
 
@@ -13,6 +13,43 @@
 <h3 id="create-icon-font">Create Icon Font</h3>
 
 <p>When creating icons for a font they have to be in svg (scalable vector graphic) format in order to be free scalable.</p>
+
+<div id="tutorial">
+	<div data-caption="#caption1">
+		<a href="data/img/icon-tutorial/illustrator.jpg"><img src="data/img/icon-tutorial/illustrator.jpg"></a>	
+	</div>
+
+	<div data-caption="#caption2">
+		<a href="data/img/icon-tutorial/inkscape_workspace.jpg"><img src="data/img/icon-tutorial/inkscape_workspace.jpg"></a>	
+	</div>
+
+	<div data-caption="#caption3">
+		<a href="data/img/icon-tutorial/inkscape_align.jpg"><img src="data/img/icon-tutorial/inkscape_align.jpg"></a>	
+	</div>
+
+	<div data-caption="#caption4">
+		<a href="data/img/icon-tutorial/inkscape_convert.jpg"><img src="data/img/icon-tutorial/inkscape_convert.jpg"></a>
+	</div>	
+
+	<div data-caption="#caption5">
+		<a href="data/img/icon-tutorial/inkscape_glyph.jpg"><img src="data/img/icon-tutorial/inkscape_glyph.jpg"></a>
+	</div>
+	
+	<div data-caption="#caption6">
+		<a href="data/img/icon-tutorial/font_conversion.jpg"><img src="data/img/icon-tutorial/font_conversion.jpg"></a>
+	</div>	
+</div>
+
+
+<!-- captions -->
+<span class="orbit-caption" id="caption1">create vector shape on canvas template and save as SVG</span>
+<span class="orbit-caption" id="caption2">setup inkscape workspace</span>
+<span class="orbit-caption" id="caption3">import SVG and align it inside the canvas</span>
+<span class="orbit-caption" id="caption4">create path from shape</span>
+<span class="orbit-caption" id="caption5">create glyph from selection</span>
+<span class="orbit-caption" id="caption6">convert SVG into font</span>
+
+
 
 <ol>
 <li><p>open the <a href="https://github.com/Heydon/Community-Icon-Font/blob/master/resources/inkscape_iconfont_canvas_template.svg">Iconfont canvas template</a> in a vector graphic software and create an icon</p></li>
@@ -46,3 +83,14 @@ Path -> Object to Path</p>
 <li><p>save icon as <em>iconset</em>.svg</p></li>
 <li><p>convert the svg to a font with a service like <a href="http://www.freefontconverter.com/">freefontconverter.com</a></p></li>
 </ol>
+
+<p>Well done! You created your own icon font and it is ready to use but only in text editors and graphic tools. In order to use it for web projects head over to the ICON FONT INTEGRATION in the <a href="#/courses/web">web category</a></p>
+
+
+<script>
+	// init fn.orbit
+	$('#tutorial').orbit({
+		timer: false
+		// animation: 'horizontal-push',
+	});
+</script>
