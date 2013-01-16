@@ -2,10 +2,10 @@
 	"name": "Motion Graphics",
 	"icon": "icon-play",
 	"description":
-		"Motion graphics are graphics that use video footage and/or animation technology to create the illusion of motion or rotation, graphics are usually combined with audio for use in multimedia projects. Motion graphics are usually displayed via electronic media technology, but may be displayed via manual powered technology (e.g. thaumatrope, phenakistoscope, stroboscope, zoetrope, praxinoscope, flip book) as well. The term is useful for distinguishing still graphics from graphics with a transforming appearance over time without over-specifying the form.",
+		"Motion graphics are graphics that use video footage and/or animation technology to create the illusion of motion or rotation, graphics are usually combined with audio for use in multimedia projects. This course teaches some of the common areas of typography in motion graphics and animations.",
 	"lessons": [
 		{
-			"name":	"Shaping Type",
+			"name":	"Typo-Shapes",
 			"id":	"shape",
 			"icon": "foundicon-smiley",
 			"archived": false
