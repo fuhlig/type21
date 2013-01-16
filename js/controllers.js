@@ -2,15 +2,6 @@
 
 /* Controllers */
 
-$('#startTour').click(function() {
-	console.log('working?');
-})
-
-function help() {
-	console.log('help please : (');
-}
-
-
 function CourseListCtrl($scope, $http) {
 	$http.get("data/courses.json").success(function(data) {
 		$scope.courses = data;
@@ -64,7 +55,6 @@ function LessonCtrl($scope, $routeParams, $http, $location) {
 	// get quiz data
 	$http.get("data/quizzes/web_quiz.json").success(function(quizData) {
 		$scope.quiz = quizData.quiz;
-	console.log("quiz loaded");
 	});
 
 

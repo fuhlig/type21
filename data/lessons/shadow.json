@@ -53,7 +53,17 @@
 					"name": "design shack",
 					"url": "http://designshack.net/articles/css/12-fun-css-text-shadows-you-can-copy-and-paste/",
 					"description": "CSS Text Shadows including Code Samples"					
-				}
+				},
+				{
+					"name": "zachstronaut",
+					"url": "http://www.zachstronaut.com/lab/text-shadow-box/text-shadow-box2.html",
+					"description": "interactive demo with the use of text-shadow"					
+				},
+				{
+					"name": "Pushing Pixels",
+					"url": "http://pushingpixels.at/experiments/dynamic_shadow/",
+					"description": "interactive demo with dynamic shadow"
+				}				
 			]
 		}
 	]

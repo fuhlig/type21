@@ -20,15 +20,11 @@ But the decision doesn't has to be one or the other. With the use of `media quer
 
 `
 @media (min-width:960px) { 
-p {
-font-family:"Droid"
-} 
+    p { font-family:"Droid" } 
 } 
 
 @media (max-width:960px) { 
-h1 {
-font-family:"Droid", serif;
-} 
+    h1 { font-family:"Droid" } 
 } 
 `
 
