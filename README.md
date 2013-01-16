@@ -2,7 +2,7 @@
 
 type21 - 21 lessons to make type sexy!
 
-![](app/img/type21_device.png)
+![](https://raw.github.com/fuhlig/type21/master/app/img/type21_device.png)
 
 LYIT Interactivity Project
 
