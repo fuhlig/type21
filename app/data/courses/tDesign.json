@@ -29,9 +29,9 @@
 			"archived": false
 		},
 		{
-			"name": "Print vs. Screen",
-			"id": "print-vs-screen",
-			"icon": "t21-printscreen",
+			"name": "Grid System",
+			"id": "grid",
+			"icon": "icon-th",
 			"archived": false
 		}
 	]

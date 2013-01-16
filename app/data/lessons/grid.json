@@ -1,0 +1,29 @@
+{
+	"title": "Typographic Grid",
+	"features": [
+		{
+			"id": "info",
+			"name": "Information",
+			"icon": "icon-info-sign",
+			"src": "data/lessons/grid.html"
+		},
+		{
+			"id": "resources",
+			"name": "Resources",
+			"icon": "icon-sitemap",
+			"src": "partials/resources.html",
+			"resources": [
+				{
+					"name": "vanseo design",
+					"url": "http://www.vanseodesign.com/web-design/grid-anatomy/",
+					"description": "Anatomy of a Typographic Grid"
+				},
+				{
+					"name": "Wikipedia",
+					"url": "http://en.wikipedia.org/wiki/Grid_(page_layout)",
+					"description": "Typographic grid"
+				}		
+			]
+		}
+	]
+}
