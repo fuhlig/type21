@@ -2,19 +2,28 @@
 
 /* Controllers */
 
+$('#startTour').click(function() {
+	console.log('working?');
+})
+
+function help() {
+	console.log('help please : (');
+}
+
+
 function CourseListCtrl($scope, $http) {
 	$http.get("data/courses.json").success(function(data) {
 		$scope.courses = data;
 	});
 
-	$scope.startTour = function() {
-	    $("#introTour").joyride({
-	      // Options
-	      // "tipLocation": "top"
-	      // "timer": 2000
-	    });
-	    console.log("tour start!");
-  	}
+	// $scope.startTour = function() {
+	//     $("#introTour").joyride({
+	//       // Options
+	//       // "tipLocation": "top"
+	//       // "timer": 2000
+	//       "nextButton": false
+	//     });
+ //  	}
 }
 
 function CourseDetailCtrl($scope, $routeParams, $http) {

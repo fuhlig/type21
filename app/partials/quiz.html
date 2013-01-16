@@ -1,64 +1,73 @@
-<!-- <div id="quiz">
-	<div ng-repeat="challenge in quiz">
-		<h1>lesson: {{challenge.lessonId}}</h1>
-		<label>question: {{challenge.question}}</label>
-		<ul>
-			<li ng-repeat="answer in challenge.answers">
-				<label>answer #{{[$index+1]}}: {{answer.choice}} ({{answer.correct}})</label>
-			</li>
-		</ul>
-	</div>	
+<!-- Button -->
+<div class="row">
+  <div class="center">
+    <a href="#" class="secondary button" data-reveal-id="badgeModal">
+      <i class="icon-question-sign"></i>
+      Quiz
+    </a>
+  </div>
 </div>
- -->
-
-<!-- multiple choice test -->
-<!-- <div id="quiz">
-	<div>
-		<h2>lesson: {{quiz[0].lessonId}}</h2>
-		<p>{{quiz[0].question}}</p>
-		<ul>
-			<li ng-repeat="answer in quiz[0].answers">{{answer}}
-			</li>
-		</ul>
-
-		<input type="radio" ng-model="userChoice" value="{{quiz[0].answers[0].choice}}">
-			{{quiz[0].answers[0].choice}} <br> 
-		<input type="radio" ng-model="userChoice" value="{{quiz[0].answers[1].choice}}">
-			{{quiz[0].answers[1].choice}} <br> 
-		<input type="radio" ng-model="userChoice" value="{{quiz[0].answers[2].choice}}">
-			{{quiz[0].answers[2].choice}} <br> 
 
 
-		<p>Your Answer: {{userChoice}}</p>
-	</div>
+
+<!-- Modal -->
+<div id="badgeModal" class="reveal-modal">
+    <!-- <h4>Quiz <em>DEMO</em></h4> -->
+
+    <div id="quiz">
+        <div>
+            <h1>First</h1>
+            <form name="firstQuiz">
+                <input type="radio"value="one">One <br>
+                <input type="radio"value="two">Two <br>
+                <input type="radio"value="three">Three <br>
+            </form>
+            <p>your answer:</p>
+        </div>
+        <div>
+            <h1>Second</h1>
+            <form name="firstQuiz">
+                <input type="checkbox">One <br>
+                <input type="checkbox">Two <br>
+                <input type="checkbox">Three <br>
+            </form>
+            <p>A:</p>
+            <p>B:</p>
+            <p>C:</p>
+        </div>
+
+
+        <!-- BADGE -->
+        <div>
+           <h3>New Badge earned</h3>
+           <p>well done!</p>
+           <div class="badge-circle {{$routeParams.courseId}}">
+           <i class="{{course.icon}}"></i>
+           <p>{{course.name}}</p>
+           <ul>
+             <li ng-repeat="lesson in course.lessons" class="award-polygon {{lesson.archived}}">
+               <i class="{{lesson.icon}}"></i>
+               <!-- <div class="award-polygon frame-outer"></div> -->
+             </li>
+             
+           </ul>
+           <div class="ribbon-bottom {{$routeParams.courseId}}"></div>      
+           <div class="ribbon-bottom {{$routeParams.courseId}}"></div>      
+           </div>
+        </div>   
+    </div>
+    <a class="close-reveal-modal">&#215;</a>
+
 </div>
- -->
-
-<p style="font-family: 't21-fontregular'; font-size: 5rem">
-	abcdefghij
-</p>
 
 
-<div ng-repeat="challenge in quiz">
-	<div class="row">
-		<span class="eight columns">
-			{{challenge.question}}
-		</span>
-		<span class="two columns">
-			<a class="secondary button"><i style="font-family: 't21-fontregular'">b</i></a>
-		</span>
-		<span class="two columns">
-			<a class="secondary button"><i class="t21-code"></i></a>
-		</span>
-	</div>
-</div>
 
 <script>
-	// init fn.orbit
-	$('#quiz').orbit({
-		timer: false,
-		// animation: 'horizontal-push',
-		fluid: "16x9"
-	});
-	console.log("orbit loaded");
+  // init fn.orbit
+  $('#quiz').orbit({
+    timer: false,
+    // animation: 'horizontal-push',
+    fluid: "16x9"
+  });
+  console.log("orbit loaded");
 </script>

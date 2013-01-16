@@ -1,8 +1,12 @@
+<pre>
+	text-shadow: <em>x-offset y-offset blur color;</em>
+</pre>
+
 <input type="range" name="fontsize-slider" min="10" max="100" value="24" ng-model="fontSize">
 <label for="fontsize-slider">font-size: {{fontSize}}px</label>
 
 <input type="range" name="blur" min="0" max="50" value="1" ng-model="shadowBlur">
-<label for="blur">font-blur: {{shadowBlur}}px</label>
+<label for="blur">blur: {{shadowBlur}}px</label>
 
 <input type="range" name="xOffset" min="-15" max="15" value="0" ng-model="xOffset">
 <label for="xOffset">x-offset: {{xOffset}}px</label>
@@ -19,14 +23,15 @@
 
 Shadow
 </h1>
-
-<a class="small blue button" ng-click="shadowClass='simple'">simple</a>
-<a class="small blue button" ng-click="shadowClass='color'">color</a>
-<a class="small blue button" ng-click="shadowClass='stack'">stack</a>
-<a class="small blue button" ng-click="shadowClass='smooth'">smooth</a>
-<a class="small blue button" ng-click="shadowClass='stroke'">stroke</a>
-<a class="small blue button" ng-click="shadowClass='inset'">inset</a>
-<a class="small blue button" ng-click="shadowClass='emboss'">emboss</a>
-<a class="small blue button" ng-click="shadowClass='glow'">glow</a>
-<a class="small blue button" ng-click="shadowClass='color'">color</a>
-<a class="small blue button" ng-click="shadowClass='neon'">neon</a>
+<ul class="block-grid five-up mobile-three-up">
+	<li><a class="small secondary button" ng-click="shadowClass='simple'">simple</a></li>
+	<li><a class="small secondary button" ng-click="shadowClass='color'">color</a></li>
+	<li><a class="small secondary button" ng-click="shadowClass='stack'">stack</a></li>
+	<li><a class="small secondary button" ng-click="shadowClass='smooth'">smooth</a></li>
+	<li><a class="small secondary button" ng-click="shadowClass='stroke'">stroke</a></li>
+	<li><a class="small secondary button" ng-click="shadowClass='inset'">inset</a></li>
+	<li><a class="small secondary button" ng-click="shadowClass='emboss'">emboss</a></li>
+	<li><a class="small secondary button" ng-click="shadowClass='glow'">glow</a></li>
+	<li><a class="small secondary button" ng-click="shadowClass='color'">color</a></li>
+	<li><a class="small secondary button" ng-click="shadowClass='neon'">neon</a></li>
+</ul>

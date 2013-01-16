@@ -1,0 +1,40 @@
+<h3>font size</h3>
+
+<p>It is not just about big screen vs. small screen results in big and small font. It comes down to reading distance. <a href="http://informationarchitects.net/">Oliver Reichenstein</a> came up with a good trick: hold a printed next to the screen with a comfortable reading distance and try to match the font size.</p>
+
+<figure>
+	<a href="http://cloudfront7.informationarchitects.net/wp-content/uploads/2012/06/responsive-typography-relative-readability3.png" class="th"><img src="http://cloudfront7.informationarchitects.net/wp-content/uploads/2012/06/responsive-typography-relative-readability3.png"></a>
+	<figcaption>Reading distance - textsize</figcaption>
+</figure>
+
+<p>To match the font size cross device look into using rem at the <a href="#/web/font-sizing">font-sizing</a> lesson.
+It is also possible to let the user set the fontsize.</p>
+
+<h3>sans serif vs serif</h3>
+
+<p>Again it is a matter of the overall design and (maybe) personal preference. But in my opinion a sans serif font for body text looks much cleaner is easier to read on small screens.
+But the decision doesn't has to be one or the other. With the use of <code>media queries</code> it is possible to <strong>alternate fonts</strong> for different criterias like viewport-width</p>
+
+<pre>
+@media (min-width:960px) { 
+	p {	font-family:"Droid" } 
+}
+
+@media (max-width:960px) { 
+	h1 { font-family:"Droid" } 
+} 
+</pre>
+
+<h3>line height and length</h3>
+
+<p>Here comes macro-typography (<a href="#/tDesign/macro-typo">again?</a>). The horizontal and vertical rhythm.
+Despite limited space on small screens it might be necessary to adjust the <code>line-height</code>. An easy adjustment and your user will benefit from it with improved reading experience.</p>
+
+<p>To achieve horizontal rhythm is harder. According to an <a href="http://baymard.com/blog/line-length-readability">article</a> by the <a href="http://baymard.com/">Baymard Institute</a>
+the optimum for line length is between 50 and 75 characters per line. A fixed contentarea would be a solution...wait! Responsive and fixed does not fit together. Setting a maximum with for the content for different device sizes works instead.
+Bigger screens could use a <code>column-count: 2</code> to improve readability of bigger textareas.</p>
+
+<figure>
+	<a href="http://cloudfront7.informationarchitects.net/wp-content/uploads/2012/05/responsive-typography-reading-distance.png" class="th"><img src="http://cloudfront7.informationarchitects.net/wp-content/uploads/2012/05/responsive-typography-reading-distance.png"></a>
+	<figcaption>line height</figcaption>
+</figure>

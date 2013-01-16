@@ -17,13 +17,56 @@
 			"id": "services",
 			"name": "Services",
 			"icon": "icon-wrench",
-			"src": "partials/icon-font_editor.html"
+			"src": "data/lessons/icon-font-web_services.html"
+		},
+		{
+			"id": "test",
+			"name": "Testing",
+			"icon": "t21-test",
+			"src": "data/lessons/icon-font-web_test.html"
 		},
 		{
 			"id": "resources",
 			"name": "Resources",
 			"icon": "icon-sitemap",
-			"src": "additional resources"
+			"src": "partials/resources.html",
+			"resources": [
+				{
+					"name": "design shack",
+					"url": "http://designshack.net/articles/css/four-custom-icon-font-generators-compared/",
+					"description": "Four Custom Icon Font Generators Compared"
+				},
+				{
+					"name": "We Love Icon Fonts",
+					"url": "http://weloveiconfonts.com/",
+					"description": "icon fonts hosting service"
+				},				
+				{
+					"name": "IcoMoon",
+					"url": "http://icomoon.io/app/",
+					"description": "custom icon font builder"
+				},
+				{
+					"name": "Fontello",
+					"url": "http://fontello.com/",
+					"description": "custom icon font builder"
+				},
+				{
+					"name": "Webdesigner Depot",
+					"url": "http://www.webdesignerdepot.com/2012/01/how-to-make-your-own-icon-webfont/",
+					"description": "How to make your own icon webfont"
+				},
+				{
+					"name": "Stephen Wyatt Bush",
+					"url": "http://blog.stephenwyattbush.com/2012/02/01/making-an-icon-font",
+					"description": "Making an Icon Font"
+				},
+				{
+					"name": "CSS Tricks",
+					"url": "http://css-tricks.com/examples/IconFont/",
+					"description": "Icon Fonts are awesome"
+				}
+			]
 		}
 	]
 }

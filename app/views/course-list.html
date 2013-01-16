@@ -6,7 +6,7 @@
 
 
 <div class="row">
-  <button id="startTour" class="button" ng-click="startTour()">Start Tour</button>
+  <button id="startTour" class="secondary button">Start Tour</button>
   <ul class="block-grid two-up mobile">
     <li ng-repeat="course in courses" class="row ">
       <a href="#/courses/{{course.id}}">
@@ -23,9 +23,18 @@
   </ul>
 </div>
 
-
-
 <!-- JoyRide -->
 <ol id="introTour">
-  <li ng-repeat="course in courses" data-id="{{course.id}}">{{course.name}}</li>
-</ol>  
+  <li data-id="{{courses[0].id}}" data-options="nextButton: false">
+    Overview over the 4 courses. Each course consists of lessons with a specific topic
+  </li>
+</ol> 
+
+  <script>
+  //   function startTour() {
+  //     $("#introTour").joyride({
+  //        "nextButton": false
+  //     });
+  //     console.log('test');
+  //   }
+  // </script>

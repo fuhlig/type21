@@ -5,25 +5,31 @@
 			"id": "info",
 			"name": "Information",
 			"icon": "icon-info-sign",
-			"src": "Symbols or Icons are visually really powerful as they deliver instant information without any cultural or lingual barrier. Icons can support the displayed text or stand on their own."
+			"src": "data/lessons/responsive-type_info.html"
 		},
 		{
-			"id": "tutorial",
-			"name": "Tutorial",
-			"icon": "icon-group",
-			"src": "tutorial here"
-		},
-		{
-			"id": "test",
-			"name": "Testing",
-			"icon": "icon-beaker",
-			"src": "partials/icon-font_editor.html"
+			"id": "guide",
+			"name": "Guide",
+			"icon": "icon-list",
+			"src": "data/lessons/responsive-type_list.html"
 		},
 		{
 			"id": "resources",
 			"name": "Resources",
 			"icon": "icon-sitemap",
-			"src": "additional resources"
+			"src": "partials/resources.html",
+			"resources": [
+				{
+					"name": "Information Architects",
+					"url": "http://informationarchitects.net/blog/responsive-typography-the-basics/",
+					"description": "Responsive Typography: The Basics"
+				},
+				{
+					"name": "Webdesigner Depot",
+					"url": "http://www.webdesignerdepot.com/2012/10/a-simple-guide-to-responsive-typography/",
+					"description": "A simple guide to responsive typography"
+				}
+			]
 		}
 	]
 }

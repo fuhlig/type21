@@ -10,7 +10,7 @@
 		{
 			"id": "list",
 			"name": "Guide",
-			"icon": "icon-question-sign",
+			"icon": "icon-list",
 			"src": "data/lessons/icon-font-design_list.html"
 		},
 		{
@@ -28,7 +28,12 @@
 				{
 					"name": "The Noun Project",
 					"url": "http://thenounproject.com",
-					"description": "Excellent resource for symbols and icons"
+					"description": "Excellent resource for symbols and icons in vector format"
+				},
+				{
+					"name": "iconmonstr",
+					"url": "http://iconmonstr.com/",
+					"description": "Great collection of vector icons"
 				},
 				{
 					"name": "Webdesigner Depot",

@@ -5,14 +5,14 @@
 			"id": "info",
 			"name": "Information",
 			"icon": "icon-info-sign",
-			"src": "Symbols or Icons are visually really powerful as they deliver instant information without any cultural or lingual barrier. Icons can support the displayed text or stand on their own."
+			"src": "data/lessons/movie-titles_info.html"
 		},
 		{
 			"id": "showcase",
 			"name": "Showcase",
 			"icon": "icon-eye-open",
 			"src": "partials/showcase_gallery.html",
-			"description": "This gallery displays some different movie post design to identify some key features and characteristics",
+			"description": "This gallery shows some movie / tv themed fonts with a high level of recognition.",
 			"grid": "two",
 			"img": [
 				{
@@ -50,16 +50,17 @@
 			]
 		},
 		{
-			"id": "test",
-			"name": "Testing",
-			"icon": "icon-beaker",
-			"src": "partials/icon-font_editor.html"
-		},
-		{
 			"id": "resources",
 			"name": "Resources",
 			"icon": "icon-sitemap",
-			"src": "additional resources"
+			"src": "partials/resources.html",
+			"resources": [
+				{
+					"name": "ae tuts+",
+					"url": "http://ae.tutsplus.com/articles/roundup/50-free-movie-themed-fonts-you-can-download/",
+					"description": "Complete list of 50 movie themed fonts"
+				}
+			]
 		}
 	]
 }

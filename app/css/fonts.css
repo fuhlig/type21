@@ -301,7 +301,17 @@
   content: "r";
 }
 
+.t21-kinetic:before {
+  content: "s";
+}
 
+.t21-movietitle:before {
+  content: "t";
+}
+
+.t21-titlesequence:before {
+  content: "u";
+}
 
 
 
