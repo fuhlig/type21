@@ -15,10 +15,10 @@ To run the site on a local server [node.js](http://nodejs.org/) needs to be inst
 
 
 ##Used Tools:
+* [Sublime Text](http://www.sublimetext.com/)
 * [AngularJS](http://angularjs.org)
 * [Foundation](http://foundation.zurb.com)
 
 * [LESS](http://lesscss.org)
-
-
-
+* [WinLess](http://winless.org/)
+* [CSScomb](http://csscomb.com/)
