@@ -42,7 +42,7 @@ These views are rendered by the [`ng-view`](http://docs.angularjs.org/api/ng.dir
 Repetitive *elements* like the header and achivements (badge) are seperated in **partials** (/partials) and are included into the corresponding views.
 As the homepage has a different header compared to the course details and lessons, the header section is seperated into *mainHeader* and *subHeader*.
 
-![](app/img/headers.png)
+![](https://raw.github.com/fuhlig/type21/master/app/img/headers.png)
 
 
 
