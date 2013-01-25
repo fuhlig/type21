@@ -23,7 +23,24 @@
 			"id": "resources",
 			"name": "Resources",
 			"icon": "icon-sitemap",
-			"src": "additional resources"
+			"src": "partials/resources.html",
+			"resources": [
+				{
+					"name": "Sans-serif",
+					"url": "http://en.wikipedia.org/wiki/Sans-serif",
+					"description": "Wikipedia"
+				},
+				{
+					"name": "So you need a Typeface?",
+					"url": "http://julianhansen.com/files/infographiclarge_v2.png",
+					"description": "Julian Hansen"
+				},
+				{
+					"name": "typecast.com",
+					"url": "http://typecast.com/",
+					"description": "Typecast"
+				}
+			]
 		}
 	]
 }

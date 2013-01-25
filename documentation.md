@@ -26,15 +26,38 @@ The entire website consists of basicly 3 Views
 * **course-detail** lists information of a particular course
 * **lesson** contains the lesson's content
 
+
+These views are rendered by the [`ng-view`](http://docs.angularjs.org/api/ng.directive:ngView) directive into the main layout (`index.html`) according to the routes which are defined within the [`routeProvider`](http://docs.angularjs.org/api/ng.$routeProvider) (`/app/js/app.js`). The routeProvider defines the route, a template and a controller
+
+* **route**: URL for deep-linking	
+>`/courses`
+
+* **template**: corresponding view
+>`views/course-list.html`
+
+* **controller**: logic and service to request data (`$http`)
+>`CourseListCtrl`
+
+
 Repetitive *elements* like the header and achivements (badge) are seperated in **partials** (/partials) and are included into the corresponding views.
-As the homepage has a different header compared to the course details and lessons, the header section is seperated into *mainHeader* and *subHeader*
+As the homepage has a different header compared to the course details and lessons, the header section is seperated into *mainHeader* and *subHeader*.
+
+![](app/img/headers.png)
 
 
 
-*< image >*
-
-
-...ng-view...
 
 ##Control
-...
+>The control component manipulates the model and updates the view and includes the logic.
+
+The [scope](http://docs.angularjs.org/guide/scope) for every controller is set within the `app.js` so every view has its own controller and requests the data from the data component.
+
+Example
+> `// get course list
+    function CourseListCtrl($scope, $http) {
+	$http.get("data/courses.json").success(function(data) {
+		$scope.courses = data;
+	});
+}`
+
+The controller requests course data (`$http.get`) and sets the $scope.courses to the data. This makes it possible to call `courses` within the view to retrieve the data to display name, icon, description etc.

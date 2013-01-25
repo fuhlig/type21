@@ -5,25 +5,64 @@
 			"id": "info",
 			"name": "Information",
 			"icon": "icon-info-sign",
-			"src": "Symbols or Icons are visually really powerful as they deliver instant information without any cultural or lingual barrier. Icons can support the displayed text or stand on their own."
+			"src": "data/lessons/3d_info.html"
 		},
 		{
-			"id": "tutorial",
-			"name": "Tutorial",
-			"icon": "icon-group",
-			"src": "tutorial here"
-		},
-		{
-			"id": "test",
-			"name": "Testing",
-			"icon": "icon-beaker",
-			"src": "partials/icon-font_editor.html"
+			"id": "showcase",
+			"name": "Showcase",
+			"icon": "icon-eye-open",
+			"src": "partials/showcase_gallery.html",
+			"description": "inspiring 3D typography",
+			"grid": "three",
+			"img": [
+				{
+					"url":	"http://farm4.static.flickr.com/3302/3434053959_f56aed7682.jpg?v=0",
+					"caption": "plants growing on character - dead, textured object comes to life"
+				},
+				{
+					"url":	"http://farm4.static.flickr.com/3363/3434059753_46889479d8.jpg?v=0",
+					"caption": "Typography on a Hill - simple but effective looking 3D text nicely integrated in environment"
+				},
+				{
+					"url":	"http://farm4.static.flickr.com/3575/3434056559_fb46740a0d.jpg?v=0",
+					"caption": "well integrated, realistic looking carton-text "
+				},
+				{
+					"url":	"http://farm4.static.flickr.com/3644/3434866650_066dd5cdc3.jpg?v=0",
+					"caption": "great use of lighting and beveled edges to emphasize the message - softness"
+				},
+				{
+					"url":	"http://farm4.static.flickr.com/3356/3434057971_c07f849170.jpg?v=0",
+					"caption": "good use of shadow to blend the text in the background that make it look like real objects"
+				},
+				{
+					"url":	"http://farm4.static.flickr.com/3571/3434059953_5be1e9d2a3.jpg?v=0",
+					"caption": "text looks like an interactive object"
+				}
+			]
 		},
 		{
 			"id": "resources",
 			"name": "Resources",
 			"icon": "icon-sitemap",
-			"src": "additional resources"
-		}
+			"src": "partials/resources.html",
+			"resources": [
+				{
+					"name": "Pushing Pixels",
+					"url": "http://www.hongkiat.com/blog/70-wonderful-3d-typography-that-truely-inspires/",
+					"description": "70 Wonderful 3D Typography That Truely Inspires"
+				},				
+				{
+					"name": "you the designer",
+					"url": "http://www.youthedesigner.com/2011/07/19/83-3d-typography-design-inspirations/",
+					"description": "3D Typography Design Inspirations"					
+				},
+				{
+					"name": "Design Your Way",
+					"url": "http://www.designyourway.net/blog/inspiration/41-examples-of-impressive-3d-typography/",
+					"description": "41 Examples Of Impressive 3D Typography"					
+				}
+			]
+		}	
 	]
 }

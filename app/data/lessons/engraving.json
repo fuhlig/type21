@@ -5,25 +5,47 @@
 			"id": "info",
 			"name": "Information",
 			"icon": "icon-info-sign",
-			"src": "Symbols or Icons are visually really powerful as they deliver instant information without any cultural or lingual barrier. Icons can support the displayed text or stand on their own."
+			"src": "data/lessons/engraving_info.html"
 		},
 		{
-			"id": "tutorial",
-			"name": "Tutorial",
-			"icon": "icon-group",
-			"src": "tutorial here"
-		},
-		{
-			"id": "test",
-			"name": "Testing",
-			"icon": "icon-beaker",
-			"src": "partials/icon-font_editor.html"
+			"id": "showcase",
+			"name": "Showcase",
+			"icon": "icon-eye-open",
+			"src": "partials/showcase_gallery.html",
+			"description": "",
+			"grid": "three",
+			"img": [
+				{
+					"url":	"data/img/engrave_bcard.png",
+					"caption": "business cards - serious and elegant look"
+				},
+				{
+					"url":	"data/img/engrave_garda.png",
+					"caption": "Garda Memorial Garden in Dublin - slightly depressing and thoughful look"
+				},
+				{
+					"url":	"http://payingattentiontothesky.files.wordpress.com/2012/06/lord_of_the_rings_one_ring.jpg",
+					"caption": "engraved rings - memorable and elegant"
+				}
+			]
 		},
 		{
 			"id": "resources",
 			"name": "Resources",
 			"icon": "icon-sitemap",
-			"src": "additional resources"
-		}
+			"src": "partials/resources.html",
+			"resources": [
+				{
+					"name": "Wikipedia",
+					"url": "http://en.wikipedia.org/wiki/Engraving",
+					"description": "Engraving"
+				},				
+				{
+					"name": "Smashing Magazine",
+					"url": "http://www.smashingmagazine.com/2012/09/20/carved-stone/",
+					"description": "Typography Carved In Stone"					
+				}
+			]
+		}	
 	]
 }
