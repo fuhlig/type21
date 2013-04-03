@@ -1,0 +1,22 @@
+<!-- Header -->
+<div ng-include src="'partials/subHeader.html'"></div>
+
+<!-- Content -->
+
+<div class="row">
+  <h1>{{course.name}}</h1>
+  <p>{{course.description}}</p>
+</div>
+
+<div class="row">
+  <ul class="block-grid five-up mobile-two-up">
+    <li ng-repeat="lesson in course.lessons">
+      <div class="polygon big {{courses[0].id}}">
+          <a href="#/lesson/{{lesson.id}}">
+            <i class="foundicon-{{courses[0].icon}}"></i>
+            <p>{{lesson.name}}</p>
+          </a>
+      </div>
+    </li>
+  </ul>
+</div>

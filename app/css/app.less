@@ -24,21 +24,16 @@
 /* -----------------------------------------
    Shared Styles
 ----------------------------------------- */
-@import "colors.less";
-@import "mixins.less";
+@import "colors";
+@import "mixins";
 @import "fonts.css";
-@import "typography.less";
+@import "typography";
 
 body {
 	background-color: @bgColor;
 }
 .content {
 	margin-top: 1em;
-	// background-color: white
-}
-
-a {
-	// color: white !important
 }
 
 
@@ -114,16 +109,11 @@ hr {
 
 nav {
 	a {
-	color: @borderColor;
+		color: @borderColor;
 	}
 	i {
-	
-	// box-shadow
-	// margin-left: 15px; 
-	line-height: 50px !important;
-	// border-radius
-	margin-left: 12px; 
-	// line-height: 60px !important
+		line-height: 50px !important;
+		margin-left: 12px; 
 	}
 	li {
 		.transition(all, 0.3s, ease-in-out);
@@ -137,28 +127,24 @@ nav {
 			&.selected {
 				background-color: @mograph;
 			}
-			// .box-radius(5px, @mograph);
 		}
 		&.web {
 			border-color: @web;
 			&.selected {
 				background-color: @web;
 			}
-			// .box-radius(5px, @web);
 		}
 		&.tDesign {
 			border-color: @tDesign;
 			&.selected {
 				background-color: @tDesign;
 			}
-			// .box-radius(5px, @tDesign);
 		}
 		&.textFx {
 			border-color: @textFx;
 			&.selected {
 				background-color: @textFx;
 			}
-			// .box-radius(5px, @textFx);
 		}
 		&.selected {
 			border-color: white;
@@ -166,27 +152,6 @@ nav {
 				color: white !important;
 			}
 		}
-		/* Hover animation */
-		&:hover {
-			// border-color: white;
-			a {
-				// color: white;
-				color: lighten(@borderColor, 20%);
-			}
-			// &.mograph {
-			// 	background-color: @mograph;
-			// }
-			// &.web {
-			// 	background-color: @web;
-			// }
-			// &.tDesign {
-			// 	background-color: @tDesign;
-			// }
-			// &.textFx {
-			// 	background-color: @textFx;
-			// }
-		}
-		// .box-radius();
 	}
 }
 
@@ -214,7 +179,6 @@ footer {
 		color: whitesmoke;
 		text-shadow: 1px 1px 0 rgba(1,1,1, 0.1);
 		&:hover { 
-			// color: rgba(0,0,0, 0.5);
 			text-shadow: none;
 		}
 	}	
@@ -267,33 +231,18 @@ footer:hover .button-arrow {
 		line-height: 0;
 	}
 
-	// &:hover {
-	// 	box-shadow: 0 0 0 5px @borderColor;
-	// }
 
 	&.mograph {
 		background-color: @mograph;
-		// &:hover {
-		// 	background-color: darken(@mograph, 8%);
-		// }
 	}
 	&.tDesign {
 		background-color: @tDesign;
-		// &:hover {
-		// 	background-color: darken(@tDesign, 8%);
-		// }
 	}
 	&.textFx {
 		background-color: @textFx;
-		// &:hover {
-		// 	background-color: darken(@textFx, 8%);
-		// }
 	}
 	&.web {
 		background-color: @web;
-		// &:hover {
-		// 	background-color: darken(@web, 8%);
-		// }
 		&:active {
 			background-color: lighten(@web, 2%);
 		}
@@ -342,19 +291,6 @@ a .circle i {
 	.transition(all, 0.5s, ease);
 }
 
-// a:hover {
-// 	& #textFx i {
-// 		text-shadow:
-// 		    -1px 1px #ccc,
-// 		    -2px 2px #ccc,
-// 		    -3px 3px #ccc,
-// 		    -4px 4px #ccc,
-// 		    -5px 5px #ccc,
-// 		    -6px 6px #ccc,
-// 		    -7px 7px #ccc,
-// 		    -8px 8px #ccc;
-// 	}
-// }
 
 .circle {
 	position: absolute;
@@ -380,6 +316,18 @@ a .circle i {
 	}
 	&.right {
 		right: -25%;
+	}
+	&.mograph {
+		border-color: @mograph;
+	}
+	&.web {
+		border-color: @web;
+	}
+	&.tDesign {
+		border-color: @tDesign;
+	}
+	&.textFx {
+		border-color: @textFx;
 	}
 }
 
@@ -453,7 +401,7 @@ a .circle i {
 
 
 .lesson-list {
-	margin-top: 15px;  						// fix when polygon-mixin (top-size)
+	margin-top: 15px;
 }
 
 .lesson-list li span,
@@ -467,7 +415,7 @@ a .circle i {
 	border: 3px solid white;
 	border-radius: 5px;
 	background-color: lighten(@borderColor, 20%);
-	color: white;	// Feature-Tooltip
+	color: white;
 	box-shadow: 1px 2px 2px rgba(0,0,0,0.3);
 	&.mograph {
 		background-color: lighten(@mograph, 10%),;
@@ -512,7 +460,6 @@ a .circle i {
 	}
 	&.small .frame {
 		top: 0;
-		// left: 1px
 	}
 
 	// frame
@@ -699,7 +646,6 @@ article.description {
 	}
 }
 
-// [class*="badge-"] > i
 .badge-polygon > i {
 	color: white;
 	line-height: 1;
@@ -708,10 +654,6 @@ article.description {
 	color: @borderColor;
 	line-height: 1.5;
 }
-/* #badge-polygonModal.reveal-modal {
-	width: 300px; */
-/* margin-left: 200px; */
-/* padding: 100px; */
 .award-circle {
 	position: absolute;
 	z-index: 1;
@@ -840,7 +782,6 @@ article.description {
 		position: absolute;
 		z-index: 1;
 		color: white;
-		// -webkit-transition: -webkit-transform 2s ease-in-out;
 	&:before {
 		.createPolygon-top(@polygonSize);
 	}
@@ -866,22 +807,18 @@ article.description {
 	.badge-circle &:nth-child(3) {
 		right: -5px;
 		bottom: -50px;
-		// .rotation(45deg)
 	}	
 	.badge-circle &:nth-child(4) {
 		bottom: -50px;
 		left: -5px;
-		// .rotation(-45deg)
 	}
 	.badge-circle &:nth-child(5) {
 		top: 50px;
 		left: -40px;
 	}
 	.badge-circle &:nth-child(1),	&:nth-child(2) {
-		// top: 40px
 	}
 	.badge-circle &:nth-child(3),	&:nth-child(4) {
-		// bottom: -25px
 	}
 	i {
 		line-height: 1;
@@ -1016,17 +953,6 @@ figure {
 
 .selected {
 
-
-	/* inverted */
-
-	// background-color: white !important;
-
-
-	/* grey: */
-
-	& i {
-		// color: @borderColor
-	}
 	& .polygon.frame-inner {
 		background-color: @borderColor;
 	}
@@ -1036,28 +962,6 @@ figure {
 	& .polygon.frame-inner:after {
 		border-top-color: @borderColor;
 	}
-	// & i {
-	// 	color: @tDesign;
-	// }
-	// & .polygon.frame-inner {
-	// 	background-color: @tDesign;
-	// }
-	// & .polygon.frame-inner:before {
-	// 	border-bottom-color: @tDesign;
-	// }
-	// & .polygon.frame-inner:after {
-	// 	border-top-color: @tDesign;
-	// }
-
-	// & .polygon.frame-outer {
-	// 	background-color: white !important;
-	// }
-	// &:before, & .polygon.frame-outer:before {
-	// 	border-bottom-color: white !important;
-	// }
-	// &:after, & .polygon.frame-outer:after {
-	// 	border-top-color: white !important;
-	// }
 }
 
 .example {
@@ -1095,6 +999,45 @@ blockquote {
 	height: 550px;
 }
 
-#badgeModal.reveal-modal .orbit-wrapper{
+#badgeModal.reveal-modal .orbit-wrapper {
 	height: 500px !important;
+}
+
+.award {
+	position: relative;
+	& .circle i { line-height: 1.7; }	// normalize icon position
+	& > div {
+		margin-bottom: 15rem;
+	}
+	& .circle {
+		&.big {
+			top: 0;
+		}
+	}
+}
+
+.award > div {
+	// centers the circle
+	text-align: center;
+	width: 30%;
+}
+
+.award_listing {
+	list-style: none;
+	li { margin-bottom: 2.5em; }
+	p { margin-left: 4em; }
+	i { line-height: 1.2; }
+	& .polygon {
+		color: white;
+		font-size: 2.5rem;
+		position: absolute;
+	}
+}
+
+.faded {
+	opacity: 0.3;
+}
+
+#awardProgress {
+	width: 20%;
 }

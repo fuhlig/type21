@@ -2,40 +2,25 @@
 
 /* Controllers */
 
-function CourseListCtrl($scope, $http) {
-	$http.get("data/courses.json").success(function(data) {
-		$scope.courses = data;
-	});
+function CourseListCtrl($scope, dataService) {
+	// $scope.dataService = dataService;
+	$scope.courses = dataService.getCourses();
+	console.log('dataService.courses');
+	console.log(dataService.courses);
 }
 
-function CourseDetailCtrl($scope, $routeParams, $http) {
-	$http.get("data/courses.json").success(function(data) {
-		$scope.courses = data;
-	});
+function CourseDetailCtrl($scope, $routeParams, dataService) {
+	$scope.courses = dataService.getCourses();
+	$scope.course = dataService.getCourse($routeParams.courseId);
 
-	$http.get("data/courses/" + $routeParams.courseId +".json").success(function(data) {
-		$scope.course = data;
-	});
 	$scope.$routeParams = $routeParams;
-
 }
 
-function LessonCtrl($scope, $routeParams, $http, $location) {
-	// get course list	
-	$http.get("data/courses.json").success(function(data) {
-		$scope.courses = data;
-	});
-
-	// get course details
-	$http.get("data/courses/" + $routeParams.courseId +".json").success(function(data) {
-		$scope.course = data;
-	});
-
-	// get lesson details
-	$http.get("data/lessons/" + $routeParams.lessonId +".json").success(function(data) {
-		$scope.lesson = data;
-		$scope.content = data.features[0].src;
-	});
+function LessonCtrl($scope, $routeParams, $http, $location, dataService) {
+	$scope.courses = dataService.getCourses();
+	$scope.course = dataService.getCourse($routeParams.courseId);
+	$scope.lesson = dataService.getLesson($routeParams.lessonId);
+	$scope.content = dataService.getContent($routeParams.lessonId);
 
 	// get quiz data
 	$http.get("data/quizzes/web_quiz.json").success(function(quizData) {
@@ -50,4 +35,20 @@ function LessonCtrl($scope, $routeParams, $http, $location) {
 
 	$scope.$routeParams = $routeParams;
 	$scope.$location = $location;
+}
+
+function AwardCtrl($scope, dataService) {
+	$scope.courses = dataService.getCourses();
+	$scope.course_mograph = dataService.getCourse_mograph();
+	$scope.course_tDesign = dataService.getCourse_tDesign();
+	$scope.course_web = dataService.getCourse_web();
+	$scope.course_textFx = dataService.getCourse_textFx();
+
+	$scope.countArchivements = function() {
+		console.log($scope.course_mograph);
+	}
+}
+
+function QuizCtrl($scope, dataService, $routeParams) {
+	console.log('quiz');
 }

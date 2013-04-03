@@ -1,0 +1,29 @@
+<!-- Header -->
+<div ng-include src="'partials/subHeader.html'"></div>
+
+<div class="row">
+	<h1>Awards</h1>
+	<p>({{}} / {{courses.lessons.length}})</p>
+	<div class="secondary progress"><span style="width: {{10/20*100}}%" class="meter"></span></div>	
+
+	<div class="row">		
+		<div ng-repeat="course in courses" class="award three columns">
+			<div>
+				<span class="circle big {{course.id}}">
+					<i class="{{course.icon}}"></i>
+				</span>
+			</div>
+			
+			<ul class="award_listing">
+				<li ng-repeat="lesson in course.lessons" ng-class="{faded: lesson.archived == false}">
+					<div class="polygon small {{course.id}}">
+						<i class="{{lesson.icon}}"></i>
+					</div>
+					<p>{{lesson.name}}</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+
+</div>

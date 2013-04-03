@@ -2,21 +2,154 @@
 	{
 		"name": "Motion Graphics",
 		"id": "mograph",
-		"icon": "icon-play"
-	},
+		"icon": "icon-play",
+		"description": 
+				"Motion graphics are graphics that use video footage and/or animation technology to create the illusion of motion or rotation, graphics are usually combined with audio for use in multimedia projects. This course teaches some of the common areas of typography in motion graphics and animations.",
+		"lessons": [
+			{
+				"name":	"Typo-Shapes",
+				"id":	"shape",
+				"icon": "foundicon-smiley",
+				"archived": true
+			},
+			{
+				"name":	"Kinetic Type",
+				"id":	"kinetic-type",
+				"icon": "t21-kinetic",
+				"archived": true
+			},
+			{
+				"name":	"Title Sequence",
+				"id":	"title-sequence",
+				"icon": "t21-titlesequence",
+				"archived": true
+			},
+			{
+				"name": "Billing Block",
+				"id": "billing-block",
+				"icon": "icon-align-center",
+				"archived": false
+			},
+			{
+				"name": "Movie Titles",
+				"id": "movie-titles",
+				"icon": "t21-movietitle",
+				"archived": false
+			}
+		]
+	},	
 	{
 		"name": "Web",
 		"id": "web",
-		"icon": "t21-web"
+		"icon": "t21-web",
+		"description": "For too long typographic style and its accompanying attention to detail have been overlooked by website designers, particularly in body copy. In years gone by this could have been put down to the technology, but now the web has caught up. The advent of much improved browsers, text rendering and high resolution screens, combine to negate technology as an excuse.",
+		"lessons": [
+			{
+				"name":	"Web-Fonts",
+				"id":	"webfonts",
+				"icon": "t21-webfont",
+				"archived": true
+			},
+			{
+				"name": "@font-face",
+				"id": "font-face",
+				"icon": "t21-fontface",
+				"archived": true
+			},
+			{
+				"name": "Font Sizing",
+				"id": "font-sizing",
+				"icon": "t21-fontsize",
+				"archived": true
+			},
+			{
+				"name":	"Responsive Type",
+				"id":	"responsive-type",
+				"icon": "t21-responsivetype",
+				"archived": true
+			},
+			{
+				"name":	"Icon Fonts",
+				"id":	"icon-fonts-web",
+				"icon": "t21-iconfont",
+				"archived": true
+			}
+		]	
 	},
 	{
 		"name": "Type Design",
 		"id": "tDesign",
-		"icon": "t21-tDesign"
+		"icon": "t21-tDesign",
+		"description": "Typography is an over underrated topic - even for designers. But it can be a powerfull tool in a designer's toolkit. This specific course deals with making the right choices, text readable and how to design a font.",
+		"lessons": [
+			{
+				"name":	"Macro-Typo",
+				"id":	"macro-typo",
+				"icon": "icon-align-left",
+				"archived": false
+			},
+			{
+				"name":	"Micro-Typo",
+				"id":	"micro-typo",
+				"icon": "icon-text-width",
+				"archived": false
+			},
+			{
+				"name":	"Icon Fonts",
+				"id":	"icon-fonts-design",
+				"icon": "t21-iconfont",
+				"archived": true
+			},
+			{
+				"name": "Choosing Type",
+				"id": "choosing-type",
+				"icon": "t21-choosingtype",
+				"archived": false
+			},
+			{
+				"name": "Grid System",
+				"id": "grid",
+				"icon": "icon-th",
+				"archived": false
+			}
+		]	
 	},
 	{
 		"name": "Text Effects",
 		"id": "textFx",
-		"icon": "t21-textFx"
+		"icon": "t21-textFx",
+		"description": "Text effects make it possible to make text a design object itself. As type doesn't have to bring only information across but it can be made visually very appealing to support the information or standalone.",
+		"lessons": [
+			{
+				"name":	"Effects",
+				"id":	"effects",
+				"icon": "icon-magic",
+				"archived": true
+			},
+			{
+				"name":	"Text Shadow",
+				"id":	"shadow",
+				"icon": "t21-textshadow",
+				"archived": true
+			},
+			{
+				"name":	"3D",
+				"id":	"3d",
+				"icon": "t21-3d",
+				"archived": true
+			},
+			{
+				"name": "Engraving",
+				"id": "engraving",
+				"icon": "t21-engraving",
+				"archived": true
+			},
+			{
+				"name": "Color Effects",
+				"id": "color",
+				"icon": "t21-color",
+				"archived": false
+			}
+		]
 	}
 ]
