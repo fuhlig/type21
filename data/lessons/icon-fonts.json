@@ -1,41 +1,5 @@
 {
 	"title": "Icon Fonts",
-	"features": [
-		{
-			"id": "info",
-			"name": "Information",
-			"icon": "icon-info-sign",
-			"src": "data/lessons/icon-font-design_info.html"
-		},		
-		{
-			"id": "list",
-			"name": "Guide",
-			"icon": "icon-question-sign",
-			"src": "data/lessons/icon-font-design_list.html"
-		},
-		{
-			"id": "tutorial",
-			"name": "Tutorial",
-			"icon": "t21-tutorial",
-			"src": "data/lessons/icon-font-design_tutorial.html"
-		},
-		{
-			"id": "test",
-			"name": "Testing",
-			"icon": "icon-beaker",
-			"src": "partials/editor_icon-font.html"
-		},
-		{
-			"id": "resources",
-			"name": "Resources",
-			"icon": "icon-warning-sign",
-			"src": "partials/quiz.html"
-		},
-		{
-			"id": "quiz",
-			"name": "quiz",
-			"icon": "icon-question-sign",
-			"src": "partials/quiz_icon-font.html"
-		}
-	]
+	"description" :
+		"Visual communication is incredibly powerful. Symbols have the ability to transcend cultural and language barriers and deliver concise information effortlessly and instantaneously. For the first time, this image-based system of communication is being combined with technology to create a social language that unites the world."
 }

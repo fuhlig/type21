@@ -1,0 +1,71 @@
+<!-- Header -->
+<div ng-include src="'partials/mainHeader.html'"></div>
+
+<h1>test</h1>
+
+<!-- Content -->
+<section>
+
+  <button class="button" ng-click="startTour()" style="display:none">Start Tour</button>
+
+<div class="row">
+  <ul class="block-grid two-up mobile">
+    <li ng-repeat="course in courses" class="row ">
+      <a href="#/courses/{{course.id}}">
+        <div class="eight columns category offset-by-three {{course.id}}">
+          <i class="foundicon-{{course.icon}} circle big hide-for-small" ng-class-odd="'left'" ng-class-even="'right'"></i>
+          <i class="foundicon-{{course.icon}} circle big show-for-small"></i>
+          {{course.name}}
+        </div>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+<!-- JoyRide -->
+<ol id="introTour">
+  <li data-id="mograph">Eins</li>
+  <li data-id="web">Zwei</li>
+  <li data-id="tDesign">Drei</li>
+  <li data-id="textFx">Vier</li>
+</ol>  
+
+<!-- STATIC -->
+
+<div class="row">
+  <a href="#/lesson">
+    <div id="cat1" class="four columns offset-by-one category big mograph left">
+      motion graphics
+    </div>
+  </a>
+
+  <div class="two columns"></div>
+
+  <a href="#/lesson">
+    <div id="cat2" class="four columns category big web right">
+      <i class="foundicon-home circle"></i>
+      web
+    </div>
+  </a>
+
+  <div class="one-columns"></div>
+</div>
+
+<div class="row">
+  <a href="#/lesson">
+    <div id="cat3" class="four columns offset-by-one category big tDesign left">
+      type design
+    </div>
+  </a>
+
+  <div class="two columns"></div>
+
+  <a href="#/lesson">
+    <div id="cat4" class="four columns category big textFx right">
+      text effects  
+    </div>
+  </a>
+
+  <div class="one-columns"></div>
+</div>

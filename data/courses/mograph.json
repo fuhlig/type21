@@ -8,7 +8,7 @@
 			"name":	"Typo-Shapes",
 			"id":	"shape",
 			"icon": "foundicon-smiley",
-			"archived": false
+			"archived": true
 		},
 		{
 			"name":	"Kinetic Type",
@@ -26,7 +26,7 @@
 			"name": "Billing Block",
 			"id": "billing-block",
 			"icon": "icon-align-center",
-			"archived": true
+			"archived": false
 		},
 		{
 			"name": "Movie Titles",
